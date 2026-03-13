@@ -83,9 +83,8 @@ Example API response:
 
 ```json
 {
-  "risk_score": 82,
-  "risk_level": "high",
-  "scam_type": "phishing",
+  "riskScore": 82,
+  "riskLevel": "high",
   "signals": [
     "urgent request"
   ],
