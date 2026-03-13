@@ -112,16 +112,14 @@ Example API response:
 
 ```
 lsjm-scam-platform/
-├── backend/
+├── backend/                 # Node + Express API (serves frontend)
 │   ├── src/
-│   │   ├── routes/          # API routes
-│   │   ├── analysis/        # Text & URL analyzers
-│   │   ├── utils/
-│   │   ├── rules/           # signals, weights, templates
-│   │   ├── types/
-│   │   └── server.ts
 │   ├── package.json
 │   └── tsconfig.json
+├── frontend/                # Web UI (HTML, CSS, JS)
+│   ├── index.html
+│   ├── css/
+│   └── js/
 ├── package.json
 ├── pnpm-workspace.yaml
 └── .env.example
@@ -145,6 +143,8 @@ pnpm backend:start    # Run production build
 
 Copy `.env.example` to `.env` and adjust if needed. Default port: 3000.
 
+Open http://localhost:3000 for the web interface.
+
 ---
 
 ## API
@@ -165,3 +165,10 @@ Copy `.env.example` to `.env` and adjust if needed. Default port: 3000.
 ---
 
 ## Team
+
+Let Shade Just Move:
+
+- Xingzhi Li (Icey)
+- Ting Shen (Lena)
+- Guangyu Ma (Marcus)
+- Xiaohan Jiang (Lindsey)

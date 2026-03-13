@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+  color: #1a1a1a;
+  background: #f5f5f5;
+}
+
+.header {
+  padding: 2rem 1.5rem;
+  background: #fff;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.header h1 {
+  margin: 0 0 0.25rem;
+  font-size: 1.5rem;
+}
+
+.header p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #666;
+}
+
+.main {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.input-section {
+  margin-bottom: 2rem;
+}
+
+.input-section label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.input-section textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.9375rem;
+  resize: vertical;
+}
+
+.input-section textarea:focus {
+  outline: none;
+  border-color: #333;
+}
+
+#analyze-btn {
+  margin-top: 1rem;
+  padding: 0.625rem 1.25rem;
+  background: #333;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+#analyze-btn:hover {
+  background: #222;
+}
+
+#analyze-btn:disabled {
+  background: #999;
+  cursor: not-allowed;
+}
+
+.result-section {
+  padding: 1.5rem;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+}
+
+.result-section h2 {
+  margin: 0 0 1rem;
+  font-size: 1.125rem;
+}
+
+.result-placeholder {
+  color: #888;
+  font-size: 0.9375rem;
+}

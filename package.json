@@ -4,6 +4,7 @@
   "description": "LSJM - Let Scams Just Miss, explainable AI platform for scam risk evaluation",
   "private": true,
   "scripts": {
+    "dev": "pnpm backend:dev",
     "backend:dev": "pnpm --filter lsjm-backend dev",
     "backend:build": "pnpm --filter lsjm-backend build",
     "backend:start": "pnpm --filter lsjm-backend start"

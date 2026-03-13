@@ -1,3 +1,4 @@
+import path from 'path';
 import express from 'express';
 import analyzeTextRouter from '@/routes/analyzeText';
 import analyzeUrlRouter from '@/routes/analyzeUrl';
@@ -17,6 +18,10 @@ app.get('/health', (_req, res) => {
 app.use('/analyze-text', analyzeTextRouter);
 app.use('/analyze-url', analyzeUrlRouter);
 
+const frontendPath = path.resolve(__dirname, '..', '..', 'frontend');
+app.use(express.static(frontendPath));
+app.get('/', (_req, res) => res.sendFile(path.join(frontendPath, 'index.html')));
+
 app.listen(PORT, () => {
-  console.log(`LSJM backend running at http://localhost:${PORT}`);
+  console.log(`LSJM running at http://localhost:${PORT}`);
 });
