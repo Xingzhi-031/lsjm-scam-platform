@@ -21,6 +21,41 @@ function setLoading(loading) {
   }
 }
 
+function renderResultCard(result) {
+
+  const card = document.getElementById("result-card");
+  const placeholder = document.getElementById("result-placeholder");
+
+  if (!card) {
+    setResult(result);
+    return;
+  }
+
+  placeholder.style.display = "none";
+  card.classList.remove("hidden");
+
+  document.getElementById("riskScore").textContent = result.riskScore;
+
+  const riskLevel = document.getElementById("riskLevel");
+  riskLevel.textContent = result.riskLevel.toUpperCase();
+  riskLevel.className = "risk-badge risk-" + result.riskLevel;
+
+  renderList("signalsList", result.signals.map(s => s.description));
+  renderList("reasonsList", result.reasons);
+  renderList("adviceList", result.advice);
+}
+
+function renderList(id, items) {
+  const list = document.getElementById(id);
+  list.innerHTML = "";
+
+  items.forEach(item => {
+    const li = document.createElement("li");
+    li.textContent = item;
+    list.appendChild(li);
+  });
+}
+
 async function analyze() {
   const text = textInput.value.trim();
   if (!text) {
@@ -36,7 +71,7 @@ async function analyze() {
       body: JSON.stringify({ text }),
     });
     const data = await res.json();
-    setResult(data);
+    renderResultCard(data);
   } catch (err) {
     setResult('Error: Could not reach the analysis service. Is the backend running?');
   } finally {
