@@ -102,9 +102,65 @@ Example API response:
 
 ## Tech Stack
 
+**Backend**
+- Node.js + TypeScript + Express
+- pnpm (workspace)
+
 ---
 
-## Setup  
+## Project Structure
+
+```
+lsjm-scam-platform/
+├── backend/
+│   ├── src/
+│   │   ├── routes/          # API routes
+│   │   ├── analysis/        # Text & URL analyzers
+│   │   ├── utils/
+│   │   ├── rules/           # signals, weights, templates
+│   │   ├── types/
+│   │   └── server.ts
+│   ├── package.json
+│   └── tsconfig.json
+├── package.json
+├── pnpm-workspace.yaml
+└── .env.example
+```
+
+---
+
+## Setup
+
+**Prerequisites:** Node.js >= 18, pnpm
+
+```bash
+# Install dependencies
+pnpm install
+
+# Backend
+pnpm backend:dev      # Development server
+pnpm backend:build    # Build (compile + copy rules)
+pnpm backend:start    # Run production build
+```
+
+Copy `.env.example` to `.env` and adjust if needed. Default port: 3000.
+
+---
+
+## API
+
+| Method | Path | Description |
+|--------|------|-------------|
+| GET | `/health` | Health check |
+| POST | `/analyze-text` | Text analysis (skeleton) |
+| POST | `/analyze-url` | URL analysis (skeleton) |
+
+---
+
+## Path Conventions
+
+- **Imports:** `@/types/analysisTypes`, `@/analysis/textAnalyzer`, etc. (via `baseUrl` and `paths` in tsconfig)
+- **File system:** `resolvePath()` in `utils/paths.ts` for loading rules; rules are copied to `dist/rules/` during build
 
 ---
 
