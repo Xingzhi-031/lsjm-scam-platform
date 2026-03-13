@@ -7,7 +7,7 @@ function normalizeRiskScore(score: number): number {
 }
 
 function getRiskLevel(score: number): RiskLevel {
-  if (score == 100) return 'critical';
+  if (score === 100) return 'critical';
   if (score >= 67) return 'high';
   if (score >= 34) return 'medium';
   return 'low';
