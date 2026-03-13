@@ -119,6 +119,12 @@ lsjm-scam-platform/
 │   ├── index.html
 │   ├── css/
 │   └── js/
+├── extension/               # Chrome extension
+│   ├── manifest.json
+│   ├── popup.html
+│   ├── popup.js
+│   ├── content.js
+│   └── styles.css
 ├── package.json
 ├── pnpm-workspace.yaml
 └── .env.example
@@ -143,6 +149,8 @@ pnpm backend:start    # Run production build
 Copy `.env.example` to `.env` and adjust if needed. Default port: 3000.
 
 Open http://localhost:3000 for the web interface.
+
+**Chrome Extension:** Load `extension/` as an unpacked extension in Chrome (chrome://extensions → Developer mode → Load unpacked).
 
 ---
 
