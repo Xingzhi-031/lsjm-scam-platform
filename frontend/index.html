@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LSJM - Scam Detection</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <h1>LSJM</h1>
+    <p>Let Scams Just Miss — analyze messages and URLs for scam risks</p>
+  </header>
+
+  <main class="main">
+    <section class="input-section">
+      <label for="text-input">Paste suspicious message or content</label>
+      <textarea id="text-input" rows="6" placeholder="Paste the message or text you want to analyze..."></textarea>
+      <button id="analyze-btn" type="button">Analyze</button>
+    </section>
+
+    <section class="result-section" id="result-area">
+      <h2>Analysis Result</h2>
+      <div id="result-placeholder" class="result-placeholder">
+        Results will appear here after analysis.
+      </div>
+    </section>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
