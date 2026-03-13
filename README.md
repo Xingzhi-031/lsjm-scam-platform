@@ -96,3 +96,16 @@ Example API response:
     "Do not click suspicious links."
   ]
 }
+```
+
+---
+
+## Tech Stack
+
+---
+
+## Setup  
+
+---
+
+## Team
