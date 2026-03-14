@@ -1,7 +1,34 @@
 {
   "templates": {
-    "urgency_language": "The message creates time pressure or urges immediate action.",
-    "money_request": "The message asks for money transfer or payment.",
-    "suspicious_link": "The message contains a link that may lead to a phishing or scam site."
+    "urgency_language": {
+      "en": "The message creates time pressure or urges immediate action.",
+      "zh": "消息制造紧迫感或催促立即行动。",
+      "es": "El mensaje crea presión de tiempo o urge a actuar de inmediato.",
+      "fr": "Le message crée une pression temporelle ou pousse à agir immédiatement."
+    },
+    "authority_impersonation": {
+      "en": "The message impersonates a bank or trusted institution.",
+      "zh": "消息冒充银行或可信机构。",
+      "es": "El mensaje suplanta a un banco o institución de confianza.",
+      "fr": "Le message se fait passer pour une banque ou une institution de confiance."
+    },
+    "suspicious_link": {
+      "en": "The message contains a link that may lead to a phishing or scam site.",
+      "zh": "消息包含可能导向钓鱼或诈骗网站的链接。",
+      "es": "El mensaje contiene un enlace que puede llevar a un sitio de phishing o estafa.",
+      "fr": "Le message contient un lien pouvant mener à un site de phishing ou d'arnaque."
+    },
+    "credential_request": {
+      "en": "The message requests passwords, PINs or other personal credentials.",
+      "zh": "消息要求提供密码、验证码或其他个人凭据。",
+      "es": "El mensaje solicita contraseñas, PIN u otras credenciales personales.",
+      "fr": "Le message demande des mots de passe, PIN ou autres identifiants personnels."
+    },
+    "payment_request": {
+      "en": "The message asks for money transfer or payment.",
+      "zh": "消息要求转账或付款。",
+      "es": "El mensaje solicita transferencia de dinero o pago.",
+      "fr": "Le message demande un virement ou un paiement."
+    }
   }
 }

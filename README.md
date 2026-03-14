@@ -193,7 +193,7 @@ Each signal: `id`, `description`, `keywords` (per language), `weight`.
 
 ### reasonTemplates.json / adviceTemplates.json
 
-Maps signal id to English reason/advice text.
+Maps signal id to multilingual reason/advice text. Structure: `{ "signal_id": { "en": "...", "zh": "...", "es": "...", "fr": "..." } }`.
 
 ### weights.json
 
