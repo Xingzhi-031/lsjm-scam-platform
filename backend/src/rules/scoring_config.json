@@ -7,7 +7,7 @@
   "min_support": 5,
   "probability": {
     "method": "sigmoid",
-    "a": 3,
+    "a": 1,
     "b": -2
   }
 }

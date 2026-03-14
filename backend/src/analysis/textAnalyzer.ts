@@ -58,6 +58,9 @@ function sigmoid(x: number): number {
 }
 
 function getRiskLevel(probability: number): RiskLevel {
+  if (probability >= 0.99) {
+    return 'critical';
+  }
   if (probability >= 0.8) {
     return 'high';
   }
@@ -67,10 +70,47 @@ function getRiskLevel(probability: number): RiskLevel {
   return 'low';
 }
 
+function buildReasons(matchedRiskWords: string[], strongestRiskWord?: string): string[] {
+  const reasons: string[] = [];
+
+  if (matchedRiskWords.length > 0) {
+    reasons.push(
+      `The message contains suspicious words associated with phishing content: ${matchedRiskWords.slice(0, 5).join(', ')}.`
+    );
+  }
+
+  if (strongestRiskWord) {
+    reasons.push(`The strongest matched risk word is "${strongestRiskWord}".`);
+  }
+
+  if (matchedRiskWords.length === 0) {
+    reasons.push('No suspicious lexicon words were detected in the message.');
+  }
+
+  return reasons;
+}
+
+function buildAdvice(riskLevel: RiskLevel, hasRiskSignals: boolean): string[] {
+  const advice: string[] = [];
+
+  if (hasRiskSignals) {
+    advice.push('Do not click links or provide personal information until the message is verified.');
+    advice.push('Verify the sender through an official channel before taking action.');
+  }
+
+  if (riskLevel === 'high') {
+    advice.push('Treat this message as highly suspicious and avoid responding directly.');
+  } else if (riskLevel === 'medium') {
+    advice.push('Be cautious and double-check the message before acting on it.');
+  } else {
+    advice.push('Continue reviewing the message carefully for any suspicious content.');
+  }
+
+  return advice;
+}
+
 export function analyzeText(text: string): AnalysisResult {
   const signals: RiskSignal[] = [];
-  const reasons: string[] = [];
-  const advice: string[] = [];
 
   // Tokenization
   const tokens = tokenize(text);
@@ -143,10 +183,14 @@ export function analyzeText(text: string): AnalysisResult {
     });
   }
 
-  return buildAnalysisResult({
+  const reasons = buildReasons(uniqueMatchedRiskWords, strongestRiskWord);
+  const advice = buildAdvice(riskLevel, uniqueMatchedRiskWords.length > 0);
+
+  return {
     riskScore,
+    riskLevel,
     signals,
     reasons,
     advice,
-  });
+  };
 }
