@@ -7,7 +7,8 @@
     "dev": "pnpm backend:dev",
     "backend:dev": "pnpm --filter lsjm-backend dev",
     "backend:build": "pnpm --filter lsjm-backend build",
-    "backend:start": "pnpm --filter lsjm-backend start"
+    "backend:start": "pnpm --filter lsjm-backend start",
+    "data:process": "pnpm --filter lsjm-backend data:process"
   },
   "packageManager": "pnpm@8.15.0"
 }

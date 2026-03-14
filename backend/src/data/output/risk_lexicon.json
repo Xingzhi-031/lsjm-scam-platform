@@ -1,0 +1,4782 @@
+{
+  "google": {
+    "weight": 3.93,
+    "phishing_ratio": 0.98,
+    "support": 699
+  },
+  "email": {
+    "weight": 3.2,
+    "phishing_ratio": 0.96,
+    "support": 626
+  },
+  "file": {
+    "weight": 2.56,
+    "phishing_ratio": 0.93,
+    "support": 493
+  },
+  "continue": {
+    "weight": 3.11,
+    "phishing_ratio": 0.96,
+    "support": 408
+  },
+  "services": {
+    "weight": 1.14,
+    "phishing_ratio": 0.76,
+    "support": 396
+  },
+  "website": {
+    "weight": 1.98,
+    "phishing_ratio": 0.88,
+    "support": 382
+  },
+  "use": {
+    "weight": 1.52,
+    "phishing_ratio": 0.82,
+    "support": 330
+  },
+  "service": {
+    "weight": 1.78,
+    "phishing_ratio": 0.86,
+    "support": 329
+  },
+  "cookies": {
+    "weight": 2.45,
+    "phishing_ratio": 0.92,
+    "support": 319
+  },
+  "open": {
+    "weight": 2.26,
+    "phishing_ratio": 0.91,
+    "support": 312
+  },
+  "sign": {
+    "weight": 3.07,
+    "phishing_ratio": 0.96,
+    "support": 304
+  },
+  "express": {
+    "weight": 4.77,
+    "phishing_ratio": 0.99,
+    "support": 295
+  },
+  "page": {
+    "weight": 1.66,
+    "phishing_ratio": 0.84,
+    "support": 283
+  },
+  "chain": {
+    "weight": 4.72,
+    "phishing_ratio": 0.99,
+    "support": 282
+  },
+  "bank": {
+    "weight": 2.08,
+    "phishing_ratio": 0.89,
+    "support": 274
+  },
+  "yes": {
+    "weight": 3.57,
+    "phishing_ratio": 0.97,
+    "support": 273
+  },
+  "maps": {
+    "weight": 4.67,
+    "phishing_ratio": 0.99,
+    "support": 268
+  },
+  "delivery": {
+    "weight": 2.16,
+    "phishing_ratio": 0.9,
+    "support": 237
+  },
+  "link": {
+    "weight": 1.98,
+    "phishing_ratio": 0.88,
+    "support": 225
+  },
+  "please": {
+    "weight": 1.94,
+    "phishing_ratio": 0.88,
+    "support": 218
+  },
+  "password": {
+    "weight": 4.12,
+    "phishing_ratio": 0.99,
+    "support": 217
+  },
+  "browser": {
+    "weight": 3.06,
+    "phishing_ratio": 0.96,
+    "support": 211
+  },
+  "create": {
+    "weight": 1.26,
+    "phishing_ratio": 0.78,
+    "support": 209
+  },
+  "home": {
+    "weight": 1.34,
+    "phishing_ratio": 0.79,
+    "support": 203
+  },
+  "required": {
+    "weight": 2.33,
+    "phishing_ratio": 0.91,
+    "support": 197
+  },
+  "want": {
+    "weight": 1.48,
+    "phishing_ratio": 0.82,
+    "support": 191
+  },
+  "enter": {
+    "weight": 2.95,
+    "phishing_ratio": 0.95,
+    "support": 190
+  },
+  "login": {
+    "weight": 2.75,
+    "phishing_ratio": 0.94,
+    "support": 190
+  },
+  "site": {
+    "weight": 1.13,
+    "phishing_ratio": 0.76,
+    "support": 181
+  },
+  "security": {
+    "weight": 2,
+    "phishing_ratio": 0.88,
+    "support": 179
+  },
+  "field": {
+    "weight": 2.99,
+    "phishing_ratio": 0.95,
+    "support": 177
+  },
+  "facebook": {
+    "weight": 2.42,
+    "phishing_ratio": 0.92,
+    "support": 176
+  },
+  "account": {
+    "weight": 1.55,
+    "phishing_ratio": 0.83,
+    "support": 173
+  },
+  "copied": {
+    "weight": 4.74,
+    "phishing_ratio": 0.99,
+    "support": 172
+  },
+  "started": {
+    "weight": 2.1,
+    "phishing_ratio": 0.89,
+    "support": 169
+  },
+  "another": {
+    "weight": 2.42,
+    "phishing_ratio": 0.92,
+    "support": 165
+  },
+  "international": {
+    "weight": 2.02,
+    "phishing_ratio": 0.88,
+    "support": 165
+  },
+  "indicates": {
+    "weight": 5,
+    "phishing_ratio": 1,
+    "support": 164
+  },
+  "copy": {
+    "weight": 2.5,
+    "phishing_ratio": 0.93,
+    "support": 164
+  },
+  "information": {
+    "weight": 1.07,
+    "phishing_ratio": 0.75,
+    "support": 157
+  },
+  "cold": {
+    "weight": 5,
+    "phishing_ratio": 1,
+    "support": 156
+  },
+  "data": {
+    "weight": 0.95,
+    "phishing_ratio": 0.72,
+    "support": 155
+  },
+  "bankid": {
+    "weight": 5,
+    "phishing_ratio": 1,
+    "support": 153
+  },
+  "share": {
+    "weight": 2.32,
+    "phishing_ratio": 0.91,
+    "support": 150
+  },
+  "try": {
+    "weight": 2.14,
+    "phishing_ratio": 0.9,
+    "support": 146
+  },
+  "shipping": {
+    "weight": 2.56,
+    "phishing_ratio": 0.93,
+    "support": 145
+  },
+  "got": {
+    "weight": 2.76,
+    "phishing_ratio": 0.94,
+    "support": 142
+  },
+  "unique": {
+    "weight": 1.84,
+    "phishing_ratio": 0.87,
+    "support": 141
+  },
+  "directed": {
+    "weight": 4.49,
+    "phishing_ratio": 0.99,
+    "support": 134
+  },
+  "next": {
+    "weight": 1.46,
+    "phishing_ratio": 0.81,
+    "support": 134
+  },
+  "directions": {
+    "weight": 5,
+    "phishing_ratio": 1,
+    "support": 133
+  },
+  "cancel": {
+    "weight": 3.62,
+    "phishing_ratio": 0.98,
+    "support": 133
+  },
+  "learn": {
+    "weight": 0.96,
+    "phishing_ratio": 0.73,
+    "support": 131
+  },
+  "supply": {
+    "weight": 3.11,
+    "phishing_ratio": 0.96,
+    "support": 128
+  },
+  "credit": {
+    "weight": 2.65,
+    "phishing_ratio": 0.94,
+    "support": 128
+  },
+  "search": {
+    "weight": 1.03,
+    "phishing_ratio": 0.74,
+    "support": 126
+  },
+  "mobile": {
+    "weight": 1.32,
+    "phishing_ratio": 0.79,
+    "support": 125
+  },
+  "customizable": {
+    "weight": 3.53,
+    "phishing_ratio": 0.98,
+    "support": 122
+  },
+  "details": {
+    "weight": 2.36,
+    "phishing_ratio": 0.92,
+    "support": 121
+  },
+  "templates": {
+    "weight": 4.38,
+    "phishing_ratio": 0.99,
+    "support": 120
+  },
+  "powered": {
+    "weight": 2.13,
+    "phishing_ratio": 0.9,
+    "support": 117
+  },
+  "contact": {
+    "weight": 1.49,
+    "phishing_ratio": 0.82,
+    "support": 116
+  },
+  "crypto": {
+    "weight": 3.79,
+    "phishing_ratio": 0.98,
+    "support": 112
+  },
+  "wallet": {
+    "weight": 4.3,
+    "phishing_ratio": 0.99,
+    "support": 111
+  },
+  "less": {
+    "weight": 2.61,
+    "phishing_ratio": 0.94,
+    "support": 109
+  },
+  "nie": {
+    "weight": 2.04,
+    "phishing_ratio": 0.89,
+    "support": 108
+  },
+  "seguridad": {
+    "weight": 4.22,
+    "phishing_ratio": 0.99,
+    "support": 103
+  },
+  "standard": {
+    "weight": 3.66,
+    "phishing_ratio": 0.98,
+    "support": 99
+  },
+  "document": {
+    "weight": 2.12,
+    "phishing_ratio": 0.9,
+    "support": 97
+  },
+  "log": {
+    "weight": 2.22,
+    "phishing_ratio": 0.91,
+    "support": 96
+  },
+  "privacy": {
+    "weight": 2.21,
+    "phishing_ratio": 0.91,
+    "support": 95
+  },
+  "hardware": {
+    "weight": 3,
+    "phishing_ratio": 0.96,
+    "support": 94
+  },
+  "bulk": {
+    "weight": 2.61,
+    "phishing_ratio": 0.94,
+    "support": 94
+  },
+  "secure": {
+    "weight": 1.29,
+    "phishing_ratio": 0.79,
+    "support": 94
+  },
+  "username": {
+    "weight": 5,
+    "phishing_ratio": 1,
+    "support": 93
+  },
+  "address": {
+    "weight": 2.6,
+    "phishing_ratio": 0.94,
+    "support": 93
+  },
+  "twoje": {
+    "weight": 4.1,
+    "phishing_ratio": 0.99,
+    "support": 91
+  },
+  "czasu": {
+    "weight": 4.1,
+    "phishing_ratio": 0.99,
+    "support": 91
+  },
+  "phone": {
+    "weight": 1.95,
+    "phishing_ratio": 0.88,
+    "support": 91
+  },
+  "przetwarza": {
+    "weight": 5,
+    "phishing_ratio": 1,
+    "support": 90
+  },
+  "dane": {
+    "weight": 5,
+    "phishing_ratio": 1,
+    "support": 90
+  },
+  "strony": {
+    "weight": 5,
+    "phishing_ratio": 1,
+    "support": 90
+  },
+  "zamykaj": {
+    "weight": 5,
+    "phishing_ratio": 1,
+    "support": 90
+  },
+  "smart": {
+    "weight": 1.75,
+    "phishing_ratio": 0.86,
+    "support": 90
+  },
+  "personal": {
+    "weight": 1.58,
+    "phishing_ratio": 0.83,
+    "support": 90
+  },
+  "english": {
+    "weight": 2.4,
+    "phishing_ratio": 0.92,
+    "support": 89
+  },
+  "view": {
+    "weight": 1.39,
+    "phishing_ratio": 0.8,
+    "support": 87
+  },
+  "sft": {
+    "weight": 5,
+    "phishing_ratio": 1,
+    "support": 85
+  },
+  "remember": {
+    "weight": 2.35,
+    "phishing_ratio": 0.92,
+    "support": 85
+  },
+  "warehousing": {
+    "weight": 5,
+    "phishing_ratio": 1,
+    "support": 84
+  },
+  "ledger": {
+    "weight": 5,
+    "phishing_ratio": 1,
+    "support": 84
+  },
+  "forgot": {
+    "weight": 4.02,
+    "phishing_ratio": 0.99,
+    "support": 84
+  },
+  "waiting": {
+    "weight": 3.47,
+    "phishing_ratio": 0.98,
+    "support": 82
+  },
+  "number": {
+    "weight": 1.11,
+    "phishing_ratio": 0.76,
+    "support": 82
+  },
+  "freight": {
+    "weight": 5,
+    "phishing_ratio": 1,
+    "support": 80
+  },
+  "igjen": {
+    "weight": 5,
+    "phishing_ratio": 1,
+    "support": 78
+  },
+  "pharmaceutical": {
+    "weight": 3.93,
+    "phishing_ratio": 0.99,
+    "support": 77
+  },
+  "enterprise": {
+    "weight": 0.97,
+    "phishing_ratio": 0.73,
+    "support": 77
+  },
+  "policy": {
+    "weight": 2.23,
+    "phishing_ratio": 0.91,
+    "support": 76
+  },
+  "vennligst": {
+    "weight": 5,
+    "phishing_ratio": 1,
+    "support": 75
+  },
+  "phrase": {
+    "weight": 5,
+    "phishing_ratio": 1,
+    "support": 75
+  },
+  "label": {
+    "weight": 3.37,
+    "phishing_ratio": 0.97,
+    "support": 74
+  },
+  "care": {
+    "weight": 0.91,
+    "phishing_ratio": 0.72,
+    "support": 74
+  },
+  "rates": {
+    "weight": 1.03,
+    "phishing_ratio": 0.74,
+    "support": 73
+  },
+  "consolidation": {
+    "weight": 2.99,
+    "phishing_ratio": 0.96,
+    "support": 72
+  },
+  "commerce": {
+    "weight": 2.45,
+    "phishing_ratio": 0.93,
+    "support": 68
+  },
+  "paid": {
+    "weight": 1.96,
+    "phishing_ratio": 0.88,
+    "support": 68
+  },
+  "loading": {
+    "weight": 2.63,
+    "phishing_ratio": 0.94,
+    "support": 66
+  },
+  "tech": {
+    "weight": 2.41,
+    "phishing_ratio": 0.92,
+    "support": 66
+  },
+  "device": {
+    "weight": 2.07,
+    "phishing_ratio": 0.89,
+    "support": 66
+  },
+  "recovery": {
+    "weight": 2.38,
+    "phishing_ratio": 0.92,
+    "support": 64
+  },
+  "download": {
+    "weight": 1.44,
+    "phishing_ratio": 0.81,
+    "support": 64
+  },
+  "wallets": {
+    "weight": 2.58,
+    "phishing_ratio": 0.94,
+    "support": 63
+  },
+  "notice": {
+    "weight": 2.02,
+    "phishing_ratio": 0.89,
+    "support": 63
+  },
+  "member": {
+    "weight": 1.04,
+    "phishing_ratio": 0.74,
+    "support": 62
+  },
+  "report": {
+    "weight": 0.96,
+    "phishing_ratio": 0.73,
+    "support": 62
+  },
+  "ready": {
+    "weight": 0.91,
+    "phishing_ratio": 0.72,
+    "support": 60
+  },
+  "allow": {
+    "weight": 0.95,
+    "phishing_ratio": 0.72,
+    "support": 58
+  },
+  "precise": {
+    "weight": 3.59,
+    "phishing_ratio": 0.98,
+    "support": 55
+  },
+  "temperature": {
+    "weight": 3.59,
+    "phishing_ratio": 0.98,
+    "support": 55
+  },
+  "china": {
+    "weight": 2.42,
+    "phishing_ratio": 0.93,
+    "support": 54
+  },
+  "wybierz": {
+    "weight": 3.03,
+    "phishing_ratio": 0.96,
+    "support": 53
+  },
+  "secret": {
+    "weight": 2.4,
+    "phishing_ratio": 0.92,
+    "support": 53
+  },
+  "zur": {
+    "weight": 1,
+    "phishing_ratio": 0.74,
+    "support": 53
+  },
+  "inquiry": {
+    "weight": 4.65,
+    "phishing_ratio": 1,
+    "support": 52
+  },
+  "new": {
+    "weight": 4.65,
+    "phishing_ratio": 1,
+    "support": 52
+  },
+  "santander": {
+    "weight": 4.65,
+    "phishing_ratio": 1,
+    "support": 52
+  },
+  "inn": {
+    "weight": 3.54,
+    "phishing_ratio": 0.98,
+    "support": 52
+  },
+  "confirm": {
+    "weight": 2.16,
+    "phishing_ratio": 0.9,
+    "support": 52
+  },
+  "agricole": {
+    "weight": 4.63,
+    "phishing_ratio": 1,
+    "support": 51
+  },
+  "banki": {
+    "weight": 4.63,
+    "phishing_ratio": 1,
+    "support": 51
+  },
+  "bnp": {
+    "weight": 4.63,
+    "phishing_ratio": 1,
+    "support": 51
+  },
+  "fyll": {
+    "weight": 4.63,
+    "phishing_ratio": 1,
+    "support": 51
+  },
+  "citibank": {
+    "weight": 4.63,
+    "phishing_ratio": 1,
+    "support": 51
+  },
+  "ing": {
+    "weight": 4.63,
+    "phishing_ratio": 1,
+    "support": 51
+  },
+  "inteligo": {
+    "weight": 4.63,
+    "phishing_ratio": 1,
+    "support": 51
+  },
+  "paribas": {
+    "weight": 4.63,
+    "phishing_ratio": 1,
+    "support": 51
+  },
+  "mbank": {
+    "weight": 4.63,
+    "phishing_ratio": 1,
+    "support": 51
+  },
+  "ipko": {
+    "weight": 4.63,
+    "phishing_ratio": 1,
+    "support": 51
+  },
+  "velobank": {
+    "weight": 4.63,
+    "phishing_ratio": 1,
+    "support": 51
+  },
+  "millennium": {
+    "weight": 4.63,
+    "phishing_ratio": 1,
+    "support": 51
+  },
+  "chinese": {
+    "weight": 2.99,
+    "phishing_ratio": 0.96,
+    "support": 51
+  },
+  "trading": {
+    "weight": 2.13,
+    "phishing_ratio": 0.9,
+    "support": 51
+  },
+  "private": {
+    "weight": 1.78,
+    "phishing_ratio": 0.86,
+    "support": 51
+  },
+  "track": {
+    "weight": 1.15,
+    "phishing_ratio": 0.76,
+    "support": 51
+  },
+  "health": {
+    "weight": 1.05,
+    "phishing_ratio": 0.75,
+    "support": 51
+  },
+  "checkbox": {
+    "weight": 4.62,
+    "phishing_ratio": 1,
+    "support": 50
+  },
+  "heavy": {
+    "weight": 2.61,
+    "phishing_ratio": 0.94,
+    "support": 50
+  },
+  "plus": {
+    "weight": 1.23,
+    "phishing_ratio": 0.78,
+    "support": 50
+  },
+  "rush": {
+    "weight": 4.6,
+    "phishing_ratio": 1,
+    "support": 49
+  },
+  "cookie": {
+    "weight": 2.31,
+    "phishing_ratio": 0.92,
+    "support": 49
+  },
+  "something": {
+    "weight": 0.99,
+    "phishing_ratio": 0.73,
+    "support": 49
+  },
+  "tilbake": {
+    "weight": 4.57,
+    "phishing_ratio": 1,
+    "support": 48
+  },
+  "neste": {
+    "weight": 4.57,
+    "phishing_ratio": 1,
+    "support": 48
+  },
+  "mainland": {
+    "weight": 3.46,
+    "phishing_ratio": 0.98,
+    "support": 48
+  },
+  "wait": {
+    "weight": 2.07,
+    "phishing_ratio": 0.9,
+    "support": 48
+  },
+  "reports": {
+    "weight": 1.56,
+    "phishing_ratio": 0.83,
+    "support": 48
+  },
+  "code": {
+    "weight": 1.18,
+    "phishing_ratio": 0.77,
+    "support": 48
+  },
+  "blogphp": {
+    "weight": 4.53,
+    "phishing_ratio": 1,
+    "support": 46
+  },
+  "third": {
+    "weight": 1.02,
+    "phishing_ratio": 0.74,
+    "support": 46
+  },
+  "hva": {
+    "weight": 4.51,
+    "phishing_ratio": 1,
+    "support": 45
+  },
+  "ditt": {
+    "weight": 4.51,
+    "phishing_ratio": 1,
+    "support": 45
+  },
+  "sitio": {
+    "weight": 3.39,
+    "phishing_ratio": 0.98,
+    "support": 45
+  },
+  "agree": {
+    "weight": 1.8,
+    "phishing_ratio": 0.87,
+    "support": 45
+  },
+  "non": {
+    "weight": 1.19,
+    "phishing_ratio": 0.77,
+    "support": 44
+  },
+  "fresh": {
+    "weight": 1.07,
+    "phishing_ratio": 0.75,
+    "support": 44
+  },
+  "skontaktuj": {
+    "weight": 3.34,
+    "phishing_ratio": 0.98,
+    "support": 43
+  },
+  "governance": {
+    "weight": 2.45,
+    "phishing_ratio": 0.93,
+    "support": 43
+  },
+  "wrong": {
+    "weight": 1.95,
+    "phishing_ratio": 0.88,
+    "support": 43
+  },
+  "individual": {
+    "weight": 1.58,
+    "phishing_ratio": 0.84,
+    "support": 43
+  },
+  "welcome": {
+    "weight": 0.92,
+    "phishing_ratio": 0.72,
+    "support": 43
+  },
+  "dito": {
+    "weight": 4.44,
+    "phishing_ratio": 1,
+    "support": 42
+  },
+  "alt": {
+    "weight": 4.44,
+    "phishing_ratio": 1,
+    "support": 42
+  },
+  "porten": {
+    "weight": 4.44,
+    "phishing_ratio": 1,
+    "support": 42
+  },
+  "wsparciem": {
+    "weight": 4.44,
+    "phishing_ratio": 1,
+    "support": 42
+  },
+  "bitcoin": {
+    "weight": 3.32,
+    "phishing_ratio": 0.98,
+    "support": 42
+  },
+  "food": {
+    "weight": 1.53,
+    "phishing_ratio": 0.83,
+    "support": 41
+  },
+  "consumer": {
+    "weight": 1.37,
+    "phishing_ratio": 0.8,
+    "support": 41
+  },
+  "shaw": {
+    "weight": 4.39,
+    "phishing_ratio": 1,
+    "support": 40
+  },
+  "ftl": {
+    "weight": 3.27,
+    "phishing_ratio": 0.98,
+    "support": 40
+  },
+  "finance": {
+    "weight": 1.5,
+    "phishing_ratio": 0.83,
+    "support": 40
+  },
+  "transshipment": {
+    "weight": 4.37,
+    "phishing_ratio": 1,
+    "support": 39
+  },
+  "laster": {
+    "weight": 4.37,
+    "phishing_ratio": 1,
+    "support": 39
+  },
+  "vent": {
+    "weight": 4.37,
+    "phishing_ratio": 1,
+    "support": 39
+  },
+  "membership": {
+    "weight": 2.71,
+    "phishing_ratio": 0.95,
+    "support": 39
+  },
+  "industrial": {
+    "weight": 1.64,
+    "phishing_ratio": 0.85,
+    "support": 39
+  },
+  "name": {
+    "weight": 1.47,
+    "phishing_ratio": 0.82,
+    "support": 39
+  },
+  "safety": {
+    "weight": 1.03,
+    "phishing_ratio": 0.74,
+    "support": 39
+  },
+  "necessary": {
+    "weight": 2.32,
+    "phishing_ratio": 0.92,
+    "support": 38
+  },
+  "amazon": {
+    "weight": 2.32,
+    "phishing_ratio": 0.92,
+    "support": 38
+  },
+  "united": {
+    "weight": 1.81,
+    "phishing_ratio": 0.87,
+    "support": 38
+  },
+  "goods": {
+    "weight": 1.81,
+    "phishing_ratio": 0.87,
+    "support": 38
+  },
+  "insurance": {
+    "weight": 1.81,
+    "phishing_ratio": 0.87,
+    "support": 38
+  },
+  "terms": {
+    "weight": 1.61,
+    "phishing_ratio": 0.84,
+    "support": 38
+  },
+  "intelligence": {
+    "weight": 1.28,
+    "phishing_ratio": 0.79,
+    "support": 38
+  },
+  "accounts": {
+    "weight": 1.13,
+    "phishing_ratio": 0.76,
+    "support": 38
+  },
+  "mail": {
+    "weight": 1.13,
+    "phishing_ratio": 0.76,
+    "support": 38
+  },
+  "zum": {
+    "weight": 0.87,
+    "phishing_ratio": 0.71,
+    "support": 38
+  },
+  "economy": {
+    "weight": 1.78,
+    "phishing_ratio": 0.86,
+    "support": 37
+  },
+  "additional": {
+    "weight": 1.4,
+    "phishing_ratio": 0.81,
+    "support": 37
+  },
+  "starte": {
+    "weight": 4.29,
+    "phishing_ratio": 1,
+    "support": 36
+  },
+  "ikke": {
+    "weight": 4.29,
+    "phishing_ratio": 1,
+    "support": 36
+  },
+  "correo": {
+    "weight": 4.29,
+    "phishing_ratio": 1,
+    "support": 36
+  },
+  "kunne": {
+    "weight": 4.29,
+    "phishing_ratio": 1,
+    "support": 36
+  },
+  "exchange": {
+    "weight": 1.55,
+    "phishing_ratio": 0.83,
+    "support": 36
+  },
+  "artificial": {
+    "weight": 1.55,
+    "phishing_ratio": 0.83,
+    "support": 36
+  },
+  "preferences": {
+    "weight": 2.6,
+    "phishing_ratio": 0.94,
+    "support": 35
+  },
+  "manufacturing": {
+    "weight": 2.6,
+    "phishing_ratio": 0.94,
+    "support": 35
+  },
+  "konto": {
+    "weight": 2.6,
+    "phishing_ratio": 0.94,
+    "support": 35
+  },
+  "household": {
+    "weight": 3.11,
+    "phishing_ratio": 0.97,
+    "support": 34
+  },
+  "transit": {
+    "weight": 3.11,
+    "phishing_ratio": 0.97,
+    "support": 34
+  },
+  "viewing": {
+    "weight": 1.91,
+    "phishing_ratio": 0.88,
+    "support": 34
+  },
+  "half": {
+    "weight": 1.48,
+    "phishing_ratio": 0.82,
+    "support": 34
+  },
+  "stock": {
+    "weight": 0.99,
+    "phishing_ratio": 0.74,
+    "support": 34
+  },
+  "przelewy": {
+    "weight": 4.2,
+    "phishing_ratio": 1,
+    "support": 33
+  },
+  "shoes": {
+    "weight": 4.2,
+    "phishing_ratio": 1,
+    "support": 33
+  },
+  "garment": {
+    "weight": 4.2,
+    "phishing_ratio": 1,
+    "support": 33
+  },
+  "automobile": {
+    "weight": 4.2,
+    "phishing_ratio": 1,
+    "support": 33
+  },
+  "webmail": {
+    "weight": 4.2,
+    "phishing_ratio": 1,
+    "support": 33
+  },
+  "telecommunications": {
+    "weight": 4.2,
+    "phishing_ratio": 1,
+    "support": 33
+  },
+  "circulation": {
+    "weight": 4.2,
+    "phishing_ratio": 1,
+    "support": 33
+  },
+  "szybkie": {
+    "weight": 4.2,
+    "phishing_ratio": 1,
+    "support": 33
+  },
+  "foundry": {
+    "weight": 4.2,
+    "phishing_ratio": 1,
+    "support": 33
+  },
+  "rmryghedrhryhfdjfghjsdstg": {
+    "weight": 4.2,
+    "phishing_ratio": 1,
+    "support": 33
+  },
+  "headwear": {
+    "weight": 4.2,
+    "phishing_ratio": 1,
+    "support": 33
+  },
+  "bankowe": {
+    "weight": 4.2,
+    "phishing_ratio": 1,
+    "support": 33
+  },
+  "mode": {
+    "weight": 0.95,
+    "phishing_ratio": 0.73,
+    "support": 33
+  },
+  "waybills": {
+    "weight": 4.17,
+    "phishing_ratio": 1,
+    "support": 32
+  },
+  "waybill": {
+    "weight": 4.17,
+    "phishing_ratio": 1,
+    "support": 32
+  },
+  "nano": {
+    "weight": 4.17,
+    "phishing_ratio": 1,
+    "support": 32
+  },
+  "word": {
+    "weight": 1.61,
+    "phishing_ratio": 0.84,
+    "support": 32
+  },
+  "trade": {
+    "weight": 1.41,
+    "phishing_ratio": 0.81,
+    "support": 32
+  },
+  "protected": {
+    "weight": 0.91,
+    "phishing_ratio": 0.72,
+    "support": 32
+  },
+  "confirmar": {
+    "weight": 4.14,
+    "phishing_ratio": 1,
+    "support": 31
+  },
+  "uses": {
+    "weight": 3.01,
+    "phishing_ratio": 0.97,
+    "support": 31
+  },
+  "preparing": {
+    "weight": 3.01,
+    "phishing_ratio": 0.97,
+    "support": 31
+  },
+  "protect": {
+    "weight": 1.37,
+    "phishing_ratio": 0.81,
+    "support": 31
+  },
+  "pour": {
+    "weight": 1.02,
+    "phishing_ratio": 0.74,
+    "support": 31
+  },
+  "providers": {
+    "weight": 1.02,
+    "phishing_ratio": 0.74,
+    "support": 31
+  },
+  "warehouse": {
+    "weight": 2.43,
+    "phishing_ratio": 0.93,
+    "support": 30
+  },
+  "ltd": {
+    "weight": 2.43,
+    "phishing_ratio": 0.93,
+    "support": 30
+  },
+  "nutzer": {
+    "weight": 1.77,
+    "phishing_ratio": 0.87,
+    "support": 30
+  },
+  "llc": {
+    "weight": 1.33,
+    "phishing_ratio": 0.8,
+    "support": 30
+  },
+  "enable": {
+    "weight": 1.14,
+    "phishing_ratio": 0.77,
+    "support": 30
+  },
+  "juno": {
+    "weight": 4.08,
+    "phishing_ratio": 1,
+    "support": 29
+  },
+  "overseas": {
+    "weight": 2.94,
+    "phishing_ratio": 0.97,
+    "support": 29
+  },
+  "indonesia": {
+    "weight": 2.94,
+    "phishing_ratio": 0.97,
+    "support": 29
+  },
+  "seite": {
+    "weight": 2.02,
+    "phishing_ratio": 0.9,
+    "support": 29
+  },
+  "zero": {
+    "weight": 1.73,
+    "phishing_ratio": 0.86,
+    "support": 29
+  },
+  "asia": {
+    "weight": 1.49,
+    "phishing_ratio": 0.83,
+    "support": 29
+  },
+  "ais": {
+    "weight": 4.04,
+    "phishing_ratio": 1,
+    "support": 28
+  },
+  "margin": {
+    "weight": 4.04,
+    "phishing_ratio": 1,
+    "support": 28
+  },
+  "speedy": {
+    "weight": 4.04,
+    "phishing_ratio": 1,
+    "support": 28
+  },
+  "abuse": {
+    "weight": 2.36,
+    "phishing_ratio": 0.93,
+    "support": 28
+  },
+  "received": {
+    "weight": 1.99,
+    "phishing_ratio": 0.89,
+    "support": 28
+  },
+  "correct": {
+    "weight": 1.05,
+    "phishing_ratio": 0.75,
+    "support": 28
+  },
+  "entered": {
+    "weight": 4.01,
+    "phishing_ratio": 1,
+    "support": 27
+  },
+  "cooperation": {
+    "weight": 4.01,
+    "phishing_ratio": 1,
+    "support": 27
+  },
+  "schutz": {
+    "weight": 2.87,
+    "phishing_ratio": 0.96,
+    "support": 27
+  },
+  "error": {
+    "weight": 2.87,
+    "phishing_ratio": 0.96,
+    "support": 27
+  },
+  "skip": {
+    "weight": 2.32,
+    "phishing_ratio": 0.93,
+    "support": 27
+  },
+  "securely": {
+    "weight": 2.32,
+    "phishing_ratio": 0.93,
+    "support": 27
+  },
+  "vous": {
+    "weight": 2.32,
+    "phishing_ratio": 0.93,
+    "support": 27
+  },
+  "mother": {
+    "weight": 2.32,
+    "phishing_ratio": 0.93,
+    "support": 27
+  },
+  "accept": {
+    "weight": 1.95,
+    "phishing_ratio": 0.89,
+    "support": 27
+  },
+  "went": {
+    "weight": 1.95,
+    "phishing_ratio": 0.89,
+    "support": 27
+  },
+  "blog": {
+    "weight": 1.65,
+    "phishing_ratio": 0.85,
+    "support": 27
+  },
+  "union": {
+    "weight": 1.65,
+    "phishing_ratio": 0.85,
+    "support": 27
+  },
+  "states": {
+    "weight": 1.41,
+    "phishing_ratio": 0.81,
+    "support": 27
+  },
+  "request": {
+    "weight": 1.01,
+    "phishing_ratio": 0.74,
+    "support": 27
+  },
+  "votre": {
+    "weight": 3.97,
+    "phishing_ratio": 1,
+    "support": 26
+  },
+  "usuarios": {
+    "weight": 3.97,
+    "phishing_ratio": 1,
+    "support": 26
+  },
+  "passkey": {
+    "weight": 3.97,
+    "phishing_ratio": 1,
+    "support": 26
+  },
+  "utilisateurs": {
+    "weight": 3.97,
+    "phishing_ratio": 1,
+    "support": 26
+  },
+  "ligne": {
+    "weight": 3.97,
+    "phishing_ratio": 1,
+    "support": 26
+  },
+  "liens": {
+    "weight": 3.97,
+    "phishing_ratio": 1,
+    "support": 26
+  },
+  "enlaces": {
+    "weight": 3.97,
+    "phishing_ratio": 1,
+    "support": 26
+  },
+  "macau": {
+    "weight": 3.97,
+    "phishing_ratio": 1,
+    "support": 26
+  },
+  "fraude": {
+    "weight": 3.97,
+    "phishing_ratio": 1,
+    "support": 26
+  },
+  "pte": {
+    "weight": 2.28,
+    "phishing_ratio": 0.92,
+    "support": 26
+  },
+  "sent": {
+    "weight": 1.9,
+    "phishing_ratio": 0.88,
+    "support": 26
+  },
+  "hong": {
+    "weight": 1.9,
+    "phishing_ratio": 0.88,
+    "support": 26
+  },
+  "automatically": {
+    "weight": 0.96,
+    "phishing_ratio": 0.73,
+    "support": 26
+  },
+  "maiden": {
+    "weight": 3.93,
+    "phishing_ratio": 1,
+    "support": 25
+  },
+  "birth": {
+    "weight": 3.93,
+    "phishing_ratio": 1,
+    "support": 25
+  },
+  "shipper": {
+    "weight": 2.79,
+    "phishing_ratio": 0.96,
+    "support": 25
+  },
+  "reset": {
+    "weight": 2.79,
+    "phishing_ratio": 0.96,
+    "support": 25
+  },
+  "selecionar": {
+    "weight": 2.79,
+    "phishing_ratio": 0.96,
+    "support": 25
+  },
+  "pacific": {
+    "weight": 2.79,
+    "phishing_ratio": 0.96,
+    "support": 25
+  },
+  "browsing": {
+    "weight": 1.86,
+    "phishing_ratio": 0.88,
+    "support": 25
+  },
+  "career": {
+    "weight": 1.32,
+    "phishing_ratio": 0.8,
+    "support": 25
+  },
+  "updated": {
+    "weight": 1.1,
+    "phishing_ratio": 0.76,
+    "support": 25
+  },
+  "assets": {
+    "weight": 1.1,
+    "phishing_ratio": 0.76,
+    "support": 25
+  },
+  "rivers": {
+    "weight": 3.89,
+    "phishing_ratio": 1,
+    "support": 24
+  },
+  "cart": {
+    "weight": 3.89,
+    "phishing_ratio": 1,
+    "support": 24
+  },
+  "ppc": {
+    "weight": 3.89,
+    "phishing_ratio": 1,
+    "support": 24
+  },
+  "halving": {
+    "weight": 3.89,
+    "phishing_ratio": 1,
+    "support": 24
+  },
+  "receiver": {
+    "weight": 3.89,
+    "phishing_ratio": 1,
+    "support": 24
+  },
+  "fcu": {
+    "weight": 3.89,
+    "phishing_ratio": 1,
+    "support": 24
+  },
+  "kong": {
+    "weight": 2.75,
+    "phishing_ratio": 0.96,
+    "support": 24
+  },
+  "taiwan": {
+    "weight": 2.75,
+    "phishing_ratio": 0.96,
+    "support": 24
+  },
+  "earnings": {
+    "weight": 2.2,
+    "phishing_ratio": 0.92,
+    "support": 24
+  },
+  "monitor": {
+    "weight": 1.52,
+    "phishing_ratio": 0.83,
+    "support": 24
+  },
+  "partnership": {
+    "weight": 1.52,
+    "phishing_ratio": 0.83,
+    "support": 24
+  },
+  "issues": {
+    "weight": 1.27,
+    "phishing_ratio": 0.79,
+    "support": 24
+  },
+  "pack": {
+    "weight": 1.05,
+    "phishing_ratio": 0.75,
+    "support": 24
+  },
+  "equipo": {
+    "weight": 3.85,
+    "phishing_ratio": 1,
+    "support": 23
+  },
+  "guest": {
+    "weight": 3.85,
+    "phishing_ratio": 1,
+    "support": 23
+  },
+  "query": {
+    "weight": 2.15,
+    "phishing_ratio": 0.91,
+    "support": 23
+  },
+  "overview": {
+    "weight": 1.77,
+    "phishing_ratio": 0.87,
+    "support": 23
+  },
+  "button": {
+    "weight": 0.99,
+    "phishing_ratio": 0.74,
+    "support": 23
+  },
+  "enumrthfdghjrijfghdgretyu": {
+    "weight": 3.81,
+    "phishing_ratio": 1,
+    "support": 22
+  },
+  "fgmnegtsghqyhfhndfgwedyfd": {
+    "weight": 3.81,
+    "phishing_ratio": 1,
+    "support": 22
+  },
+  "reject": {
+    "weight": 3.81,
+    "phishing_ratio": 1,
+    "support": 22
+  },
+  "motorola": {
+    "weight": 3.81,
+    "phishing_ratio": 1,
+    "support": 22
+  },
+  "invalid": {
+    "weight": 3.81,
+    "phishing_ratio": 1,
+    "support": 22
+  },
+  "branch": {
+    "weight": 2.66,
+    "phishing_ratio": 0.95,
+    "support": 22
+  },
+  "session": {
+    "weight": 2.1,
+    "phishing_ratio": 0.91,
+    "support": 22
+  },
+  "appliances": {
+    "weight": 2.1,
+    "phishing_ratio": 0.91,
+    "support": 22
+  },
+  "federal": {
+    "weight": 1.41,
+    "phishing_ratio": 0.82,
+    "support": 22
+  },
+  "logistics": {
+    "weight": 3.76,
+    "phishing_ratio": 1,
+    "support": 21
+  },
+  "pickup": {
+    "weight": 3.76,
+    "phishing_ratio": 1,
+    "support": 21
+  },
+  "coverage": {
+    "weight": 3.76,
+    "phishing_ratio": 1,
+    "support": 21
+  },
+  "commitments": {
+    "weight": 2.61,
+    "phishing_ratio": 0.95,
+    "support": 21
+  },
+  "carbon": {
+    "weight": 2.61,
+    "phishing_ratio": 0.95,
+    "support": 21
+  },
+  "announcements": {
+    "weight": 2.61,
+    "phishing_ratio": 0.95,
+    "support": 21
+  },
+  "trace": {
+    "weight": 2.05,
+    "phishing_ratio": 0.9,
+    "support": 21
+  },
+  "signed": {
+    "weight": 2.05,
+    "phishing_ratio": 0.9,
+    "support": 21
+  },
+  "algorithm": {
+    "weight": 1.67,
+    "phishing_ratio": 0.86,
+    "support": 21
+  },
+  "menu": {
+    "weight": 1.36,
+    "phishing_ratio": 0.81,
+    "support": 21
+  },
+  "investor": {
+    "weight": 1.36,
+    "phishing_ratio": 0.81,
+    "support": 21
+  },
+  "piece": {
+    "weight": 1.1,
+    "phishing_ratio": 0.76,
+    "support": 21
+  },
+  "registration": {
+    "weight": 1.1,
+    "phishing_ratio": 0.76,
+    "support": 21
+  },
+  "turnstile": {
+    "weight": 3.71,
+    "phishing_ratio": 1,
+    "support": 20
+  },
+  "procurement": {
+    "weight": 3.71,
+    "phishing_ratio": 1,
+    "support": 20
+  },
+  "cloudflare": {
+    "weight": 3.71,
+    "phishing_ratio": 1,
+    "support": 20
+  },
+  "talents": {
+    "weight": 3.71,
+    "phishing_ratio": 1,
+    "support": 20
+  },
+  "privileges": {
+    "weight": 3.71,
+    "phishing_ratio": 1,
+    "support": 20
+  },
+  "periodical": {
+    "weight": 3.71,
+    "phishing_ratio": 1,
+    "support": 20
+  },
+  "verify": {
+    "weight": 2,
+    "phishing_ratio": 0.9,
+    "support": 20
+  },
+  "method": {
+    "weight": 2,
+    "phishing_ratio": 0.9,
+    "support": 20
+  },
+  "tower": {
+    "weight": 1.61,
+    "phishing_ratio": 0.85,
+    "support": 20
+  },
+  "targeting": {
+    "weight": 1.3,
+    "phishing_ratio": 0.8,
+    "support": 20
+  },
+  "portfolio": {
+    "weight": 1.04,
+    "phishing_ratio": 0.75,
+    "support": 20
+  },
+  "identidad": {
+    "weight": 3.66,
+    "phishing_ratio": 1,
+    "support": 19
+  },
+  "robot": {
+    "weight": 2.51,
+    "phishing_ratio": 0.95,
+    "support": 19
+  },
+  "respect": {
+    "weight": 2.51,
+    "phishing_ratio": 0.95,
+    "support": 19
+  },
+  "sido": {
+    "weight": 2.51,
+    "phishing_ratio": 0.95,
+    "support": 19
+  },
+  "relations": {
+    "weight": 1.95,
+    "phishing_ratio": 0.89,
+    "support": 19
+  },
+  "pass": {
+    "weight": 1.95,
+    "phishing_ratio": 0.89,
+    "support": 19
+  },
+  "vehicle": {
+    "weight": 1.95,
+    "phishing_ratio": 0.89,
+    "support": 19
+  },
+  "continuing": {
+    "weight": 1.55,
+    "phishing_ratio": 0.84,
+    "support": 19
+  },
+  "profile": {
+    "weight": 1.24,
+    "phishing_ratio": 0.79,
+    "support": 19
+  },
+  "directly": {
+    "weight": 0.97,
+    "phishing_ratio": 0.74,
+    "support": 19
+  },
+  "italiano": {
+    "weight": 3.61,
+    "phishing_ratio": 1,
+    "support": 18
+  },
+  "dansk": {
+    "weight": 3.61,
+    "phishing_ratio": 1,
+    "support": 18
+  },
+  "suomi": {
+    "weight": 3.61,
+    "phishing_ratio": 1,
+    "support": 18
+  },
+  "malaysia": {
+    "weight": 3.61,
+    "phishing_ratio": 1,
+    "support": 18
+  },
+  "deutsch": {
+    "weight": 3.61,
+    "phishing_ratio": 1,
+    "support": 18
+  },
+  "svenska": {
+    "weight": 3.61,
+    "phishing_ratio": 1,
+    "support": 18
+  },
+  "batch": {
+    "weight": 3.61,
+    "phishing_ratio": 1,
+    "support": 18
+  },
+  "nederlands": {
+    "weight": 3.61,
+    "phishing_ratio": 1,
+    "support": 18
+  },
+  "lozko": {
+    "weight": 3.61,
+    "phishing_ratio": 1,
+    "support": 18
+  },
+  "magyar": {
+    "weight": 3.61,
+    "phishing_ratio": 1,
+    "support": 18
+  },
+  "olx": {
+    "weight": 3.61,
+    "phishing_ratio": 1,
+    "support": 18
+  },
+  "jednoosobowe": {
+    "weight": 3.61,
+    "phishing_ratio": 1,
+    "support": 18
+  },
+  "attempts": {
+    "weight": 3.61,
+    "phishing_ratio": 1,
+    "support": 18
+  },
+  "ref": {
+    "weight": 3.61,
+    "phishing_ratio": 1,
+    "support": 18
+  },
+  "brasil": {
+    "weight": 2.46,
+    "phishing_ratio": 0.94,
+    "support": 18
+  },
+  "sustainability": {
+    "weight": 2.46,
+    "phishing_ratio": 0.94,
+    "support": 18
+  },
+  "item": {
+    "weight": 1.49,
+    "phishing_ratio": 0.83,
+    "support": 18
+  },
+  "strictly": {
+    "weight": 1.49,
+    "phishing_ratio": 0.83,
+    "support": 18
+  },
+  "abonnement": {
+    "weight": 1.49,
+    "phishing_ratio": 0.83,
+    "support": 18
+  },
+  "desde": {
+    "weight": 1.17,
+    "phishing_ratio": 0.78,
+    "support": 18
+  },
+  "deposits": {
+    "weight": 0.9,
+    "phishing_ratio": 0.72,
+    "support": 18
+  },
+  "shared": {
+    "weight": 0.9,
+    "phishing_ratio": 0.72,
+    "support": 18
+  },
+  "net": {
+    "weight": 0.9,
+    "phishing_ratio": 0.72,
+    "support": 18
+  },
+  "yijitong": {
+    "weight": 3.56,
+    "phishing_ratio": 1,
+    "support": 17
+  },
+  "daifuguanjia": {
+    "weight": 3.56,
+    "phishing_ratio": 1,
+    "support": 17
+  },
+  "malay": {
+    "weight": 3.56,
+    "phishing_ratio": 1,
+    "support": 17
+  },
+  "phoenixwings": {
+    "weight": 3.56,
+    "phishing_ratio": 1,
+    "support": 17
+  },
+  "wuyoushenghuo": {
+    "weight": 3.56,
+    "phishing_ratio": 1,
+    "support": 17
+  },
+  "shuzhitaibai": {
+    "weight": 3.56,
+    "phishing_ratio": 1,
+    "support": 17
+  },
+  "wrd": {
+    "weight": 3.56,
+    "phishing_ratio": 1,
+    "support": 17
+  },
+  "xiaoguoguo": {
+    "weight": 3.56,
+    "phishing_ratio": 1,
+    "support": 17
+  },
+  "shundiantong": {
+    "weight": 3.56,
+    "phishing_ratio": 1,
+    "support": 17
+  },
+  "scs": {
+    "weight": 3.56,
+    "phishing_ratio": 1,
+    "support": 17
+  },
+  "scd": {
+    "weight": 3.56,
+    "phishing_ratio": 1,
+    "support": 17
+  },
+  "decentralized": {
+    "weight": 3.56,
+    "phishing_ratio": 1,
+    "support": 17
+  },
+  "scc": {
+    "weight": 3.56,
+    "phishing_ratio": 1,
+    "support": 17
+  },
+  "scct": {
+    "weight": 3.56,
+    "phishing_ratio": 1,
+    "support": 17
+  },
+  "butler": {
+    "weight": 3.56,
+    "phishing_ratio": 1,
+    "support": 17
+  },
+  "filipino": {
+    "weight": 3.56,
+    "phishing_ratio": 1,
+    "support": 17
+  },
+  "unmanned": {
+    "weight": 3.56,
+    "phishing_ratio": 1,
+    "support": 17
+  },
+  "hrvatski": {
+    "weight": 3.56,
+    "phishing_ratio": 1,
+    "support": 17
+  },
+  "flink": {
+    "weight": 3.56,
+    "phishing_ratio": 1,
+    "support": 17
+  },
+  "kuaijishunfeng": {
+    "weight": 3.56,
+    "phishing_ratio": 1,
+    "support": 17
+  },
+  "sce": {
+    "weight": 3.56,
+    "phishing_ratio": 1,
+    "support": 17
+  },
+  "window": {
+    "weight": 2.4,
+    "phishing_ratio": 0.94,
+    "support": 17
+  },
+  "functional": {
+    "weight": 2.4,
+    "phishing_ratio": 0.94,
+    "support": 17
+  },
+  "move": {
+    "weight": 1.82,
+    "phishing_ratio": 0.88,
+    "support": 17
+  },
+  "york": {
+    "weight": 1.82,
+    "phishing_ratio": 0.88,
+    "support": 17
+  },
+  "choices": {
+    "weight": 1.42,
+    "phishing_ratio": 0.82,
+    "support": 17
+  },
+  "dies": {
+    "weight": 1.1,
+    "phishing_ratio": 0.76,
+    "support": 17
+  },
+  "clearance": {
+    "weight": 1.1,
+    "phishing_ratio": 0.76,
+    "support": 17
+  },
+  "comme": {
+    "weight": 1.1,
+    "phishing_ratio": 0.76,
+    "support": 17
+  },
+  "prevent": {
+    "weight": 1.1,
+    "phishing_ratio": 0.76,
+    "support": 17
+  },
+  "port": {
+    "weight": 1.1,
+    "phishing_ratio": 0.76,
+    "support": 17
+  },
+  "mot": {
+    "weight": 3.5,
+    "phishing_ratio": 1,
+    "support": 16
+  },
+  "pause": {
+    "weight": 3.5,
+    "phishing_ratio": 1,
+    "support": 16
+  },
+  "minutos": {
+    "weight": 3.5,
+    "phishing_ratio": 1,
+    "support": 16
+  },
+  "passe": {
+    "weight": 3.5,
+    "phishing_ratio": 1,
+    "support": 16
+  },
+  "identifiant": {
+    "weight": 3.5,
+    "phishing_ratio": 1,
+    "support": 16
+  },
+  "redirected": {
+    "weight": 3.5,
+    "phishing_ratio": 1,
+    "support": 16
+  },
+  "morning": {
+    "weight": 2.34,
+    "phishing_ratio": 0.94,
+    "support": 16
+  },
+  "submission": {
+    "weight": 2.34,
+    "phishing_ratio": 0.94,
+    "support": 16
+  },
+  "distribution": {
+    "weight": 2.34,
+    "phishing_ratio": 0.94,
+    "support": 16
+  },
+  "typing": {
+    "weight": 2.34,
+    "phishing_ratio": 0.94,
+    "support": 16
+  },
+  "polski": {
+    "weight": 2.34,
+    "phishing_ratio": 0.94,
+    "support": 16
+  },
+  "usuario": {
+    "weight": 2.34,
+    "phishing_ratio": 0.94,
+    "support": 16
+  },
+  "nombre": {
+    "weight": 2.34,
+    "phishing_ratio": 0.94,
+    "support": 16
+  },
+  "telefon": {
+    "weight": 2.34,
+    "phishing_ratio": 0.94,
+    "support": 16
+  },
+  "function": {
+    "weight": 1.76,
+    "phishing_ratio": 0.88,
+    "support": 16
+  },
+  "advertising": {
+    "weight": 1.76,
+    "phishing_ratio": 0.88,
+    "support": 16
+  },
+  "develop": {
+    "weight": 1.35,
+    "phishing_ratio": 0.81,
+    "support": 16
+  },
+  "identified": {
+    "weight": 1.35,
+    "phishing_ratio": 0.81,
+    "support": 16
+  },
+  "cette": {
+    "weight": 1.35,
+    "phishing_ratio": 0.81,
+    "support": 16
+  },
+  "sicherheit": {
+    "weight": 1.35,
+    "phishing_ratio": 0.81,
+    "support": 16
+  },
+  "intended": {
+    "weight": 1.35,
+    "phishing_ratio": 0.81,
+    "support": 16
+  },
+  "loans": {
+    "weight": 1.35,
+    "phishing_ratio": 0.81,
+    "support": 16
+  },
+  "reasons": {
+    "weight": 1.35,
+    "phishing_ratio": 0.81,
+    "support": 16
+  },
+  "hat": {
+    "weight": 1.35,
+    "phishing_ratio": 0.81,
+    "support": 16
+  },
+  "pressing": {
+    "weight": 3.43,
+    "phishing_ratio": 1,
+    "support": 15
+  },
+  "dial": {
+    "weight": 3.43,
+    "phishing_ratio": 1,
+    "support": 15
+  },
+  "pracownika": {
+    "weight": 3.43,
+    "phishing_ratio": 1,
+    "support": 15
+  },
+  "pozdrawiam": {
+    "weight": 3.43,
+    "phishing_ratio": 1,
+    "support": 15
+  },
+  "gdzie": {
+    "weight": 3.43,
+    "phishing_ratio": 1,
+    "support": 15
+  },
+  "submitting": {
+    "weight": 3.43,
+    "phishing_ratio": 1,
+    "support": 15
+  },
+  "vendido": {
+    "weight": 3.43,
+    "phishing_ratio": 1,
+    "support": 15
+  },
+  "connecter": {
+    "weight": 3.43,
+    "phishing_ratio": 1,
+    "support": 15
+  },
+  "norsk": {
+    "weight": 3.43,
+    "phishing_ratio": 1,
+    "support": 15
+  },
+  "finansowego": {
+    "weight": 3.43,
+    "phishing_ratio": 1,
+    "support": 15
+  },
+  "oops": {
+    "weight": 3.43,
+    "phishing_ratio": 1,
+    "support": 15
+  },
+  "avbryt": {
+    "weight": 3.43,
+    "phishing_ratio": 1,
+    "support": 15
+  },
+  "repay": {
+    "weight": 2.27,
+    "phishing_ratio": 0.93,
+    "support": 15
+  },
+  "aviso": {
+    "weight": 2.27,
+    "phishing_ratio": 0.93,
+    "support": 15
+  },
+  "indonesian": {
+    "weight": 2.27,
+    "phishing_ratio": 0.93,
+    "support": 15
+  },
+  "leverage": {
+    "weight": 2.27,
+    "phishing_ratio": 0.93,
+    "support": 15
+  },
+  "garantir": {
+    "weight": 2.27,
+    "phishing_ratio": 0.93,
+    "support": 15
+  },
+  "size": {
+    "weight": 1.69,
+    "phishing_ratio": 0.87,
+    "support": 15
+  },
+  "regulations": {
+    "weight": 1.69,
+    "phishing_ratio": 0.87,
+    "support": 15
+  },
+  "identity": {
+    "weight": 1.69,
+    "phishing_ratio": 0.87,
+    "support": 15
+  },
+  "sold": {
+    "weight": 1.69,
+    "phishing_ratio": 0.87,
+    "support": 15
+  },
+  "eines": {
+    "weight": 1.69,
+    "phishing_ratio": 0.87,
+    "support": 15
+  },
+  "practices": {
+    "weight": 1.27,
+    "phishing_ratio": 0.8,
+    "support": 15
+  },
+  "regional": {
+    "weight": 1.27,
+    "phishing_ratio": 0.8,
+    "support": 15
+  },
+  "prepare": {
+    "weight": 1.27,
+    "phishing_ratio": 0.8,
+    "support": 15
+  },
+  "consent": {
+    "weight": 1.27,
+    "phishing_ratio": 0.8,
+    "support": 15
+  },
+  "dans": {
+    "weight": 0.94,
+    "phishing_ratio": 0.73,
+    "support": 15
+  },
+  "usd": {
+    "weight": 3.37,
+    "phishing_ratio": 1,
+    "support": 14
+  },
+  "borrow": {
+    "weight": 3.37,
+    "phishing_ratio": 1,
+    "support": 14
+  },
+  "esperanto": {
+    "weight": 3.37,
+    "phishing_ratio": 1,
+    "support": 14
+  },
+  "returned": {
+    "weight": 3.37,
+    "phishing_ratio": 1,
+    "support": 14
+  },
+  "nequi": {
+    "weight": 3.37,
+    "phishing_ratio": 1,
+    "support": 14
+  },
+  "nacimiento": {
+    "weight": 3.37,
+    "phishing_ratio": 1,
+    "support": 14
+  },
+  "fecha": {
+    "weight": 3.37,
+    "phishing_ratio": 1,
+    "support": 14
+  },
+  "laser": {
+    "weight": 3.37,
+    "phishing_ratio": 1,
+    "support": 14
+  },
+  "redirect": {
+    "weight": 3.37,
+    "phishing_ratio": 1,
+    "support": 14
+  },
+  "docusign": {
+    "weight": 3.37,
+    "phishing_ratio": 1,
+    "support": 14
+  },
+  "submit": {
+    "weight": 2.2,
+    "phishing_ratio": 0.93,
+    "support": 14
+  },
+  "outlets": {
+    "weight": 2.2,
+    "phishing_ratio": 0.93,
+    "support": 14
+  },
+  "ihnen": {
+    "weight": 2.2,
+    "phishing_ratio": 0.93,
+    "support": 14
+  },
+  "mechanismus": {
+    "weight": 2.2,
+    "phishing_ratio": 0.93,
+    "support": 14
+  },
+  "pas": {
+    "weight": 2.2,
+    "phishing_ratio": 0.93,
+    "support": 14
+  },
+  "modify": {
+    "weight": 2.2,
+    "phishing_ratio": 0.93,
+    "support": 14
+  },
+  "appliance": {
+    "weight": 2.2,
+    "phishing_ratio": 0.93,
+    "support": 14
+  },
+  "shortened": {
+    "weight": 2.2,
+    "phishing_ratio": 0.93,
+    "support": 14
+  },
+  "fulfillment": {
+    "weight": 2.2,
+    "phishing_ratio": 0.93,
+    "support": 14
+  },
+  "ltl": {
+    "weight": 2.2,
+    "phishing_ratio": 0.93,
+    "support": 14
+  },
+  "mechanism": {
+    "weight": 2.2,
+    "phishing_ratio": 0.93,
+    "support": 14
+  },
+  "afin": {
+    "weight": 2.2,
+    "phishing_ratio": 0.93,
+    "support": 14
+  },
+  "artificielle": {
+    "weight": 2.2,
+    "phishing_ratio": 0.93,
+    "support": 14
+  },
+  "removed": {
+    "weight": 2.2,
+    "phishing_ratio": 0.93,
+    "support": 14
+  },
+  "affect": {
+    "weight": 1.61,
+    "phishing_ratio": 0.86,
+    "support": 14
+  },
+  "install": {
+    "weight": 1.19,
+    "phishing_ratio": 0.79,
+    "support": 14
+  },
+  "philippines": {
+    "weight": 1.19,
+    "phishing_ratio": 0.79,
+    "support": 14
+  },
+  "proteger": {
+    "weight": 3.3,
+    "phishing_ratio": 1,
+    "support": 13
+  },
+  "informations": {
+    "weight": 3.3,
+    "phishing_ratio": 1,
+    "support": 13
+  },
+  "intentos": {
+    "weight": 3.3,
+    "phishing_ratio": 1,
+    "support": 13
+  },
+  "raccourci": {
+    "weight": 3.3,
+    "phishing_ratio": 1,
+    "support": 13
+  },
+  "genehmigt": {
+    "weight": 3.3,
+    "phishing_ratio": 1,
+    "support": 13
+  },
+  "incumplimiento": {
+    "weight": 3.3,
+    "phishing_ratio": 1,
+    "support": 13
+  },
+  "algorithme": {
+    "weight": 3.3,
+    "phishing_ratio": 1,
+    "support": 13
+  },
+  "visitar": {
+    "weight": 3.3,
+    "phishing_ratio": 1,
+    "support": 13
+  },
+  "hace": {
+    "weight": 3.3,
+    "phishing_ratio": 1,
+    "support": 13
+  },
+  "assurer": {
+    "weight": 3.3,
+    "phishing_ratio": 1,
+    "support": 13
+  },
+  "tentatives": {
+    "weight": 3.3,
+    "phishing_ratio": 1,
+    "support": 13
+  },
+  "weiterentwickeln": {
+    "weight": 3.3,
+    "phishing_ratio": 1,
+    "support": 13
+  },
+  "sospechosos": {
+    "weight": 3.3,
+    "phishing_ratio": 1,
+    "support": 13
+  },
+  "controlled": {
+    "weight": 3.3,
+    "phishing_ratio": 1,
+    "support": 13
+  },
+  "approve": {
+    "weight": 3.3,
+    "phishing_ratio": 1,
+    "support": 13
+  },
+  "aufgrund": {
+    "weight": 3.3,
+    "phishing_ratio": 1,
+    "support": 13
+  },
+  "bloquer": {
+    "weight": 3.3,
+    "phishing_ratio": 1,
+    "support": 13
+  },
+  "weiterleitung": {
+    "weight": 3.3,
+    "phishing_ratio": 1,
+    "support": 13
+  },
+  "consulter": {
+    "weight": 3.3,
+    "phishing_ratio": 1,
+    "support": 13
+  },
+  "redirection": {
+    "weight": 3.3,
+    "phishing_ratio": 1,
+    "support": 13
+  },
+  "raison": {
+    "weight": 3.3,
+    "phishing_ratio": 1,
+    "support": 13
+  },
+  "monitoreando": {
+    "weight": 3.3,
+    "phishing_ratio": 1,
+    "support": 13
+  },
+  "sicherheitshinweis": {
+    "weight": 3.3,
+    "phishing_ratio": 1,
+    "support": 13
+  },
+  "passvvord": {
+    "weight": 3.3,
+    "phishing_ratio": 1,
+    "support": 13
+  },
+  "normas": {
+    "weight": 3.3,
+    "phishing_ratio": 1,
+    "support": 13
+  },
+  "suspicious": {
+    "weight": 3.3,
+    "phishing_ratio": 1,
+    "support": 13
+  },
+  "intentabas": {
+    "weight": 3.3,
+    "phishing_ratio": 1,
+    "support": 13
+  },
+  "acortado": {
+    "weight": 3.3,
+    "phishing_ratio": 1,
+    "support": 13
+  },
+  "geschieht": {
+    "weight": 3.3,
+    "phishing_ratio": 1,
+    "support": 13
+  },
+  "algoritmo": {
+    "weight": 3.3,
+    "phishing_ratio": 1,
+    "support": 13
+  },
+  "souhaitiez": {
+    "weight": 3.3,
+    "phishing_ratio": 1,
+    "support": 13
+  },
+  "lien": {
+    "weight": 3.3,
+    "phishing_ratio": 1,
+    "support": 13
+  },
+  "continuera": {
+    "weight": 3.3,
+    "phishing_ratio": 1,
+    "support": 13
+  },
+  "informationssicherheit": {
+    "weight": 3.3,
+    "phishing_ratio": 1,
+    "support": 13
+  },
+  "avis": {
+    "weight": 3.3,
+    "phishing_ratio": 1,
+    "support": 13
+  },
+  "ecount": {
+    "weight": 3.3,
+    "phishing_ratio": 1,
+    "support": 13
+  },
+  "identificado": {
+    "weight": 3.3,
+    "phishing_ratio": 1,
+    "support": 13
+  },
+  "desarrollando": {
+    "weight": 3.3,
+    "phishing_ratio": 1,
+    "support": 13
+  },
+  "enviar": {
+    "weight": 3.3,
+    "phishing_ratio": 1,
+    "support": 13
+  },
+  "nutzungsrichtlinien": {
+    "weight": 3.3,
+    "phishing_ratio": 1,
+    "support": 13
+  },
+  "acortamiento": {
+    "weight": 3.3,
+    "phishing_ratio": 1,
+    "support": 13
+  },
+  "mesure": {
+    "weight": 3.3,
+    "phishing_ratio": 1,
+    "support": 13
+  },
+  "prevenir": {
+    "weight": 3.3,
+    "phishing_ratio": 1,
+    "support": 13
+  },
+  "parce": {
+    "weight": 3.3,
+    "phishing_ratio": 1,
+    "support": 13
+  },
+  "vise": {
+    "weight": 3.3,
+    "phishing_ratio": 1,
+    "support": 13
+  },
+  "shortening": {
+    "weight": 3.3,
+    "phishing_ratio": 1,
+    "support": 13
+  },
+  "surveiller": {
+    "weight": 3.3,
+    "phishing_ratio": 1,
+    "support": 13
+  },
+  "mantener": {
+    "weight": 3.3,
+    "phishing_ratio": 1,
+    "support": 13
+  },
+  "wahrung": {
+    "weight": 3.3,
+    "phishing_ratio": 1,
+    "support": 13
+  },
+  "raccourcissement": {
+    "weight": 3.3,
+    "phishing_ratio": 1,
+    "support": 13
+  },
+  "tarjeta": {
+    "weight": 3.3,
+    "phishing_ratio": 1,
+    "support": 13
+  },
+  "algorithmus": {
+    "weight": 3.3,
+    "phishing_ratio": 1,
+    "support": 13
+  },
+  "malicioso": {
+    "weight": 3.3,
+    "phishing_ratio": 1,
+    "support": 13
+  },
+  "eliminado": {
+    "weight": 3.3,
+    "phishing_ratio": 1,
+    "support": 13
+  },
+  "eingestuft": {
+    "weight": 3.3,
+    "phishing_ratio": 1,
+    "support": 13
+  },
+  "razones": {
+    "weight": 3.3,
+    "phishing_ratio": 1,
+    "support": 13
+  },
+  "malveillant": {
+    "weight": 3.3,
+    "phishing_ratio": 1,
+    "support": 13
+  },
+  "raisons": {
+    "weight": 3.3,
+    "phishing_ratio": 1,
+    "support": 13
+  },
+  "esto": {
+    "weight": 3.3,
+    "phishing_ratio": 1,
+    "support": 13
+  },
+  "malicious": {
+    "weight": 3.3,
+    "phishing_ratio": 1,
+    "support": 13
+  },
+  "betrugsversuchen": {
+    "weight": 3.3,
+    "phishing_ratio": 1,
+    "support": 13
+  },
+  "entfernt": {
+    "weight": 3.3,
+    "phishing_ratio": 1,
+    "support": 13
+  },
+  "verhinderung": {
+    "weight": 3.3,
+    "phishing_ratio": 1,
+    "support": 13
+  },
+  "aufgerufene": {
+    "weight": 3.3,
+    "phishing_ratio": 1,
+    "support": 13
+  },
+  "gegen": {
+    "weight": 3.3,
+    "phishing_ratio": 1,
+    "support": 13
+  },
+  "mecanismo": {
+    "weight": 3.3,
+    "phishing_ratio": 1,
+    "support": 13
+  },
+  "cet": {
+    "weight": 3.3,
+    "phishing_ratio": 1,
+    "support": 13
+  },
+  "enlace": {
+    "weight": 3.3,
+    "phishing_ratio": 1,
+    "support": 13
+  },
+  "blockieren": {
+    "weight": 3.3,
+    "phishing_ratio": 1,
+    "support": 13
+  },
+  "lis": {
+    "weight": 3.3,
+    "phishing_ratio": 1,
+    "support": 13
+  },
+  "suspects": {
+    "weight": 3.3,
+    "phishing_ratio": 1,
+    "support": 13
+  },
+  "actualizar": {
+    "weight": 3.3,
+    "phishing_ratio": 1,
+    "support": 13
+  },
+  "plateforme": {
+    "weight": 3.3,
+    "phishing_ratio": 1,
+    "support": 13
+  },
+  "collected": {
+    "weight": 2.12,
+    "phishing_ratio": 0.92,
+    "support": 13
+  },
+  "evolving": {
+    "weight": 2.12,
+    "phishing_ratio": 0.92,
+    "support": 13
+  },
+  "canceled": {
+    "weight": 2.12,
+    "phishing_ratio": 0.92,
+    "support": 13
+  },
+  "powermax": {
+    "weight": 1.53,
+    "phishing_ratio": 0.85,
+    "support": 13
+  },
+  "count": {
+    "weight": 1.53,
+    "phishing_ratio": 0.85,
+    "support": 13
+  },
+  "allen": {
+    "weight": 1.53,
+    "phishing_ratio": 0.85,
+    "support": 13
+  },
+  "mostly": {
+    "weight": 1.1,
+    "phishing_ratio": 0.77,
+    "support": 13
+  },
+  "preview": {
+    "weight": 1.1,
+    "phishing_ratio": 0.77,
+    "support": 13
+  },
+  "export": {
+    "weight": 1.1,
+    "phishing_ratio": 0.77,
+    "support": 13
+  },
+  "else": {
+    "weight": 1.1,
+    "phishing_ratio": 0.77,
+    "support": 13
+  },
+  "credentials": {
+    "weight": 3.22,
+    "phishing_ratio": 1,
+    "support": 12
+  },
+  "naver": {
+    "weight": 3.22,
+    "phishing_ratio": 1,
+    "support": 12
+  },
+  "nft": {
+    "weight": 3.22,
+    "phishing_ratio": 1,
+    "support": 12
+  },
+  "mis": {
+    "weight": 3.22,
+    "phishing_ratio": 1,
+    "support": 12
+  },
+  "storing": {
+    "weight": 3.22,
+    "phishing_ratio": 1,
+    "support": 12
+  },
+  "megamail": {
+    "weight": 3.22,
+    "phishing_ratio": 1,
+    "support": 12
+  },
+  "abandoned": {
+    "weight": 3.22,
+    "phishing_ratio": 1,
+    "support": 12
+  },
+  "nfts": {
+    "weight": 3.22,
+    "phishing_ratio": 1,
+    "support": 12
+  },
+  "france": {
+    "weight": 3.22,
+    "phishing_ratio": 1,
+    "support": 12
+  },
+  "entrar": {
+    "weight": 3.22,
+    "phishing_ratio": 1,
+    "support": 12
+  },
+  "condiciones": {
+    "weight": 3.22,
+    "phishing_ratio": 1,
+    "support": 12
+  },
+  "norton": {
+    "weight": 3.22,
+    "phishing_ratio": 1,
+    "support": 12
+  },
+  "comporium": {
+    "weight": 3.22,
+    "phishing_ratio": 1,
+    "support": 12
+  },
+  "cloudinfolibrary": {
+    "weight": 3.22,
+    "phishing_ratio": 1,
+    "support": 12
+  },
+  "applied": {
+    "weight": 2.04,
+    "phishing_ratio": 0.92,
+    "support": 12
+  },
+  "korea": {
+    "weight": 2.04,
+    "phishing_ratio": 0.92,
+    "support": 12
+  },
+  "continuar": {
+    "weight": 2.04,
+    "phishing_ratio": 0.92,
+    "support": 12
+  },
+  "viva": {
+    "weight": 2.04,
+    "phishing_ratio": 0.92,
+    "support": 12
+  },
+  "mon": {
+    "weight": 1.44,
+    "phishing_ratio": 0.83,
+    "support": 12
+  },
+  "bottom": {
+    "weight": 1.44,
+    "phishing_ratio": 0.83,
+    "support": 12
+  },
+  "present": {
+    "weight": 1.44,
+    "phishing_ratio": 0.83,
+    "support": 12
+  },
+  "qualidade": {
+    "weight": 1.44,
+    "phishing_ratio": 0.83,
+    "support": 12
+  },
+  "hospital": {
+    "weight": 1.44,
+    "phishing_ratio": 0.83,
+    "support": 12
+  },
+  "chrome": {
+    "weight": 1.44,
+    "phishing_ratio": 0.83,
+    "support": 12
+  },
+  "bundles": {
+    "weight": 1.44,
+    "phishing_ratio": 0.83,
+    "support": 12
+  },
+  "automated": {
+    "weight": 1,
+    "phishing_ratio": 0.75,
+    "support": 12
+  },
+  "esta": {
+    "weight": 1,
+    "phishing_ratio": 0.75,
+    "support": 12
+  },
+  "electoral": {
+    "weight": 3.14,
+    "phishing_ratio": 1,
+    "support": 11
+  },
+  "abb": {
+    "weight": 3.14,
+    "phishing_ratio": 1,
+    "support": 11
+  },
+  "rexroth": {
+    "weight": 3.14,
+    "phishing_ratio": 1,
+    "support": 11
+  },
+  "neles": {
+    "weight": 3.14,
+    "phishing_ratio": 1,
+    "support": 11
+  },
+  "hima": {
+    "weight": 3.14,
+    "phishing_ratio": 1,
+    "support": 11
+  },
+  "pilz": {
+    "weight": 3.14,
+    "phishing_ratio": 1,
+    "support": 11
+  },
+  "hammer": {
+    "weight": 3.14,
+    "phishing_ratio": 1,
+    "support": 11
+  },
+  "bradley": {
+    "weight": 3.14,
+    "phishing_ratio": 1,
+    "support": 11
+  },
+  "instituto": {
+    "weight": 3.14,
+    "phishing_ratio": 1,
+    "support": 11
+  },
+  "lenze": {
+    "weight": 3.14,
+    "phishing_ratio": 1,
+    "support": 11
+  },
+  "caisse": {
+    "weight": 3.14,
+    "phishing_ratio": 1,
+    "support": 11
+  },
+  "mitsubishi": {
+    "weight": 3.14,
+    "phishing_ratio": 1,
+    "support": 11
+  },
+  "omron": {
+    "weight": 3.14,
+    "phishing_ratio": 1,
+    "support": 11
+  },
+  "metso": {
+    "weight": 3.14,
+    "phishing_ratio": 1,
+    "support": 11
+  },
+  "triconex": {
+    "weight": 3.14,
+    "phishing_ratio": 1,
+    "support": 11
+  },
+  "eaton": {
+    "weight": 3.14,
+    "phishing_ratio": 1,
+    "support": 11
+  },
+  "cisco": {
+    "weight": 3.14,
+    "phishing_ratio": 1,
+    "support": 11
+  },
+  "ahgsydhavuywdgyasgvdyugaw": {
+    "weight": 3.14,
+    "phishing_ratio": 1,
+    "support": 11
+  },
+  "foxboro": {
+    "weight": 3.14,
+    "phishing_ratio": 1,
+    "support": 11
+  },
+  "redlion": {
+    "weight": 3.14,
+    "phishing_ratio": 1,
+    "support": 11
+  },
+  "danfoss": {
+    "weight": 3.14,
+    "phishing_ratio": 1,
+    "support": 11
+  },
+  "nacional": {
+    "weight": 3.14,
+    "phishing_ratio": 1,
+    "support": 11
+  },
+  "leuze": {
+    "weight": 3.14,
+    "phishing_ratio": 1,
+    "support": 11
+  },
+  "hansford": {
+    "weight": 3.14,
+    "phishing_ratio": 1,
+    "support": 11
+  },
+  "epro": {
+    "weight": 3.14,
+    "phishing_ratio": 1,
+    "support": 11
+  },
+  "sensata": {
+    "weight": 3.14,
+    "phishing_ratio": 1,
+    "support": 11
+  },
+  "fisher": {
+    "weight": 3.14,
+    "phishing_ratio": 1,
+    "support": 11
+  },
+  "bailey": {
+    "weight": 3.14,
+    "phishing_ratio": 1,
+    "support": 11
+  },
+  "banreservas": {
+    "weight": 3.14,
+    "phishing_ratio": 1,
+    "support": 11
+  },
+  "reliance": {
+    "weight": 3.14,
+    "phishing_ratio": 1,
+    "support": 11
+  },
+  "hongkong": {
+    "weight": 3.14,
+    "phishing_ratio": 1,
+    "support": 11
+  },
+  "kollmorgen": {
+    "weight": 3.14,
+    "phishing_ratio": 1,
+    "support": 11
+  },
+  "skins": {
+    "weight": 3.14,
+    "phishing_ratio": 1,
+    "support": 11
+  },
+  "rosemount": {
+    "weight": 3.14,
+    "phishing_ratio": 1,
+    "support": 11
+  },
+  "germany": {
+    "weight": 3.14,
+    "phishing_ratio": 1,
+    "support": 11
+  },
+  "cutler": {
+    "weight": 3.14,
+    "phishing_ratio": 1,
+    "support": 11
+  },
+  "connexion": {
+    "weight": 3.14,
+    "phishing_ratio": 1,
+    "support": 11
+  },
+  "yaskawa": {
+    "weight": 3.14,
+    "phishing_ratio": 1,
+    "support": 11
+  },
+  "phoenix": {
+    "weight": 3.14,
+    "phishing_ratio": 1,
+    "support": 11
+  },
+  "honeywell": {
+    "weight": 3.14,
+    "phishing_ratio": 1,
+    "support": 11
+  },
+  "yokogawa": {
+    "weight": 3.14,
+    "phishing_ratio": 1,
+    "support": 11
+  },
+  "grupo": {
+    "weight": 3.14,
+    "phishing_ratio": 1,
+    "support": 11
+  },
+  "schneider": {
+    "weight": 3.14,
+    "phishing_ratio": 1,
+    "support": 11
+  },
+  "slimpak": {
+    "weight": 3.14,
+    "phishing_ratio": 1,
+    "support": 11
+  },
+  "ics": {
+    "weight": 3.14,
+    "phishing_ratio": 1,
+    "support": 11
+  },
+  "instruments": {
+    "weight": 3.14,
+    "phishing_ratio": 1,
+    "support": 11
+  },
+  "espace": {
+    "weight": 3.14,
+    "phishing_ratio": 1,
+    "support": 11
+  },
+  "eurotherm": {
+    "weight": 3.14,
+    "phishing_ratio": 1,
+    "support": 11
+  },
+  "vietnam": {
+    "weight": 3.14,
+    "phishing_ratio": 1,
+    "support": 11
+  },
+  "amcl": {
+    "weight": 3.14,
+    "phishing_ratio": 1,
+    "support": 11
+  },
+  "moog": {
+    "weight": 3.14,
+    "phishing_ratio": 1,
+    "support": 11
+  },
+  "zealand": {
+    "weight": 3.14,
+    "phishing_ratio": 1,
+    "support": 11
+  },
+  "fanuc": {
+    "weight": 3.14,
+    "phishing_ratio": 1,
+    "support": 11
+  },
+  "toshiba": {
+    "weight": 3.14,
+    "phishing_ratio": 1,
+    "support": 11
+  },
+  "woodward": {
+    "weight": 3.14,
+    "phishing_ratio": 1,
+    "support": 11
+  },
+  "siemens": {
+    "weight": 3.14,
+    "phishing_ratio": 1,
+    "support": 11
+  },
+  "bender": {
+    "weight": 3.14,
+    "phishing_ratio": 1,
+    "support": 11
+  },
+  "thailand": {
+    "weight": 3.14,
+    "phishing_ratio": 1,
+    "support": 11
+  },
+  "elau": {
+    "weight": 3.14,
+    "phishing_ratio": 1,
+    "support": 11
+  },
+  "prosoft": {
+    "weight": 3.14,
+    "phishing_ratio": 1,
+    "support": 11
+  },
+  "unitronics": {
+    "weight": 3.14,
+    "phishing_ratio": 1,
+    "support": 11
+  },
+  "ovation": {
+    "weight": 3.14,
+    "phishing_ratio": 1,
+    "support": 11
+  },
+  "intercept": {
+    "weight": 3.14,
+    "phishing_ratio": 1,
+    "support": 11
+  },
+  "nevada": {
+    "weight": 3.14,
+    "phishing_ratio": 1,
+    "support": 11
+  },
+  "triplex": {
+    "weight": 3.14,
+    "phishing_ratio": 1,
+    "support": 11
+  },
+  "kuka": {
+    "weight": 3.14,
+    "phishing_ratio": 1,
+    "support": 11
+  },
+  "vnpost": {
+    "weight": 3.14,
+    "phishing_ratio": 1,
+    "support": 11
+  },
+  "emerson": {
+    "weight": 3.14,
+    "phishing_ratio": 1,
+    "support": 11
+  },
+  "bachmann": {
+    "weight": 3.14,
+    "phishing_ratio": 1,
+    "support": 11
+  },
+  "duplication": {
+    "weight": 3.14,
+    "phishing_ratio": 1,
+    "support": 11
+  },
+  "cas": {
+    "weight": 3.14,
+    "phishing_ratio": 1,
+    "support": 11
+  },
+  "jamesbury": {
+    "weight": 3.14,
+    "phishing_ratio": 1,
+    "support": 11
+  },
+  "sick": {
+    "weight": 3.14,
+    "phishing_ratio": 1,
+    "support": 11
+  },
+  "bently": {
+    "weight": 3.14,
+    "phishing_ratio": 1,
+    "support": 11
+  },
+  "authentification": {
+    "weight": 3.14,
+    "phishing_ratio": 1,
+    "support": 11
+  },
+  "kongsberg": {
+    "weight": 3.14,
+    "phishing_ratio": 1,
+    "support": 11
+  },
+  "sst": {
+    "weight": 3.14,
+    "phishing_ratio": 1,
+    "support": 11
+  },
+  "mois": {
+    "weight": 1.95,
+    "phishing_ratio": 0.91,
+    "support": 11
+  },
+  "pendant": {
+    "weight": 1.95,
+    "phishing_ratio": 0.91,
+    "support": 11
+  },
+  "aplikacji": {
+    "weight": 1.95,
+    "phishing_ratio": 0.91,
+    "support": 11
+  },
+  "informacje": {
+    "weight": 1.95,
+    "phishing_ratio": 0.91,
+    "support": 11
+  },
+  "accessories": {
+    "weight": 1.95,
+    "phishing_ratio": 0.91,
+    "support": 11
+  },
+  "coins": {
+    "weight": 1.34,
+    "phishing_ratio": 0.82,
+    "support": 11
+  },
+  "interest": {
+    "weight": 1.34,
+    "phishing_ratio": 0.82,
+    "support": 11
+  },
+  "loin": {
+    "weight": 3.04,
+    "phishing_ratio": 1,
+    "support": 10
+  },
+  "detalles": {
+    "weight": 3.04,
+    "phishing_ratio": 1,
+    "support": 10
+  },
+  "careers": {
+    "weight": 3.04,
+    "phishing_ratio": 1,
+    "support": 10
+  },
+  "leido": {
+    "weight": 3.04,
+    "phishing_ratio": 1,
+    "support": 10
+  },
+  "przerwach": {
+    "weight": 3.04,
+    "phishing_ratio": 1,
+    "support": 10
+  },
+  "cliquez": {
+    "weight": 3.04,
+    "phishing_ratio": 1,
+    "support": 10
+  },
+  "zaplanowanych": {
+    "weight": 3.04,
+    "phishing_ratio": 1,
+    "support": 10
+  },
+  "transporte": {
+    "weight": 3.04,
+    "phishing_ratio": 1,
+    "support": 10
+  },
+  "londrina": {
+    "weight": 3.04,
+    "phishing_ratio": 1,
+    "support": 10
+  },
+  "jusqu": {
+    "weight": 3.04,
+    "phishing_ratio": 1,
+    "support": 10
+  },
+  "puntos": {
+    "weight": 3.04,
+    "phishing_ratio": 1,
+    "support": 10
+  },
+  "authenticate": {
+    "weight": 3.04,
+    "phishing_ratio": 1,
+    "support": 10
+  },
+  "credito": {
+    "weight": 3.04,
+    "phishing_ratio": 1,
+    "support": 10
+  },
+  "solicitados": {
+    "weight": 3.04,
+    "phishing_ratio": 1,
+    "support": 10
+  },
+  "bahasa": {
+    "weight": 3.04,
+    "phishing_ratio": 1,
+    "support": 10
+  },
+  "acepto": {
+    "weight": 3.04,
+    "phishing_ratio": 1,
+    "support": 10
+  },
+  "incorrect": {
+    "weight": 3.04,
+    "phishing_ratio": 1,
+    "support": 10
+  },
+  "xfinity": {
+    "weight": 3.04,
+    "phishing_ratio": 1,
+    "support": 10
+  },
+  "aller": {
+    "weight": 3.04,
+    "phishing_ratio": 1,
+    "support": 10
+  },
+  "seconnecter": {
+    "weight": 3.04,
+    "phishing_ratio": 1,
+    "support": 10
+  },
+  "ordering": {
+    "weight": 3.04,
+    "phishing_ratio": 1,
+    "support": 10
+  },
+  "embedded": {
+    "weight": 1.85,
+    "phishing_ratio": 0.9,
+    "support": 10
+  },
+  "materials": {
+    "weight": 1.85,
+    "phishing_ratio": 0.9,
+    "support": 10
+  },
+  "comprar": {
+    "weight": 1.85,
+    "phishing_ratio": 0.9,
+    "support": 10
+  },
+  "checking": {
+    "weight": 1.85,
+    "phishing_ratio": 0.9,
+    "support": 10
+  },
+  "locally": {
+    "weight": 1.85,
+    "phishing_ratio": 0.9,
+    "support": 10
+  },
+  "electronic": {
+    "weight": 1.22,
+    "phishing_ratio": 0.8,
+    "support": 10
+  },
+  "compare": {
+    "weight": 1.22,
+    "phishing_ratio": 0.8,
+    "support": 10
+  },
+  "limit": {
+    "weight": 1.22,
+    "phishing_ratio": 0.8,
+    "support": 10
+  },
+  "valid": {
+    "weight": 1.22,
+    "phishing_ratio": 0.8,
+    "support": 10
+  },
+  "banco": {
+    "weight": 2.94,
+    "phishing_ratio": 1,
+    "support": 9
+  },
+  "broadband": {
+    "weight": 2.94,
+    "phishing_ratio": 1,
+    "support": 9
+  },
+  "zoho": {
+    "weight": 2.94,
+    "phishing_ratio": 1,
+    "support": 9
+  },
+  "unrecognized": {
+    "weight": 2.94,
+    "phishing_ratio": 1,
+    "support": 9
+  },
+  "clause": {
+    "weight": 2.94,
+    "phishing_ratio": 1,
+    "support": 9
+  },
+  "ntt": {
+    "weight": 2.94,
+    "phishing_ratio": 1,
+    "support": 9
+  },
+  "nea": {
+    "weight": 2.94,
+    "phishing_ratio": 1,
+    "support": 9
+  },
+  "redirecting": {
+    "weight": 2.94,
+    "phishing_ratio": 1,
+    "support": 9
+  },
+  "sorry": {
+    "weight": 2.94,
+    "phishing_ratio": 1,
+    "support": 9
+  },
+  "pichincha": {
+    "weight": 2.94,
+    "phishing_ratio": 1,
+    "support": 9
+  },
+  "docomo": {
+    "weight": 2.94,
+    "phishing_ratio": 1,
+    "support": 9
+  },
+  "analyze": {
+    "weight": 1.73,
+    "phishing_ratio": 0.89,
+    "support": 9
+  },
+  "deemed": {
+    "weight": 1.73,
+    "phishing_ratio": 0.89,
+    "support": 9
+  },
+  "lower": {
+    "weight": 1.73,
+    "phishing_ratio": 0.89,
+    "support": 9
+  },
+  "solicita": {
+    "weight": 1.73,
+    "phishing_ratio": 0.89,
+    "support": 9
+  },
+  "introducing": {
+    "weight": 1.73,
+    "phishing_ratio": 0.89,
+    "support": 9
+  },
+  "invest": {
+    "weight": 1.73,
+    "phishing_ratio": 0.89,
+    "support": 9
+  },
+  "clicking": {
+    "weight": 1.73,
+    "phishing_ratio": 0.89,
+    "support": 9
+  },
+  "url": {
+    "weight": 1.73,
+    "phishing_ratio": 0.89,
+    "support": 9
+  },
+  "visited": {
+    "weight": 1.1,
+    "phishing_ratio": 0.78,
+    "support": 9
+  },
+  "matching": {
+    "weight": 1.1,
+    "phishing_ratio": 0.78,
+    "support": 9
+  },
+  "acceder": {
+    "weight": 1.1,
+    "phishing_ratio": 0.78,
+    "support": 9
+  },
+  "spot": {
+    "weight": 1.1,
+    "phishing_ratio": 0.78,
+    "support": 9
+  },
+  "fetching": {
+    "weight": 2.83,
+    "phishing_ratio": 1,
+    "support": 8
+  },
+  "kerry": {
+    "weight": 2.83,
+    "phishing_ratio": 1,
+    "support": 8
+  },
+  "coupon": {
+    "weight": 2.83,
+    "phishing_ratio": 1,
+    "support": 8
+  },
+  "ethereum": {
+    "weight": 2.83,
+    "phishing_ratio": 1,
+    "support": 8
+  },
+  "bito": {
+    "weight": 2.83,
+    "phishing_ratio": 1,
+    "support": 8
+  },
+  "airlines": {
+    "weight": 2.83,
+    "phishing_ratio": 1,
+    "support": 8
+  },
+  "yields": {
+    "weight": 2.83,
+    "phishing_ratio": 1,
+    "support": 8
+  },
+  "secured": {
+    "weight": 2.83,
+    "phishing_ratio": 1,
+    "support": 8
+  },
+  "invoice": {
+    "weight": 2.83,
+    "phishing_ratio": 1,
+    "support": 8
+  },
+  "macao": {
+    "weight": 2.83,
+    "phishing_ratio": 1,
+    "support": 8
+  },
+  "monto": {
+    "weight": 2.83,
+    "phishing_ratio": 1,
+    "support": 8
+  },
+  "stax": {
+    "weight": 2.83,
+    "phishing_ratio": 1,
+    "support": 8
+  },
+  "gmail": {
+    "weight": 2.83,
+    "phishing_ratio": 1,
+    "support": 8
+  },
+  "ftipark": {
+    "weight": 2.83,
+    "phishing_ratio": 1,
+    "support": 8
+  },
+  "personales": {
+    "weight": 2.83,
+    "phishing_ratio": 1,
+    "support": 8
+  },
+  "creatina": {
+    "weight": 2.83,
+    "phishing_ratio": 1,
+    "support": 8
+  },
+  "tratamiento": {
+    "weight": 2.83,
+    "phishing_ratio": 1,
+    "support": 8
+  },
+  "paga": {
+    "weight": 1.61,
+    "phishing_ratio": 0.88,
+    "support": 8
+  },
+  "logging": {
+    "weight": 1.61,
+    "phishing_ratio": 0.88,
+    "support": 8
+  },
+  "enhanced": {
+    "weight": 1.61,
+    "phishing_ratio": 0.88,
+    "support": 8
+  },
+  "bajo": {
+    "weight": 1.61,
+    "phishing_ratio": 0.88,
+    "support": 8
+  },
+  "solicitar": {
+    "weight": 1.61,
+    "phishing_ratio": 0.88,
+    "support": 8
+  },
+  "estudio": {
+    "weight": 1.61,
+    "phishing_ratio": 0.88,
+    "support": 8
+  },
+  "efectivo": {
+    "weight": 1.61,
+    "phishing_ratio": 0.88,
+    "support": 8
+  },
+  "tienes": {
+    "weight": 1.61,
+    "phishing_ratio": 0.88,
+    "support": 8
+  },
+  "identifying": {
+    "weight": 1.61,
+    "phishing_ratio": 0.88,
+    "support": 8
+  },
+  "period": {
+    "weight": 0.96,
+    "phishing_ratio": 0.75,
+    "support": 8
+  },
+  "tls": {
+    "weight": 0.96,
+    "phishing_ratio": 0.75,
+    "support": 8
+  },
+  "charged": {
+    "weight": 0.96,
+    "phishing_ratio": 0.75,
+    "support": 8
+  },
+  "nueva": {
+    "weight": 0.96,
+    "phishing_ratio": 0.75,
+    "support": 8
+  },
+  "described": {
+    "weight": 0.96,
+    "phishing_ratio": 0.75,
+    "support": 8
+  },
+  "headquarters": {
+    "weight": 0.96,
+    "phishing_ratio": 0.75,
+    "support": 8
+  },
+  "plata": {
+    "weight": 0.96,
+    "phishing_ratio": 0.75,
+    "support": 8
+  },
+  "leg": {
+    "weight": 2.71,
+    "phishing_ratio": 1,
+    "support": 7
+  },
+  "bienvenido": {
+    "weight": 2.71,
+    "phishing_ratio": 1,
+    "support": 7
+  },
+  "futures": {
+    "weight": 2.71,
+    "phishing_ratio": 1,
+    "support": 7
+  },
+  "senha": {
+    "weight": 2.71,
+    "phishing_ratio": 1,
+    "support": 7
+  },
+  "zooz": {
+    "weight": 2.71,
+    "phishing_ratio": 1,
+    "support": 7
+  },
+  "contactez": {
+    "weight": 2.71,
+    "phishing_ratio": 1,
+    "support": 7
+  },
+  "interests": {
+    "weight": 2.71,
+    "phishing_ratio": 1,
+    "support": 7
+  },
+  "latina": {
+    "weight": 2.71,
+    "phishing_ratio": 1,
+    "support": 7
+  },
+  "qfsearn": {
+    "weight": 2.71,
+    "phishing_ratio": 1,
+    "support": 7
+  },
+  "informaton": {
+    "weight": 2.71,
+    "phishing_ratio": 1,
+    "support": 7
+  },
+  "identifiable": {
+    "weight": 2.71,
+    "phishing_ratio": 1,
+    "support": 7
+  },
+  "uniquely": {
+    "weight": 2.71,
+    "phishing_ratio": 1,
+    "support": 7
+  },
+  "adverts": {
+    "weight": 2.71,
+    "phishing_ratio": 1,
+    "support": 7
+  },
+  "visitors": {
+    "weight": 2.71,
+    "phishing_ratio": 1,
+    "support": 7
+  },
+  "volver": {
+    "weight": 2.71,
+    "phishing_ratio": 1,
+    "support": 7
+  },
+  "filling": {
+    "weight": 2.71,
+    "phishing_ratio": 1,
+    "support": 7
+  },
+  "actions": {
+    "weight": 2.71,
+    "phishing_ratio": 1,
+    "support": 7
+  },
+  "decimos": {
+    "weight": 2.71,
+    "phishing_ratio": 1,
+    "support": 7
+  },
+  "disagree": {
+    "weight": 2.71,
+    "phishing_ratio": 1,
+    "support": 7
+  },
+  "derivatives": {
+    "weight": 2.71,
+    "phishing_ratio": 1,
+    "support": 7
+  },
+  "exist": {
+    "weight": 2.71,
+    "phishing_ratio": 1,
+    "support": 7
+  },
+  "cupons": {
+    "weight": 2.71,
+    "phishing_ratio": 1,
+    "support": 7
+  },
+  "expired": {
+    "weight": 2.71,
+    "phishing_ratio": 1,
+    "support": 7
+  },
+  "verificacion": {
+    "weight": 2.71,
+    "phishing_ratio": 1,
+    "support": 7
+  },
+  "anonymous": {
+    "weight": 2.71,
+    "phishing_ratio": 1,
+    "support": 7
+  },
+  "aggregated": {
+    "weight": 2.71,
+    "phishing_ratio": 1,
+    "support": 7
+  },
+  "personalisation": {
+    "weight": 2.71,
+    "phishing_ratio": 1,
+    "support": 7
+  },
+  "monohidratada": {
+    "weight": 2.71,
+    "phishing_ratio": 1,
+    "support": 7
+  },
+  "personally": {
+    "weight": 2.71,
+    "phishing_ratio": 1,
+    "support": 7
+  },
+  "instante": {
+    "weight": 2.71,
+    "phishing_ratio": 1,
+    "support": 7
+  },
+  "aprobamos": {
+    "weight": 2.71,
+    "phishing_ratio": 1,
+    "support": 7
+  },
+  "switched": {
+    "weight": 2.71,
+    "phishing_ratio": 1,
+    "support": 7
+  },
+  "friendzone": {
+    "weight": 2.71,
+    "phishing_ratio": 1,
+    "support": 7
+  },
+  "verde": {
+    "weight": 1.47,
+    "phishing_ratio": 0.86,
+    "support": 7
+  },
+  "institutional": {
+    "weight": 1.47,
+    "phishing_ratio": 0.86,
+    "support": 7
+  },
+  "conocemos": {
+    "weight": 1.47,
+    "phishing_ratio": 0.86,
+    "support": 7
+  },
+  "estimate": {
+    "weight": 1.47,
+    "phishing_ratio": 0.86,
+    "support": 7
+  },
+  "workers": {
+    "weight": 1.47,
+    "phishing_ratio": 0.86,
+    "support": 7
+  },
+  "plug": {
+    "weight": 1.47,
+    "phishing_ratio": 0.86,
+    "support": 7
+  },
+  "menos": {
+    "weight": 1.47,
+    "phishing_ratio": 0.86,
+    "support": 7
+  },
+  "tinyurl": {
+    "weight": 2.56,
+    "phishing_ratio": 1,
+    "support": 6
+  },
+  "analizamos": {
+    "weight": 2.56,
+    "phishing_ratio": 1,
+    "support": 6
+  },
+  "creditos": {
+    "weight": 2.56,
+    "phishing_ratio": 1,
+    "support": 6
+  },
+  "logowanie": {
+    "weight": 2.56,
+    "phishing_ratio": 1,
+    "support": 6
+  },
+  "encuentran": {
+    "weight": 2.56,
+    "phishing_ratio": 1,
+    "support": 6
+  },
+  "avantages": {
+    "weight": 2.56,
+    "phishing_ratio": 1,
+    "support": 6
+  },
+  "recargues": {
+    "weight": 2.56,
+    "phishing_ratio": 1,
+    "support": 6
+  },
+  "manejas": {
+    "weight": 2.56,
+    "phishing_ratio": 1,
+    "support": 6
+  },
+  "incorrectly": {
+    "weight": 2.56,
+    "phishing_ratio": 1,
+    "support": 6
+  },
+  "passwort": {
+    "weight": 2.56,
+    "phishing_ratio": 1,
+    "support": 6
+  },
+  "protegidos": {
+    "weight": 2.56,
+    "phishing_ratio": 1,
+    "support": 6
+  },
+  "perfil": {
+    "weight": 2.56,
+    "phishing_ratio": 1,
+    "support": 6
+  },
+  "avez": {
+    "weight": 2.56,
+    "phishing_ratio": 1,
+    "support": 6
+  },
+  "distant": {
+    "weight": 2.56,
+    "phishing_ratio": 1,
+    "support": 6
+  },
+  "ina": {
+    "weight": 2.56,
+    "phishing_ratio": 1,
+    "support": 6
+  },
+  "userpay": {
+    "weight": 2.56,
+    "phishing_ratio": 1,
+    "support": 6
+  },
+  "krok": {
+    "weight": 2.56,
+    "phishing_ratio": 1,
+    "support": 6
+  },
+  "mejores": {
+    "weight": 2.56,
+    "phishing_ratio": 1,
+    "support": 6
+  },
+  "antivirus": {
+    "weight": 2.56,
+    "phishing_ratio": 1,
+    "support": 6
+  },
+  "mise": {
+    "weight": 2.56,
+    "phishing_ratio": 1,
+    "support": 6
+  },
+  "terminos": {
+    "weight": 2.56,
+    "phishing_ratio": 1,
+    "support": 6
+  },
+  "crediticias": {
+    "weight": 2.56,
+    "phishing_ratio": 1,
+    "support": 6
+  },
+  "pagues": {
+    "weight": 2.56,
+    "phishing_ratio": 1,
+    "support": 6
+  },
+  "souhaitez": {
+    "weight": 2.56,
+    "phishing_ratio": 1,
+    "support": 6
+  },
+  "certificado": {
+    "weight": 2.56,
+    "phishing_ratio": 1,
+    "support": 6
+  },
+  "encriptado": {
+    "weight": 2.56,
+    "phishing_ratio": 1,
+    "support": 6
+  },
+  "dalej": {
+    "weight": 2.56,
+    "phishing_ratio": 1,
+    "support": 6
+  },
+  "annuler": {
+    "weight": 2.56,
+    "phishing_ratio": 1,
+    "support": 6
+  },
+  "ses": {
+    "weight": 2.56,
+    "phishing_ratio": 1,
+    "support": 6
+  },
+  "olvidaste": {
+    "weight": 2.56,
+    "phishing_ratio": 1,
+    "support": 6
+  },
+  "myrogers": {
+    "weight": 2.56,
+    "phishing_ratio": 1,
+    "support": 6
+  },
+  "dsl": {
+    "weight": 2.56,
+    "phishing_ratio": 1,
+    "support": 6
+  },
+  "ponteiro": {
+    "weight": 2.56,
+    "phishing_ratio": 1,
+    "support": 6
+  },
+  "failed": {
+    "weight": 2.56,
+    "phishing_ratio": 1,
+    "support": 6
+  },
+  "dula": {
+    "weight": 2.56,
+    "phishing_ratio": 1,
+    "support": 6
+  },
+  "wpisz": {
+    "weight": 2.56,
+    "phishing_ratio": 1,
+    "support": 6
+  },
+  "binance": {
+    "weight": 2.56,
+    "phishing_ratio": 1,
+    "support": 6
+  },
+  "pomoc": {
+    "weight": 1.3,
+    "phishing_ratio": 0.83,
+    "support": 6
+  },
+  "checkout": {
+    "weight": 1.3,
+    "phishing_ratio": 0.83,
+    "support": 6
+  },
+  "blocking": {
+    "weight": 1.3,
+    "phishing_ratio": 0.83,
+    "support": 6
+  },
+  "unions": {
+    "weight": 1.3,
+    "phishing_ratio": 0.83,
+    "support": 6
+  },
+  "maintenance": {
+    "weight": 1.3,
+    "phishing_ratio": 0.83,
+    "support": 6
+  },
+  "property": {
+    "weight": 1.3,
+    "phishing_ratio": 0.83,
+    "support": 6
+  },
+  "alex": {
+    "weight": 1.3,
+    "phishing_ratio": 0.83,
+    "support": 6
+  },
+  "atendimento": {
+    "weight": 1.3,
+    "phishing_ratio": 0.83,
+    "support": 6
+  },
+  "mulheres": {
+    "weight": 1.3,
+    "phishing_ratio": 0.83,
+    "support": 6
+  },
+  "quiero": {
+    "weight": 1.3,
+    "phishing_ratio": 0.83,
+    "support": 6
+  },
+  "fundamental": {
+    "weight": 1.3,
+    "phishing_ratio": 0.83,
+    "support": 6
+  },
+  "ciebie": {
+    "weight": 1.3,
+    "phishing_ratio": 0.83,
+    "support": 6
+  },
+  "straightforward": {
+    "weight": 1.3,
+    "phishing_ratio": 0.83,
+    "support": 6
+  },
+  "pontos": {
+    "weight": 1.3,
+    "phishing_ratio": 0.83,
+    "support": 6
+  },
+  "desfrute": {
+    "weight": 1.3,
+    "phishing_ratio": 0.83,
+    "support": 6
+  },
+  "aktualne": {
+    "weight": 1.3,
+    "phishing_ratio": 0.83,
+    "support": 6
+  },
+  "internetowej": {
+    "weight": 1.3,
+    "phishing_ratio": 0.83,
+    "support": 6
+  },
+  "identify": {
+    "weight": 1.3,
+    "phishing_ratio": 0.83,
+    "support": 6
+  },
+  "utilizar": {
+    "weight": 1.3,
+    "phishing_ratio": 0.83,
+    "support": 6
+  },
+  "colo": {
+    "weight": 1.3,
+    "phishing_ratio": 0.83,
+    "support": 6
+  },
+  "climate": {
+    "weight": 1.3,
+    "phishing_ratio": 0.83,
+    "support": 6
+  },
+  "prioritizing": {
+    "weight": 1.3,
+    "phishing_ratio": 0.83,
+    "support": 6
+  },
+  "verification": {
+    "weight": 1.3,
+    "phishing_ratio": 0.83,
+    "support": 6
+  },
+  "cashback": {
+    "weight": 2.4,
+    "phishing_ratio": 1,
+    "support": 5
+  },
+  "zawsze": {
+    "weight": 2.4,
+    "phishing_ratio": 1,
+    "support": 5
+  },
+  "mobilnej": {
+    "weight": 2.4,
+    "phishing_ratio": 1,
+    "support": 5
+  },
+  "eleve": {
+    "weight": 2.4,
+    "phishing_ratio": 1,
+    "support": 5
+  },
+  "affiliates": {
+    "weight": 2.4,
+    "phishing_ratio": 1,
+    "support": 5
+  },
+  "preference": {
+    "weight": 2.4,
+    "phishing_ratio": 1,
+    "support": 5
+  },
+  "worship": {
+    "weight": 2.4,
+    "phishing_ratio": 1,
+    "support": 5
+  },
+  "branching": {
+    "weight": 2.4,
+    "phishing_ratio": 1,
+    "support": 5
+  },
+  "czytaj": {
+    "weight": 2.4,
+    "phishing_ratio": 1,
+    "support": 5
+  },
+  "swojego": {
+    "weight": 2.4,
+    "phishing_ratio": 1,
+    "support": 5
+  },
+  "eligibility": {
+    "weight": 2.4,
+    "phishing_ratio": 1,
+    "support": 5
+  },
+  "quarterly": {
+    "weight": 2.4,
+    "phishing_ratio": 1,
+    "support": 5
+  },
+  "podawaj": {
+    "weight": 2.4,
+    "phishing_ratio": 1,
+    "support": 5
+  },
+  "focava": {
+    "weight": 2.4,
+    "phishing_ratio": 1,
+    "support": 5
+  },
+  "pinto": {
+    "weight": 2.4,
+    "phishing_ratio": 1,
+    "support": 5
+  },
+  "tratamento": {
+    "weight": 2.4,
+    "phishing_ratio": 1,
+    "support": 5
+  },
+  "norte": {
+    "weight": 2.4,
+    "phishing_ratio": 1,
+    "support": 5
+  },
+  "closing": {
+    "weight": 2.4,
+    "phishing_ratio": 1,
+    "support": 5
+  },
+  "trocar": {
+    "weight": 2.4,
+    "phishing_ratio": 1,
+    "support": 5
+  },
+  "reduced": {
+    "weight": 2.4,
+    "phishing_ratio": 1,
+    "support": 5
+  },
+  "retrieve": {
+    "weight": 2.4,
+    "phishing_ratio": 1,
+    "support": 5
+  },
+  "ballalai": {
+    "weight": 2.4,
+    "phishing_ratio": 1,
+    "support": 5
+  },
+  "expiry": {
+    "weight": 2.4,
+    "phishing_ratio": 1,
+    "support": 5
+  },
+  "alcance": {
+    "weight": 2.4,
+    "phishing_ratio": 1,
+    "support": 5
+  },
+  "zip": {
+    "weight": 2.4,
+    "phishing_ratio": 1,
+    "support": 5
+  },
+  "economia": {
+    "weight": 2.4,
+    "phishing_ratio": 1,
+    "support": 5
+  },
+  "crees": {
+    "weight": 2.4,
+    "phishing_ratio": 1,
+    "support": 5
+  },
+  "humanos": {
+    "weight": 2.4,
+    "phishing_ratio": 1,
+    "support": 5
+  },
+  "cooperative": {
+    "weight": 2.4,
+    "phishing_ratio": 1,
+    "support": 5
+  },
+  "criado": {
+    "weight": 2.4,
+    "phishing_ratio": 1,
+    "support": 5
+  },
+  "loginu": {
+    "weight": 2.4,
+    "phishing_ratio": 1,
+    "support": 5
+  },
+  "logowaniu": {
+    "weight": 2.4,
+    "phishing_ratio": 1,
+    "support": 5
+  },
+  "titulaire": {
+    "weight": 2.4,
+    "phishing_ratio": 1,
+    "support": 5
+  },
+  "acesso": {
+    "weight": 2.4,
+    "phishing_ratio": 1,
+    "support": 5
+  },
+  "lucilla": {
+    "weight": 2.4,
+    "phishing_ratio": 1,
+    "support": 5
+  },
+  "telefonia": {
+    "weight": 2.4,
+    "phishing_ratio": 1,
+    "support": 5
+  },
+  "dapps": {
+    "weight": 2.4,
+    "phishing_ratio": 1,
+    "support": 5
+  },
+  "novembro": {
+    "weight": 2.4,
+    "phishing_ratio": 1,
+    "support": 5
+  },
+  "verifying": {
+    "weight": 2.4,
+    "phishing_ratio": 1,
+    "support": 5
+  },
+  "eres": {
+    "weight": 2.4,
+    "phishing_ratio": 1,
+    "support": 5
+  },
+  "fundado": {
+    "weight": 2.4,
+    "phishing_ratio": 1,
+    "support": 5
+  },
+  "zatwierdzasz": {
+    "weight": 2.4,
+    "phishing_ratio": 1,
+    "support": 5
+  },
+  "klikniesz": {
+    "weight": 2.4,
+    "phishing_ratio": 1,
+    "support": 5
+  },
+  "zanim": {
+    "weight": 2.4,
+    "phishing_ratio": 1,
+    "support": 5
+  },
+  "sprawdzisz": {
+    "weight": 2.4,
+    "phishing_ratio": 1,
+    "support": 5
+  },
+  "originalmente": {
+    "weight": 2.4,
+    "phishing_ratio": 1,
+    "support": 5
+  },
+  "nikomu": {
+    "weight": 2.4,
+    "phishing_ratio": 1,
+    "support": 5
+  },
+  "komunikaty": {
+    "weight": 2.4,
+    "phishing_ratio": 1,
+    "support": 5
+  },
+  "blu": {
+    "weight": 2.4,
+    "phishing_ratio": 1,
+    "support": 5
+  },
+  "borrada": {
+    "weight": 2.4,
+    "phishing_ratio": 1,
+    "support": 5
+  },
+  "cyberoszustwach": {
+    "weight": 2.4,
+    "phishing_ratio": 1,
+    "support": 5
+  },
+  "fenoux": {
+    "weight": 2.4,
+    "phishing_ratio": 1,
+    "support": 5
+  },
+  "nosotros": {
+    "weight": 2.4,
+    "phishing_ratio": 1,
+    "support": 5
+  },
+  "metropolitan": {
+    "weight": 2.4,
+    "phishing_ratio": 1,
+    "support": 5
+  },
+  "advisors": {
+    "weight": 2.4,
+    "phishing_ratio": 1,
+    "support": 5
+  },
+  "consultas": {
+    "weight": 2.4,
+    "phishing_ratio": 1,
+    "support": 5
+  },
+  "buscou": {
+    "weight": 2.4,
+    "phishing_ratio": 1,
+    "support": 5
+  },
+  "pesquisas": {
+    "weight": 2.4,
+    "phishing_ratio": 1,
+    "support": 5
+  },
+  "beneficiada": {
+    "weight": 2.4,
+    "phishing_ratio": 1,
+    "support": 5
+  },
+  "enriquece": {
+    "weight": 2.4,
+    "phishing_ratio": 1,
+    "support": 5
+  },
+  "melhorar": {
+    "weight": 2.4,
+    "phishing_ratio": 1,
+    "support": 5
+  },
+  "smskodem": {
+    "weight": 2.4,
+    "phishing_ratio": 1,
+    "support": 5
+  },
+  "aprimorar": {
+    "weight": 2.4,
+    "phishing_ratio": 1,
+    "support": 5
+  },
+  "chamado": {
+    "weight": 2.4,
+    "phishing_ratio": 1,
+    "support": 5
+  },
+  "headings": {
+    "weight": 2.4,
+    "phishing_ratio": 1,
+    "support": 5
+  },
+  "paranaense": {
+    "weight": 2.4,
+    "phishing_ratio": 1,
+    "support": 5
+  },
+  "metamask": {
+    "weight": 2.4,
+    "phishing_ratio": 1,
+    "support": 5
+  },
+  "benutzername": {
+    "weight": 2.4,
+    "phishing_ratio": 1,
+    "support": 5
+  },
+  "receber": {
+    "weight": 2.4,
+    "phishing_ratio": 1,
+    "support": 5
+  },
+  "contacta": {
+    "weight": 2.4,
+    "phishing_ratio": 1,
+    "support": 5
+  },
+  "acumule": {
+    "weight": 2.4,
+    "phishing_ratio": 1,
+    "support": 5
+  },
+  "inicialmente": {
+    "weight": 2.4,
+    "phishing_ratio": 1,
+    "support": 5
+  },
+  "dapp": {
+    "weight": 2.4,
+    "phishing_ratio": 1,
+    "support": 5
+  },
+  "proceeding": {
+    "weight": 1.1,
+    "phishing_ratio": 0.8,
+    "support": 5
+  },
+  "validating": {
+    "weight": 1.1,
+    "phishing_ratio": 0.8,
+    "support": 5
+  },
+  "officers": {
+    "weight": 1.1,
+    "phishing_ratio": 0.8,
+    "support": 5
+  },
+  "safeguards": {
+    "weight": 1.1,
+    "phishing_ratio": 0.8,
+    "support": 5
+  },
+  "cybersecurity": {
+    "weight": 1.1,
+    "phishing_ratio": 0.8,
+    "support": 5
+  },
+  "estamos": {
+    "weight": 1.1,
+    "phishing_ratio": 0.8,
+    "support": 5
+  },
+  "restore": {
+    "weight": 1.1,
+    "phishing_ratio": 0.8,
+    "support": 5
+  },
+  "index": {
+    "weight": 1.1,
+    "phishing_ratio": 0.8,
+    "support": 5
+  },
+  "rely": {
+    "weight": 1.1,
+    "phishing_ratio": 0.8,
+    "support": 5
+  },
+  "fraudulent": {
+    "weight": 1.1,
+    "phishing_ratio": 0.8,
+    "support": 5
+  },
+  "resilient": {
+    "weight": 1.1,
+    "phishing_ratio": 0.8,
+    "support": 5
+  },
+  "clave": {
+    "weight": 1.1,
+    "phishing_ratio": 0.8,
+    "support": 5
+  },
+  "holistic": {
+    "weight": 1.1,
+    "phishing_ratio": 0.8,
+    "support": 5
+  },
+  "covered": {
+    "weight": 1.1,
+    "phishing_ratio": 0.8,
+    "support": 5
+  },
+  "mata": {
+    "weight": 1.1,
+    "phishing_ratio": 0.8,
+    "support": 5
+  },
+  "usb": {
+    "weight": 1.1,
+    "phishing_ratio": 0.8,
+    "support": 5
+  },
+  "fingertips": {
+    "weight": 1.1,
+    "phishing_ratio": 0.8,
+    "support": 5
+  }
+}
