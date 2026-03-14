@@ -173,7 +173,7 @@ Open http://localhost:3000 for the web interface.
 
 ## Multilingual Rule Schema
 
-Rule configuration for scam signal detection. Supports en, zh, es, fr for input matching; outputs (reasons, advice) in English.
+Rule configuration for scam signal detection. Supports English (en), Chinese (zh), Spanish (es), French (fr) for input matching; outputs (reasons, advice) in English.
 
 ### signals.json
 
