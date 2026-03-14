@@ -15,6 +15,64 @@ let mode = 'text';
 modeText?.addEventListener('click', () => { mode = 'text'; textWrap?.classList.remove('hidden'); urlWrap?.classList.add('hidden'); modeText?.classList.add('active'); modeUrl?.classList.remove('active'); });
 modeUrl?.addEventListener('click', () => { mode = 'url'; urlWrap?.classList.remove('hidden'); textWrap?.classList.add('hidden'); modeUrl?.classList.add('active'); modeText?.classList.remove('active'); });
 
+async function getCurrentTab() {
+  const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+  return tab;
+}
+
+function sendToContentScript(action) {
+  return new Promise((resolve, reject) => {
+    chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+      if (!tabs?.[0]?.id) {
+        reject(new Error('No active tab'));
+        return;
+      }
+      chrome.tabs.sendMessage(tabs[0].id, { action }, (res) => {
+        if (chrome.runtime.lastError) {
+          reject(new Error(chrome.runtime.lastError.message || 'Cannot access this page'));
+          return;
+        }
+        resolve(res || {});
+      });
+    });
+  });
+}
+
+document.getElementById('btnCurrentUrl')?.addEventListener('click', async () => {
+  try {
+    const tab = await getCurrentTab();
+    if (!tab?.url) {
+      setError('No active tab found.');
+      return;
+    }
+    if (tab.url.startsWith('http://') || tab.url.startsWith('https://')) {
+      urlInput.value = tab.url;
+    } else {
+      setError('Cannot get URL from this page (e.g. chrome://, new tab).');
+    }
+  } catch (e) {
+    setError(e.message || 'Failed to get current page URL.');
+  }
+});
+
+document.getElementById('btnPageText')?.addEventListener('click', async () => {
+  try {
+    const res = await sendToContentScript('getPageText');
+    textInput.value = res.text || '';
+  } catch (e) {
+    setError(e.message || 'Failed to get page text.');
+  }
+});
+
+document.getElementById('btnSelection')?.addEventListener('click', async () => {
+  try {
+    const res = await sendToContentScript('getSelection');
+    textInput.value = res.text || '';
+  } catch (e) {
+    setError(e.message || 'Failed to get selection.');
+  }
+});
+
 function renderResultCard(data) {
   resultPlaceholder.classList.add('hidden');
   resultPlaceholder.classList.remove('error');
