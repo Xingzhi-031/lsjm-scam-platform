@@ -1,0 +1,10 @@
+{
+  "num_phishing_sites": 956,
+  "num_normal_sites": 0,
+  "avg_phishing_score": 2.64,
+  "avg_normal_score": 0,
+  "recommended_thresholds": {
+    "low": 0.3,
+    "medium": 0.8
+  }
+}
