@@ -24,6 +24,7 @@ interface ScoringConfig {
   min_token_length: number;
   bad_word_threshold: number;
   min_support: number;
+  max_per_word_weight?: number;
   probability: {
     method: string;
     a: number;
@@ -126,16 +127,20 @@ export function analyzeText(text: string): AnalysisResult {
   const matchedRiskWords: string[] = [];
   const matchedSafeWords: string[] = [];
 
+  const maxPerWord = scoringConfig.max_per_word_weight ?? Infinity;
+
   for (const token of filteredTokens) {
     const riskEntry = riskLexicon[token];
     if (riskEntry) {
-      rawScore += riskEntry.weight;
+      const contrib = maxPerWord < Infinity ? Math.min(riskEntry.weight, maxPerWord) : riskEntry.weight;
+      rawScore += contrib;
       matchedRiskWords.push(token);
     }
 
     const safeEntry = safeLexicon[token];
     if (safeEntry) {
-      rawScore += safeEntry.weight;
+      const contrib = maxPerWord < Infinity ? Math.max(safeEntry.weight, -maxPerWord) : safeEntry.weight;
+      rawScore += contrib;
       matchedSafeWords.push(token);
     }
   }

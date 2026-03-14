@@ -5,6 +5,7 @@
   "min_token_length": 3,
   "bad_word_threshold": 0.7,
   "min_support": 5,
+  "max_per_word_weight": 1.2,
   "probability": {
     "method": "sigmoid",
     "a": 1,

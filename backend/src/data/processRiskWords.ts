@@ -13,7 +13,7 @@ const OUTPUT_DIR = path.join(DATA_DIR, 'output');
 
 const MIN_WORD_LEN = 3;
 const MIN_SUPPORT = 5;
-const BLACKLIST = new Set(['sf', 'ok', 'tab']);
+const BLACKLIST = new Set(['sf', 'ok', 'tab', 'new']);
 const RISK_THRESHOLD_PHISHING_RATIO = 0.7;
 const SAFE_THRESHOLD_NORMAL_RATIO = 0.7;
 const WEIGHT_CLIP_MIN = -5;
