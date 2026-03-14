@@ -1,10 +1,6 @@
-/**
- * LSJM Shared UI - Tokens, states, risk levels
- * Used by: frontend, extension (copy to extension/shared-ui.css via npm run copy-shared)
- */
+/* LSJM shared UI. Run pnpm copy-shared to update extension. */
 
 :root {
-  /* Risk level colors - unified across web and extension */
   --risk-low-bg: #e6f4ea;
   --risk-low-fg: #1e7e34;
   --risk-medium-bg: #fff3cd;
@@ -14,14 +10,12 @@
   --risk-critical-bg: #b71c1c;
   --risk-critical-fg: #fff;
 
-  /* State colors */
   --state-loading-fg: #666;
   --state-error-bg: #ffebee;
   --state-error-fg: #c62828;
   --state-success-fg: #1a1a1a;
   --state-placeholder-fg: #888;
 
-  /* Common */
   --border: #e0e0e0;
   --border-focus: #333;
   --btn-primary: #333;
@@ -29,8 +23,7 @@
   --btn-disabled: #999;
 }
 
-/* --- Risk badge (use class: risk-badge risk-{low|medium|high|critical}) --- */
-/* Extension uses: riskLevel {low|medium|high|critical} */
+/* risk-badge risk-{level} | riskLevel.{level} */
 .risk-badge,
 .riskLevel {
   padding: 3px 10px;
@@ -67,7 +60,6 @@
   color: var(--risk-critical-fg);
 }
 
-/* --- Result placeholder states (web: result-placeholder, extension: resultPlaceholder) --- */
 .result-placeholder,
 .resultPlaceholder {
   color: var(--state-placeholder-fg);
