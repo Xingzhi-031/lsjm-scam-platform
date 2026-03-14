@@ -1,7 +1,34 @@
 {
   "templates": {
-    "urgency_language": "Do not act hastily. Verify through official channels before taking action.",
-    "money_request": "Never transfer money to unknown parties. Contact the organization through verified means.",
-    "suspicious_link": "Do not click suspicious links. Type the URL directly or use bookmarks."
+    "urgency_language": {
+      "en": "Do not act hastily. Verify through official channels before taking action.",
+      "zh": "不要仓促行动。通过官方渠道核实后再操作。",
+      "es": "No actúe apresuradamente. Verifique a través de canales oficiales antes de actuar.",
+      "fr": "N'agissez pas précipitamment. Vérifiez via les canaux officiels avant d'agir."
+    },
+    "authority_impersonation": {
+      "en": "Never share sensitive data. Contact the institution directly using the number on their official website.",
+      "zh": "切勿分享敏感信息。请通过官网上的联系方式直接联系机构。",
+      "es": "Nunca comparta datos sensibles. Contacte a la institución directamente usando el número de su sitio web oficial.",
+      "fr": "Ne partagez jamais de données sensibles. Contactez l'institution directement via le numéro sur leur site officiel."
+    },
+    "suspicious_link": {
+      "en": "Do not click suspicious links. Type the URL directly or use bookmarks.",
+      "zh": "不要点击可疑链接。请直接输入网址或使用书签。",
+      "es": "No haga clic en enlaces sospechosos. Escriba la URL directamente o use marcadores.",
+      "fr": "Ne cliquez pas sur les liens suspects. Saisissez l'URL directement ou utilisez les favoris."
+    },
+    "credential_request": {
+      "en": "Never share passwords or verification codes. Legitimate services will not ask for them via message.",
+      "zh": "切勿通过消息分享密码或验证码。正规服务不会通过消息索要。",
+      "es": "Nunca comparta contraseñas o códigos de verificación. Los servicios legítimos no los pedirán por mensaje.",
+      "fr": "Ne partagez jamais de mots de passe ou codes de vérification. Les services légitimes ne les demanderont pas par message."
+    },
+    "payment_request": {
+      "en": "Never transfer money to unknown parties. Contact the organization through verified means.",
+      "zh": "切勿向陌生方转账。请通过可核实的渠道联系机构。",
+      "es": "Nunca transfiera dinero a partes desconocidas. Contacte a la organización por medios verificados.",
+      "fr": "Ne transférez jamais d'argent à des inconnus. Contactez l'organisation par des moyens vérifiés."
+    }
   }
 }

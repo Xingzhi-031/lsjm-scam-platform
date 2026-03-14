@@ -4,21 +4,21 @@
       "id": "urgency_language",
       "description": "Creates time pressure or urges immediate action",
       "keywords": {
-        "en": ["urgent", "immediately", "act now", "asap", "hurry"],
-        "zh": ["紧急", "立即", "马上", "速来", "赶快"],
-        "es": ["urgente", "ahora mismo", "inmediatamente", "rápido"],
-        "fr": ["urgent", "immédiatement", "tout de suite", "rapidement"]
+        "en": ["urgent", "immediately", "act now", "asap", "hurry", "limited time"],
+        "zh": ["紧急", "立即", "马上", "速来", "赶快", "限时"],
+        "es": ["urgente", "ahora mismo", "inmediatamente", "rápido", "tiempo limitado"],
+        "fr": ["urgent", "immédiatement", "tout de suite", "rapidement", "délai limité"]
       },
       "weight": 20
     },
     {
-      "id": "money_request",
-      "description": "Asks for money transfer or payment",
+      "id": "authority_impersonation",
+      "description": "Impersonates bank, government or trusted institution",
       "keywords": {
-        "en": ["transfer", "wire", "pay now", "send money", "payment required"],
-        "zh": ["转账", "汇款", "打款", "支付", "付款"],
-        "es": ["transferir", "pagar ahora", "enviar dinero", "pago requerido"],
-        "fr": ["transfert", "payer maintenant", "envoyer de l'argent", "paiement requis"]
+        "en": ["your bank", "bank account", "suspended", "verify identity", "security alert"],
+        "zh": ["您的银行", "银行账户", "已暂停", "验证身份", "安全提醒"],
+        "es": ["su banco", "cuenta bancaria", "suspendida", "verificar identidad", "alerta de seguridad"],
+        "fr": ["votre banque", "compte bancaire", "suspendu", "vérifier identité", "alerte sécurité"]
       },
       "weight": 25
     },
@@ -26,12 +26,34 @@
       "id": "suspicious_link",
       "description": "Contains link that may lead to phishing or scam site",
       "keywords": {
-        "en": ["click here", "click link", "open link", "verify account"],
-        "zh": ["点击链接", "点击此处", "打开链接", "验证账户"],
-        "es": ["haga clic aquí", "clic en el enlace", "abrir enlace", "verificar cuenta"],
-        "fr": ["cliquez ici", "cliquez sur le lien", "ouvrir le lien", "vérifier le compte"]
+        "en": ["click here", "click link", "open link", "verify account", "follow this link"],
+        "zh": ["点击链接", "点击此处", "打开链接", "验证账户", "请点击"],
+        "es": ["haga clic aquí", "clic en el enlace", "abrir enlace", "verificar cuenta", "siga este enlace"],
+        "fr": ["cliquez ici", "cliquez sur le lien", "ouvrir le lien", "vérifier le compte", "suivez ce lien"]
       },
       "weight": 20
+    },
+    {
+      "id": "credential_request",
+      "description": "Requests password, PIN or personal credentials",
+      "keywords": {
+        "en": ["password", "login", "credentials", "PIN", "security code", "OTP"],
+        "zh": ["密码", "登录", "凭据", "验证码", "安全码", "动态口令"],
+        "es": ["contraseña", "iniciar sesión", "credenciales", "PIN", "código de seguridad", "OTP"],
+        "fr": ["mot de passe", "connexion", "identifiants", "PIN", "code de sécurité", "OTP"]
+      },
+      "weight": 25
+    },
+    {
+      "id": "payment_request",
+      "description": "Asks for money transfer or payment",
+      "keywords": {
+        "en": ["transfer", "wire", "pay now", "send money", "payment required", "refund", "fee"],
+        "zh": ["转账", "汇款", "打款", "支付", "付款", "退款", "手续费"],
+        "es": ["transferir", "pagar ahora", "enviar dinero", "pago requerido", "reembolso", "tarifa"],
+        "fr": ["transfert", "payer maintenant", "envoyer de l'argent", "paiement requis", "remboursement", "frais"]
+      },
+      "weight": 25
     }
   ]
 }
