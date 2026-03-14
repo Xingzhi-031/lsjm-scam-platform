@@ -14,8 +14,18 @@
 
   <main class="main">
     <section class="input-section">
-      <label for="text-input">Paste suspicious message or content</label>
-      <textarea id="text-input" rows="6" placeholder="Paste the message or text you want to analyze..."></textarea>
+      <div class="mode-toggle">
+        <button type="button" id="mode-text" class="mode-btn active">Text</button>
+        <button type="button" id="mode-url" class="mode-btn">URL</button>
+      </div>
+      <div id="text-input-wrap">
+        <label for="text-input">Paste suspicious message or content</label>
+        <textarea id="text-input" rows="6" placeholder="Paste the message or text you want to analyze..."></textarea>
+      </div>
+      <div id="url-input-wrap" class="hidden">
+        <label for="url-input">Enter URL to analyze</label>
+        <input type="url" id="url-input" placeholder="https://example.com" />
+      </div>
       <button id="analyze-btn" type="button">Analyze</button>
     </section>
 
