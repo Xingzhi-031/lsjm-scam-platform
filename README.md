@@ -159,8 +159,13 @@ Open http://localhost:3000 for the web interface.
 | Method | Path | Description |
 |--------|------|-------------|
 | GET | `/health` | Health check |
-| POST | `/analyze-text` | Text analysis (skeleton) |
-| POST | `/analyze-url` | URL analysis (skeleton) |
+| POST | `/analyze-text` | Text analysis |
+| POST | `/analyze-url` | URL analysis |
+
+### Mock / Fallback (KAN-25)
+
+- **Mock mode**: Add `?mock=1` to any analyze request, or set `LSJM_MOCK_MODE=1` for global mock. Returns stable low-risk responses for demos.
+- **Fallback on error**: If analysis throws, the API returns a structured fallback result (riskScore 50, medium) instead of 5xx, keeping the API stable.
 
 ---
 
