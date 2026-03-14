@@ -5,8 +5,11 @@ chrome.runtime.onMessage.addListener((request, _sender, sendResponse) => {
     if (request.action === 'getPageUrl') {
       sendResponse({ url: window.location.href });
     } else if (request.action === 'getPageText') {
-      const text = document.body?.innerText?.trim() || '';
-      sendResponse({ text });
+      let text = document.body?.innerText?.trim() || '';
+      const maxLen = 50000;
+      const truncated = text.length > maxLen;
+      if (truncated) text = text.slice(0, maxLen);
+      sendResponse({ text, truncated });
     } else if (request.action === 'getSelection') {
       const text = window.getSelection()?.toString()?.trim() || '';
       sendResponse({ text });

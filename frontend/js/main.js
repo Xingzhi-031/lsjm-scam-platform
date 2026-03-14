@@ -42,24 +42,33 @@ function setLoading(loading) {
 }
 
 function renderResultCard(result) {
-
   const card = document.getElementById("result-card");
-  const placeholder = document.getElementById("result-placeholder");
-
   if (!card) {
     setResult(result);
     return;
   }
 
+  const level = (result.riskLevel || "low").toLowerCase();
   resultPlaceholder.style.display = "none";
   resultPlaceholder.classList.remove("state-loading", "state-error");
-  card.classList.remove("hidden");
+  card.classList.remove("hidden", "risk-low", "risk-medium", "risk-high", "risk-critical");
+  card.classList.add("risk-" + level, "animate-in");
 
   document.getElementById("riskScore").textContent = result.riskScore;
 
-  const riskLevel = document.getElementById("riskLevel");
-  riskLevel.textContent = result.riskLevel.toUpperCase();
-  riskLevel.className = "risk-badge risk-" + (result.riskLevel || "low").toLowerCase();
+  const riskLevelEl = document.getElementById("riskLevel");
+  riskLevelEl.textContent = (result.riskLevel || "LOW").toUpperCase();
+  riskLevelEl.className = "risk-badge risk-" + level;
+
+  const shadeMsg = document.getElementById("shade-moved-msg");
+  if (shadeMsg) {
+    if (level === "low") {
+      shadeMsg.textContent = "Shade moved ✓ You're in the clear.";
+      shadeMsg.classList.remove("hidden");
+    } else {
+      shadeMsg.classList.add("hidden");
+    }
+  }
 
   renderList("signalsList", (result.signals || []).map(s => s.score != null ? `${s.description} (score: ${s.score})` : s.description));
   renderList("reasonsList", result.reasons || []);
