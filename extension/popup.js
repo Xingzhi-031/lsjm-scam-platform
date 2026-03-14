@@ -1,5 +1,20 @@
 const API_BASE = 'http://localhost:3000';
 
+// Injected into page via executeScript - must be a function (serializable)
+function injectFloatingPanel(data) {
+  if (document.getElementById('lsjm-floating-warning')) return;
+  const advice = (data.advice && data.advice[0]) || 'Avoid entering personal information on this page.';
+  const level = (data.riskLevel || 'unknown').toUpperCase();
+  const div = document.createElement('div');
+  div.id = 'lsjm-floating-warning';
+  div.innerHTML = '<div class="lsjm-panel"><button class="lsjm-close" aria-label="Close">×</button><div class="lsjm-icon">⚠</div><div class="lsjm-title">Potential Scam Detected</div><div class="lsjm-level">Risk Level: ' + level + '</div><div class="lsjm-advice">' + advice.replace(/</g, '&lt;').replace(/>/g, '&gt;') + '</div></div>';
+  const style = document.createElement('style');
+  style.textContent = '#lsjm-floating-warning{position:fixed;bottom:16px;right:16px;z-index:2147483647;font-family:system-ui,sans-serif;font-size:13px;max-width:280px;box-shadow:0 4px 12px rgba(0,0,0,.15);border-radius:8px;overflow:hidden}#lsjm-floating-warning .lsjm-panel{background:#fff3e0;border:1px solid #e65100;padding:12px 36px 12px 12px;position:relative}#lsjm-floating-warning .lsjm-close{position:absolute;top:8px;right:8px;background:none;border:none;font-size:20px;cursor:pointer;color:#666;line-height:1;padding:0 4px}#lsjm-floating-warning .lsjm-close:hover{color:#000}#lsjm-floating-warning .lsjm-icon{font-size:18px;margin-bottom:4px}#lsjm-floating-warning .lsjm-title{font-weight:600;color:#bf360c;margin-bottom:4px}#lsjm-floating-warning .lsjm-level{font-weight:600;color:#e65100;margin-bottom:6px}#lsjm-floating-warning .lsjm-advice{color:#5d4037;font-size:12px;line-height:1.4}';
+  document.head.appendChild(style);
+  document.body.appendChild(div);
+  div.querySelector('.lsjm-close').onclick = () => div.remove();
+}
+
 const textInput = document.getElementById('textInput');
 const urlInput = document.getElementById('urlInput');
 const textWrap = document.getElementById('textInputWrap');
@@ -20,16 +35,25 @@ async function getCurrentTab() {
   return tab;
 }
 
+function canInjectIntoTab(tab) {
+  return tab?.url?.startsWith('http://') || tab?.url?.startsWith('https://');
+}
+
 function sendToContentScript(action) {
   return new Promise((resolve, reject) => {
     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-      if (!tabs?.[0]?.id) {
+      const tab = tabs?.[0];
+      if (!tab?.id) {
         reject(new Error('No active tab'));
         return;
       }
-      chrome.tabs.sendMessage(tabs[0].id, { action }, (res) => {
+      if (!canInjectIntoTab(tab)) {
+        reject(new Error('Cannot access this page (try a regular website)'));
+        return;
+      }
+      chrome.tabs.sendMessage(tab.id, { action }, (res) => {
         if (chrome.runtime.lastError) {
-          reject(new Error(chrome.runtime.lastError.message || 'Cannot access this page'));
+          reject(new Error('Cannot access this page. Try refreshing the tab.'));
           return;
         }
         resolve(res || {});
@@ -118,6 +142,19 @@ analyzeBtn.addEventListener('click', async () => {
     }
     const data = await res.json();
     renderResultCard(data);
+    const level = (data.riskLevel || '').toLowerCase();
+    if (level === 'medium' || level === 'high' || level === 'critical') {
+      try {
+        const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+        if (tab?.id && canInjectIntoTab(tab)) {
+          await chrome.scripting.executeScript({
+            target: { tabId: tab.id },
+            func: injectFloatingPanel,
+            args: [data],
+          });
+        }
+      } catch (_e) { /* panel injection failed - e.g. restricted page */ }
+    }
   } catch (err) {
     setError('Backend not reachable. Start server on port 3000.');
   } finally {
