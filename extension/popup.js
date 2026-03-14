@@ -100,17 +100,20 @@ document.getElementById('btnSelection')?.addEventListener('click', async () => {
 function renderResultCard(data) {
   resultPlaceholder.classList.add('hidden');
   resultPlaceholder.classList.remove('error', 'state-loading');
+  const level = (data.riskLevel || 'low').toLowerCase();
   const signalsHtml = (data.signals || []).length
     ? (data.signals || []).map(s => `<li>${s.score != null ? `${s.description} (${s.score})` : s.description}</li>`).join('')
     : '<li>—</li>';
   const reasonsList = (data.reasons || []).length ? data.reasons.map(r => `<li>${r}</li>`).join('') : '<li>—</li>';
   const adviceList = (data.advice || []).length ? data.advice.map(a => `<li>${a}</li>`).join('') : '<li>—</li>';
+  const shadeMsg = level === 'low' ? '<p class="shade-moved">Shade moved ✓</p>' : '';
   resultCard.innerHTML = `
-    <div class="riskHeader"><span class="riskScore">${data.riskScore ?? 0}</span> <span class="riskLevel ${(data.riskLevel || 'low').toLowerCase()}">${(data.riskLevel || 'low').toUpperCase()}</span></div>
+    <div class="riskHeader risk-header-area risk-${level}"><span class="riskScore">${data.riskScore ?? 0}</span> <span class="riskLevel ${level}">${(data.riskLevel || 'low').toUpperCase()}</span>${shadeMsg}</div>
     <div class="resultField"><strong>Signals</strong><ul>${signalsHtml}</ul></div>
     <div class="resultField"><strong>Reasons</strong><ul>${reasonsList}</ul></div>
     <div class="resultField"><strong>Advice</strong><ul>${adviceList}</ul></div>
   `;
+  resultCard.className = 'resultCard animate-in risk-' + level;
   resultCard.classList.remove('hidden');
 }
 

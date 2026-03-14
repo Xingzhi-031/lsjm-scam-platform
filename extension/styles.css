@@ -86,21 +86,23 @@ body {
 #analyzeBtn {
   margin-top: 8px;
   padding: 6px 12px;
-  background: #333;
+  background: var(--btn-primary);
   color: #fff;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   font-size: 13px;
   cursor: pointer;
+  transition: opacity var(--transition);
 }
 
-#analyzeBtn:hover {
-  background: #222;
+#analyzeBtn:hover:not(:disabled) {
+  background: var(--btn-primary-hover);
 }
 
 #analyzeBtn:disabled {
-  background: #999;
+  background: var(--btn-disabled);
   cursor: not-allowed;
+  opacity: 0.8;
 }
 
 .resultSection {
@@ -126,15 +128,25 @@ body {
 .resultCard {
   font-size: 12px;
   margin-top: 8px;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .riskHeader {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 8px;
-  margin-bottom: 10px;
-  padding-bottom: 8px;
-  border-bottom: 1px solid #e0e0e0;
+  margin: -8px -10px 10px -10px;
+  padding: 10px 10px 10px 10px;
+  border-radius: 8px 8px 0 0;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.riskHeader .shade-moved {
+  width: 100%;
+  margin: 4px 0 0;
+  font-size: 11px;
 }
 
 .riskScore {
@@ -148,6 +160,7 @@ body {
 
 .resultField {
   margin-bottom: 8px;
+  padding: 0 4px;
 }
 
 .resultField strong {

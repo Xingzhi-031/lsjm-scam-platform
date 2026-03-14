@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LSJM - Scam Detection</title>
+  <title>LSJM — Let Shade Just Move | Scam Detection</title>
   <link rel="stylesheet" href="/shared/css/ui.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header class="header">
     <h1>LSJM</h1>
-    <p>Let Scams Just Miss — analyze messages and URLs for scam risks</p>
+    <p class="tagline">Let Shade Just Move — scam detection for messages and URLs</p>
   </header>
 
   <main class="main">
@@ -33,19 +33,21 @@
     <section class="result-section" id="result-area">
       <h2>Analysis Result</h2>
       <div id="result-placeholder" class="result-placeholder">
-        Results will appear here after analysis.
+        Paste content to see if the shade moves away.
       </div>
       
       <div id="result-card" class="result-card hidden">
 
-        <div class="result-row">
-          <span class="label">Risk Score:</span>
-          <span id="riskScore"></span>
-        </div>
-
-        <div class="result-row">
-          <span class="label">Risk Level:</span>
-          <span id="riskLevel" class="risk-badge"></span>
+        <div id="risk-header-area" class="risk-header-area">
+          <div class="result-row risk-row">
+            <span class="label">Risk Score</span>
+            <span id="riskScore" class="risk-score-num"></span>
+          </div>
+          <div class="result-row">
+            <span class="label">Risk Level</span>
+            <span id="riskLevel" class="risk-badge"></span>
+          </div>
+          <p id="shade-moved-msg" class="shade-moved hidden"></p>
         </div>
 
         <div class="section">
@@ -66,6 +68,10 @@
       </div>
     </section>
   </main>
+
+  <footer class="footer">
+    <span>Let Shade Just Move</span>
+  </footer>
 
   <script src="js/main.js"></script>
 </body>
