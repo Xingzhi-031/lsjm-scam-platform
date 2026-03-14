@@ -1,0 +1,112 @@
+/**
+ * LSJM Shared UI - Tokens, states, risk levels
+ * Used by: frontend, extension (copy to extension/shared-ui.css via npm run copy-shared)
+ */
+
+:root {
+  /* Risk level colors - unified across web and extension */
+  --risk-low-bg: #e6f4ea;
+  --risk-low-fg: #1e7e34;
+  --risk-medium-bg: #fff3cd;
+  --risk-medium-fg: #856404;
+  --risk-high-bg: #ffe0e0;
+  --risk-high-fg: #a71d2a;
+  --risk-critical-bg: #b71c1c;
+  --risk-critical-fg: #fff;
+
+  /* State colors */
+  --state-loading-fg: #666;
+  --state-error-bg: #ffebee;
+  --state-error-fg: #c62828;
+  --state-success-fg: #1a1a1a;
+  --state-placeholder-fg: #888;
+
+  /* Common */
+  --border: #e0e0e0;
+  --border-focus: #333;
+  --btn-primary: #333;
+  --btn-primary-hover: #222;
+  --btn-disabled: #999;
+}
+
+/* --- Risk badge (use class: risk-badge risk-{low|medium|high|critical}) --- */
+/* Extension uses: riskLevel {low|medium|high|critical} */
+.risk-badge,
+.riskLevel {
+  padding: 3px 10px;
+  border-radius: 6px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.risk-badge.risk-low,
+.risk-level.risk-low,
+.riskLevel.low {
+  background: var(--risk-low-bg);
+  color: var(--risk-low-fg);
+}
+
+.risk-badge.risk-medium,
+.risk-level.risk-medium,
+.riskLevel.medium {
+  background: var(--risk-medium-bg);
+  color: var(--risk-medium-fg);
+}
+
+.risk-badge.risk-high,
+.risk-level.risk-high,
+.riskLevel.high {
+  background: var(--risk-high-bg);
+  color: var(--risk-high-fg);
+}
+
+.risk-badge.risk-critical,
+.risk-level.risk-critical,
+.riskLevel.critical {
+  background: var(--risk-critical-bg);
+  color: var(--risk-critical-fg);
+}
+
+/* --- Result placeholder states (web: result-placeholder, extension: resultPlaceholder) --- */
+.result-placeholder,
+.resultPlaceholder {
+  color: var(--state-placeholder-fg);
+}
+
+.result-placeholder.state-loading,
+.resultPlaceholder.state-loading {
+  color: var(--state-loading-fg);
+}
+
+.result-placeholder.state-loading::before,
+.resultPlaceholder.state-loading::before {
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin-right: 8px;
+  vertical-align: middle;
+  border: 2px solid var(--state-loading-fg);
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: lsjm-spin 0.7s linear infinite;
+}
+
+.result-placeholder.state-error,
+.result-placeholder.error,
+.resultPlaceholder.state-error,
+.resultPlaceholder.error {
+  background: var(--state-error-bg);
+  color: var(--state-error-fg);
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #ffcdd2;
+}
+
+@keyframes lsjm-spin {
+  to { transform: rotate(360deg); }
+}
+
+.hidden {
+  display: none !important;
+}

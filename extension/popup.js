@@ -99,14 +99,14 @@ document.getElementById('btnSelection')?.addEventListener('click', async () => {
 
 function renderResultCard(data) {
   resultPlaceholder.classList.add('hidden');
-  resultPlaceholder.classList.remove('error');
+  resultPlaceholder.classList.remove('error', 'state-loading');
   const signalsHtml = (data.signals || []).length
     ? (data.signals || []).map(s => `<li>${s.score != null ? `${s.description} (${s.score})` : s.description}</li>`).join('')
     : '<li>—</li>';
   const reasonsList = (data.reasons || []).length ? data.reasons.map(r => `<li>${r}</li>`).join('') : '<li>—</li>';
   const adviceList = (data.advice || []).length ? data.advice.map(a => `<li>${a}</li>`).join('') : '<li>—</li>';
   resultCard.innerHTML = `
-    <div class="riskHeader"><span class="riskScore">${data.riskScore ?? 0}</span> <span class="riskLevel ${data.riskLevel || 'low'}">${data.riskLevel || 'low'}</span></div>
+    <div class="riskHeader"><span class="riskScore">${data.riskScore ?? 0}</span> <span class="riskLevel ${(data.riskLevel || 'low').toLowerCase()}">${(data.riskLevel || 'low').toUpperCase()}</span></div>
     <div class="resultField"><strong>Signals</strong><ul>${signalsHtml}</ul></div>
     <div class="resultField"><strong>Reasons</strong><ul>${reasonsList}</ul></div>
     <div class="resultField"><strong>Advice</strong><ul>${adviceList}</ul></div>
@@ -117,14 +117,14 @@ function renderResultCard(data) {
 function setError(msg) {
   resultPlaceholder.textContent = msg;
   resultPlaceholder.className = 'resultPlaceholder error';
-  resultPlaceholder.classList.remove('hidden');
+  resultPlaceholder.classList.remove('hidden', 'state-loading');
   resultCard.classList.add('hidden');
 }
 
 analyzeBtn.addEventListener('click', async () => {
   resultPlaceholder.textContent = 'Analyzing...';
-  resultPlaceholder.className = 'resultPlaceholder';
-  resultPlaceholder.classList.remove('hidden');
+  resultPlaceholder.className = 'resultPlaceholder state-loading';
+  resultPlaceholder.classList.remove('hidden', 'error');
   resultCard.classList.add('hidden');
   analyzeBtn.disabled = true;
 

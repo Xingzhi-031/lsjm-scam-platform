@@ -109,7 +109,6 @@ body {
 }
 
 .result-placeholder {
-  color: #888;
   font-size: 0.9375rem;
 }
 
@@ -140,30 +139,4 @@ body {
   padding-left: 20px;
 }
 
-.risk-badge {
-  padding: 3px 10px;
-  border-radius: 6px;
-  font-weight: bold;
-}
-
-/* risk colors */
-
-.risk-low {
-  background: #e6f4ea;
-  color: #1e7e34;
-}
-
-.risk-medium {
-  background: #fff3cd;
-  color: #856404;
-}
-
-.risk-high {
-  background: #ffe0e0;
-  color: #a71d2a;
-}
-
-.risk-critical {
-  background: #ffb3b3;
-  color: #6b0000;
-}
+/* Risk badge colors from shared/ui.css */

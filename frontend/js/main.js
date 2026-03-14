@@ -14,7 +14,10 @@ let mode = 'text';
 modeText?.addEventListener('click', () => { mode = 'text'; textWrap?.classList.remove('hidden'); urlWrap?.classList.add('hidden'); modeText.classList.add('active'); modeUrl?.classList.remove('active'); });
 modeUrl?.addEventListener('click', () => { mode = 'url'; urlWrap?.classList.remove('hidden'); textWrap?.classList.add('hidden'); modeUrl?.classList.add('active'); modeText?.classList.remove('active'); });
 
-function setResult(content) {
+function setResult(content, isError = true) {
+  resultPlaceholder.classList.remove('state-loading');
+  resultPlaceholder.classList.toggle('state-error', isError);
+  resultPlaceholder.style.display = 'block';
   if (typeof content === 'string') {
     resultPlaceholder.textContent = content;
   } else if (content && typeof content === 'object') {
@@ -29,8 +32,12 @@ function setLoading(loading) {
   if (loading) {
     resultPlaceholder.style.display = 'block';
     resultPlaceholder.textContent = 'Analyzing...';
+    resultPlaceholder.classList.add('state-loading');
+    resultPlaceholder.classList.remove('state-error');
     const card = document.getElementById('result-card');
     if (card) card.classList.add('hidden');
+  } else {
+    resultPlaceholder.classList.remove('state-loading');
   }
 }
 
@@ -45,13 +52,14 @@ function renderResultCard(result) {
   }
 
   resultPlaceholder.style.display = "none";
+  resultPlaceholder.classList.remove("state-loading", "state-error");
   card.classList.remove("hidden");
 
   document.getElementById("riskScore").textContent = result.riskScore;
 
   const riskLevel = document.getElementById("riskLevel");
   riskLevel.textContent = result.riskLevel.toUpperCase();
-  riskLevel.className = "risk-badge risk-" + result.riskLevel;
+  riskLevel.className = "risk-badge risk-" + (result.riskLevel || "low").toLowerCase();
 
   renderList("signalsList", (result.signals || []).map(s => s.score != null ? `${s.description} (score: ${s.score})` : s.description));
   renderList("reasonsList", result.reasons || []);
@@ -74,20 +82,20 @@ async function analyze() {
   try {
     if (mode === 'text') {
       const text = textInput?.value?.trim();
-      if (!text) { setResult('Please enter some text.'); setLoading(false); return; }
+      if (!text) { setResult('Please enter some text.', true); setLoading(false); return; }
       const res = await fetch(`${API_BASE}/analyze-text`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ text }) });
       const data = await res.json();
       renderResultCard(data);
     } else {
       let url = urlInput?.value?.trim();
-      if (!url) { setResult('Please enter a URL.'); setLoading(false); return; }
+      if (!url) { setResult('Please enter a URL.', true); setLoading(false); return; }
       if (!/^https?:\/\//i.test(url)) url = 'https://' + url;
       const res = await fetch(`${API_BASE}/analyze-url`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ url }) });
       const data = await res.json();
       renderResultCard(data);
     }
   } catch (err) {
-    setResult('Error: Could not reach the analysis service. Is the backend running?');
+    setResult('Error: Could not reach the analysis service. Is the backend running?', true);
   } finally {
     setLoading(false);
   }
