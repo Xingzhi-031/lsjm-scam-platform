@@ -6,7 +6,6 @@ const resultPlaceholder = document.getElementById('resultPlaceholder');
 const resultCard = document.getElementById('resultCard');
 
 function renderResultCard(data) {
-  const scamType = data.scamType ?? '—';
   const signalsList = (data.signals || []).map(s =>
     typeof s === 'string' ? s : (s.description || s.id || s)
   ).join(', ') || '—';
@@ -17,7 +16,6 @@ function renderResultCard(data) {
     <div class="riskHeader">
       <span class="riskScore">${data.riskScore ?? 0}</span>
       <span class="riskLevel ${(data.riskLevel || 'low')}">${data.riskLevel || 'low'}</span>
-      ${scamType !== '—' ? `<span class="scamType">${scamType}</span>` : ''}
     </div>
     <div class="resultField">
       <strong>Signals</strong>
