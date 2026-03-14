@@ -140,6 +140,16 @@ export function analyzeText(text: string): AnalysisResult {
     }
   }
 
+  if (matchedRiskWords.length === 0 && matchedSafeWords.length === 0) {
+    return {
+      riskScore: 0,
+      riskLevel: 'low',
+      signals: [],
+      reasons: ['No lexicon matches were found in the message.'],
+      advice: [],
+    };
+  }
+  
   // Score calculation
   const a = scoringConfig.probability.a;
   const b = scoringConfig.probability.b;
