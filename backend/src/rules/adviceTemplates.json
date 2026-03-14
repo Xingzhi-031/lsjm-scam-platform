@@ -1,3 +1,7 @@
 {
-  "templates": []
+  "templates": {
+    "urgency_language": "Do not act hastily. Verify through official channels before taking action.",
+    "money_request": "Never transfer money to unknown parties. Contact the organization through verified means.",
+    "suspicious_link": "Do not click suspicious links. Type the URL directly or use bookmarks."
+  }
 }
