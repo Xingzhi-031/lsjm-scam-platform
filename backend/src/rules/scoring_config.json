@@ -8,6 +8,6 @@
   "probability": {
     "method": "sigmoid",
     "a": 3,
-    "b": 0.5
+    "b": -2
   }
 }
