@@ -3,24 +3,32 @@
 :root {
   --risk-low-bg: #e6f4ea;
   --risk-low-fg: #1e7e34;
+  --risk-low-gradient: linear-gradient(135deg, #e6f4ea 0%, #c8e6c9 100%);
   --risk-medium-bg: #fff3cd;
   --risk-medium-fg: #856404;
+  --risk-medium-gradient: linear-gradient(135deg, #fff3cd 0%, #ffe082 100%);
   --risk-high-bg: #ffe0e0;
   --risk-high-fg: #a71d2a;
+  --risk-high-gradient: linear-gradient(135deg, #ffe0e0 0%, #ffcdd2 100%);
   --risk-critical-bg: #b71c1c;
   --risk-critical-fg: #fff;
+  --risk-critical-gradient: linear-gradient(135deg, #d32f2f 0%, #b71c1c 100%);
 
   --state-loading-fg: #666;
   --state-error-bg: #ffebee;
   --state-error-fg: #c62828;
-  --state-success-fg: #1a1a1a;
   --state-placeholder-fg: #888;
 
   --border: #e0e0e0;
-  --border-focus: #333;
-  --btn-primary: #333;
-  --btn-primary-hover: #222;
-  --btn-disabled: #999;
+  --btn-primary: linear-gradient(180deg, #455a64 0%, #37474f 100%);
+  --btn-primary-hover: linear-gradient(180deg, #546e7a 0%, #455a64 100%);
+  --btn-disabled: #9e9e9e;
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+  --transition: 0.25s ease;
+
+  --bg-shade: linear-gradient(135deg, #e8ecf1 0%, #eef2f6 40%, #f5f7fa 100%);
+  --bg-radial: radial-gradient(ellipse 100% 70% at 50% 0%, #f8fafc 0%, #eef2f6 70%);
 }
 
 /* risk-badge risk-{level} | riskLevel.{level} */
@@ -30,34 +38,68 @@
   border-radius: 6px;
   font-weight: bold;
   display: inline-block;
+  transition: background var(--transition), color var(--transition), transform var(--transition);
 }
 
 .risk-badge.risk-low,
 .risk-level.risk-low,
 .riskLevel.low {
-  background: var(--risk-low-bg);
+  background: var(--risk-low-gradient);
   color: var(--risk-low-fg);
 }
 
 .risk-badge.risk-medium,
 .risk-level.risk-medium,
 .riskLevel.medium {
-  background: var(--risk-medium-bg);
+  background: var(--risk-medium-gradient);
   color: var(--risk-medium-fg);
 }
 
 .risk-badge.risk-high,
 .risk-level.risk-high,
 .riskLevel.high {
-  background: var(--risk-high-bg);
+  background: var(--risk-high-gradient);
   color: var(--risk-high-fg);
 }
 
 .risk-badge.risk-critical,
 .risk-level.risk-critical,
 .riskLevel.critical {
-  background: var(--risk-critical-bg);
+  background: var(--risk-critical-gradient);
   color: var(--risk-critical-fg);
+}
+
+.result-card.animate-in {
+  animation: lsjm-fade-slide 0.35s ease forwards;
+}
+
+.risk-header-area {
+  background: var(--risk-low-gradient);
+}
+
+.risk-header-area.risk-low,
+.result-card.risk-low .risk-header-area {
+  background: var(--risk-low-gradient);
+}
+
+.risk-header-area.risk-medium,
+.result-card.risk-medium .risk-header-area {
+  background: var(--risk-medium-gradient);
+}
+
+.risk-header-area.risk-high,
+.result-card.risk-high .risk-header-area {
+  background: var(--risk-high-gradient);
+}
+
+.risk-header-area.risk-critical,
+.result-card.risk-critical .risk-header-area {
+  background: var(--risk-critical-gradient);
+}
+
+@keyframes lsjm-fade-slide {
+  from { opacity: 0; transform: translateY(-12px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .result-placeholder,
@@ -97,6 +139,21 @@
 
 @keyframes lsjm-spin {
   to { transform: rotate(360deg); }
+}
+
+@keyframes lsjm-pulse-soft {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.9; }
+}
+
+.result-card.risk-high.animate-in,
+.result-card.risk-critical.animate-in {
+  animation: lsjm-fade-slide 0.35s ease forwards, lsjm-pulse-soft 1.5s ease 0.4s;
+}
+
+.shade-moved {
+  color: var(--risk-low-fg);
+  font-weight: 600;
 }
 
 .hidden {
