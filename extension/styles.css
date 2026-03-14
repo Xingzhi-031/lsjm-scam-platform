@@ -1,29 +1,54 @@
 body {
-  width: 280px;
+  width: 320px;
+  max-height: 480px;
   margin: 0;
   padding: 12px;
-  font-family: system-ui, sans-serif;
+  font-family: system-ui, -apple-system, sans-serif;
   font-size: 14px;
+  color: #1a1a1a;
 }
 
 .popup h2 {
-  margin: 0 0 4px;
+  margin: 0 0 2px;
   font-size: 16px;
 }
 
-.popup .hint {
-  margin: 8px 0;
+.popup .tagline {
+  margin: 0 0 12px;
+  font-size: 12px;
   color: #666;
+}
+
+.inputSection label {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: 500;
   font-size: 12px;
 }
 
+.inputSection textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 13px;
+  resize: vertical;
+  box-sizing: border-box;
+}
+
+.inputSection textarea:focus {
+  outline: none;
+  border-color: #333;
+}
+
 #analyzeBtn {
-  margin: 8px 0;
+  margin-top: 8px;
   padding: 6px 12px;
   background: #333;
   color: #fff;
   border: none;
-  border-radius: 4px;
+  border-radius: 6px;
+  font-size: 13px;
   cursor: pointer;
 }
 
@@ -31,25 +56,107 @@ body {
   background: #222;
 }
 
-.resultPlaceholder,
-.result {
-  margin-top: 8px;
-  padding: 8px;
-  border-radius: 4px;
-  font-size: 12px;
+#analyzeBtn:disabled {
+  background: #999;
+  cursor: not-allowed;
+}
+
+.resultSection {
+  margin-top: 12px;
+  padding: 10px;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  max-height: 260px;
+  overflow-y: auto;
+}
+
+.resultSection h3 {
+  margin: 0 0 8px;
+  font-size: 13px;
+  font-weight: 600;
 }
 
 .resultPlaceholder {
   color: #888;
-  background: #f5f5f5;
+  font-size: 12px;
 }
 
-.result {
+.resultPlaceholder.error {
+  color: #c62828;
+}
+
+.hidden {
+  display: none;
+}
+
+.resultCard {
+  font-size: 12px;
+}
+
+.riskHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.riskScore {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.riskLevel {
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.riskLevel.low {
   background: #e8f5e9;
   color: #2e7d32;
 }
 
-.result.error {
+.riskLevel.medium {
+  background: #fff3e0;
+  color: #e65100;
+}
+
+.riskLevel.high {
   background: #ffebee;
   color: #c62828;
+}
+
+.riskLevel.critical {
+  background: #b71c1c;
+  color: #fff;
+}
+
+.scamType {
+  font-size: 11px;
+  color: #666;
+}
+
+.resultField {
+  margin-bottom: 8px;
+}
+
+.resultField strong {
+  display: block;
+  margin-bottom: 2px;
+  font-size: 11px;
+  color: #666;
+}
+
+.resultField p,
+.resultField ul {
+  margin: 0;
+  padding-left: 16px;
+}
+
+.resultField ul {
+  list-style: disc;
 }
