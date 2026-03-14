@@ -79,10 +79,16 @@ document.getElementById('btnCurrentUrl')?.addEventListener('click', async () => 
   }
 });
 
+const MAX_TEXT_CHARS = 50000;
+
 document.getElementById('btnPageText')?.addEventListener('click', async () => {
   try {
     const res = await sendToContentScript('getPageText');
-    textInput.value = res.text || '';
+    const text = res.text || '';
+    if (res.truncated) {
+      setInfo(`Text too long. Using first ${MAX_TEXT_CHARS.toLocaleString()} characters.`);
+    }
+    textInput.value = text;
   } catch (e) {
     setError(e.message || 'Failed to get page text.');
   }
@@ -121,6 +127,13 @@ function setError(msg) {
   resultPlaceholder.textContent = msg;
   resultPlaceholder.className = 'resultPlaceholder error';
   resultPlaceholder.classList.remove('hidden', 'state-loading');
+  resultCard.classList.add('hidden');
+}
+
+function setInfo(msg) {
+  resultPlaceholder.textContent = msg;
+  resultPlaceholder.className = 'resultPlaceholder';
+  resultPlaceholder.classList.remove('hidden', 'error', 'state-loading');
   resultCard.classList.add('hidden');
 }
 
