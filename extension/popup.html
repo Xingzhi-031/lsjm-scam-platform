@@ -16,10 +16,15 @@
     </div>
     <div id="textInputWrap">
       <label for="textInput">Paste text</label>
+      <div class="extractBtns">
+        <button type="button" id="btnPageText" class="extractBtn">Use page text</button>
+        <button type="button" id="btnSelection" class="extractBtn">Use selection</button>
+      </div>
       <textarea id="textInput" rows="3" placeholder="Paste message..."></textarea>
     </div>
     <div id="urlInputWrap" class="hidden">
       <label for="urlInput">Enter URL</label>
+      <button type="button" id="btnCurrentUrl" class="extractBtn">Use current page</button>
       <input type="url" id="urlInput" placeholder="https://example.com" />
     </div>
     <button id="analyzeBtn" type="button">Analyze</button>
