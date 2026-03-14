@@ -124,7 +124,11 @@ lsjm-scam-platform/
 │   ├── popup.html
 │   ├── popup.js
 │   ├── content.js
+│   ├── shared-ui.css       # Copied from shared (run pnpm copy-shared)
 │   └── styles.css
+├── shared/
+│   └── css/
+│       └── ui.css          # Shared UI tokens, risk levels, states
 ├── package.json
 ├── pnpm-workspace.yaml
 └── .env.example
@@ -150,7 +154,12 @@ Copy `.env.example` to `.env` and adjust if needed. Default port: 3000.
 
 Open http://localhost:3000 for the web interface.
 
-**Chrome Extension:** Load `extension/` as an unpacked extension in Chrome (chrome://extensions → Developer mode → Load unpacked).
+**Chrome Extension:** Load `extension/` as an unpacked extension in Chrome (chrome://extensions → Developer mode → Load unpacked). After changing `shared/css/ui.css`, run `pnpm copy-shared` to update `extension/shared-ui.css`.
+
+### Shared UI (KAN-38)
+
+- **`shared/css/ui.css`** — Source of truth for risk level colors, loading/error/success states. Used by web and extension.
+- **`pnpm copy-shared`** — Copies shared UI to `extension/shared-ui.css` (extension cannot load files outside its folder).
 
 ---
 

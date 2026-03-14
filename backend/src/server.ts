@@ -19,6 +19,8 @@ app.use('/analyze-text', analyzeTextRouter);
 app.use('/analyze-url', analyzeUrlRouter);
 
 const frontendPath = path.resolve(__dirname, '..', '..', 'frontend');
+const sharedPath = path.resolve(__dirname, '..', '..', 'shared');
+app.use('/shared', express.static(sharedPath));
 app.use(express.static(frontendPath));
 app.get('/', (_req, res) => res.sendFile(path.join(frontendPath, 'index.html')));
 
