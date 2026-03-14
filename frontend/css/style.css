@@ -37,6 +37,12 @@ body {
   margin-bottom: 2rem;
 }
 
+.hidden { display: none !important; }
+
+.mode-toggle { margin-bottom: 0.75rem; }
+.mode-toggle .mode-btn { margin-right: 8px; padding: 6px 12px; border: 1px solid #ccc; background: #fff; border-radius: 6px; cursor: pointer; }
+.mode-toggle .mode-btn.active { background: #333; color: #fff; border-color: #333; }
+
 .input-section label {
   display: block;
   margin-bottom: 0.5rem;
@@ -53,6 +59,19 @@ body {
 }
 
 .input-section textarea:focus {
+  outline: none;
+  border-color: #333;
+}
+
+.input-section input[type="url"] {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.9375rem;
+  box-sizing: border-box;
+}
+.input-section input[type="url"]:focus {
   outline: none;
   border-color: #333;
 }

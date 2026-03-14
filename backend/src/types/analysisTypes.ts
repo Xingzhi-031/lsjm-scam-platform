@@ -1,9 +1,11 @@
 export type RiskLevel = 'low' | 'medium' | 'high' | 'critical';
+export type SignalSource = 'url' | 'message';
 
 export interface RiskSignal {
   id: string;
   description: string;
-  weight: number;
+  score: number;
+  source: SignalSource;
 }
 
 export interface AnalysisResult {
