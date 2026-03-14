@@ -6,6 +6,7 @@ body {
   font-family: system-ui, -apple-system, sans-serif;
   font-size: 14px;
   color: #1a1a1a;
+  background: var(--bg-shade);
 }
 
 

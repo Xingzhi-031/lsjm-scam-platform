@@ -26,6 +26,9 @@
   --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
   --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
   --transition: 0.25s ease;
+
+  --bg-shade: linear-gradient(135deg, #e8ecf1 0%, #eef2f6 40%, #f5f7fa 100%);
+  --bg-radial: radial-gradient(ellipse 100% 70% at 50% 0%, #f8fafc 0%, #eef2f6 70%);
 }
 
 /* risk-badge risk-{level} | riskLevel.{level} */
