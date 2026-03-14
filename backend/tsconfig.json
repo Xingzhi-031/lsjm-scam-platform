@@ -15,8 +15,9 @@
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
     "declaration": true,
-    "declarationMap": true
+    "declarationMap": true,
+    "types": ["jest", "node"]
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "tests"],
   "exclude": ["node_modules", "dist"]
 }
