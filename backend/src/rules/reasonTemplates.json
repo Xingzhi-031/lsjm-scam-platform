@@ -1,3 +1,7 @@
 {
-  "templates": []
+  "templates": {
+    "urgency_language": "The message creates time pressure or urges immediate action.",
+    "money_request": "The message asks for money transfer or payment.",
+    "suspicious_link": "The message contains a link that may lead to a phishing or scam site."
+  }
 }

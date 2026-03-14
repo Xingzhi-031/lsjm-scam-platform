@@ -2,7 +2,6 @@ export type RiskLevel = 'low' | 'medium' | 'high' | 'critical';
 
 export interface RiskSignal {
   id: string;
-  category: string;
   description: string;
   weight: number;
 }
