@@ -3,8 +3,11 @@
   "name": "LSJM - Scam Detection",
   "version": "0.1.0",
   "description": "Let Scams Just Miss - analyze messages and URLs for scam risks",
-  "permissions": ["activeTab", "tabs"],
+  "permissions": ["activeTab", "tabs", "scripting"],
   "host_permissions": ["http://localhost:3000/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
   "action": {
     "default_popup": "popup.html"
   },
