@@ -10,7 +10,9 @@
     "data:process": "ts-node -r tsconfig-paths/register src/data/processRiskWords.ts"
   },
   "dependencies": {
+    "dotenv": "^17.3.1",
     "express": "^4.18.2",
+    "openai": "^6.29.0",
     "whoiser": "1",
     "xlsx": "^0.18.5"
   },
@@ -21,6 +23,7 @@
     "ts-node": "^10.9.2",
     "tsc-alias": "^1.8.8",
     "tsconfig-paths": "^4.2.0",
+    "tsx": "^4.21.0",
     "typescript": "^5.3.0"
   },
   "engines": {
