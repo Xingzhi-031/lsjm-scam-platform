@@ -1,17 +1,68 @@
 const API_BASE = 'http://localhost:3000';
 
-document.getElementById('analyzeBtn').addEventListener('click', async () => {
-  const resultEl = document.getElementById('result');
-  resultEl.textContent = 'Analyzing...';
-  resultEl.className = 'resultPlaceholder';
+const textInput = document.getElementById('textInput');
+const urlInput = document.getElementById('urlInput');
+const textWrap = document.getElementById('textInputWrap');
+const urlWrap = document.getElementById('urlInputWrap');
+const modeText = document.getElementById('modeText');
+const modeUrl = document.getElementById('modeUrl');
+const analyzeBtn = document.getElementById('analyzeBtn');
+const resultPlaceholder = document.getElementById('resultPlaceholder');
+const resultCard = document.getElementById('resultCard');
+
+let mode = 'text';
+
+modeText?.addEventListener('click', () => { mode = 'text'; textWrap?.classList.remove('hidden'); urlWrap?.classList.add('hidden'); modeText?.classList.add('active'); modeUrl?.classList.remove('active'); });
+modeUrl?.addEventListener('click', () => { mode = 'url'; urlWrap?.classList.remove('hidden'); textWrap?.classList.add('hidden'); modeUrl?.classList.add('active'); modeText?.classList.remove('active'); });
+
+function renderResultCard(data) {
+  resultPlaceholder.classList.add('hidden');
+  resultPlaceholder.classList.remove('error');
+  const signalsHtml = (data.signals || []).length
+    ? (data.signals || []).map(s => `<li>${s.score != null ? `${s.description} (${s.score})` : s.description}</li>`).join('')
+    : '<li>—</li>';
+  const reasonsList = (data.reasons || []).length ? data.reasons.map(r => `<li>${r}</li>`).join('') : '<li>—</li>';
+  const adviceList = (data.advice || []).length ? data.advice.map(a => `<li>${a}</li>`).join('') : '<li>—</li>';
+  resultCard.innerHTML = `
+    <div class="riskHeader"><span class="riskScore">${data.riskScore ?? 0}</span> <span class="riskLevel ${data.riskLevel || 'low'}">${data.riskLevel || 'low'}</span></div>
+    <div class="resultField"><strong>Signals</strong><ul>${signalsHtml}</ul></div>
+    <div class="resultField"><strong>Reasons</strong><ul>${reasonsList}</ul></div>
+    <div class="resultField"><strong>Advice</strong><ul>${adviceList}</ul></div>
+  `;
+  resultCard.classList.remove('hidden');
+}
+
+function setError(msg) {
+  resultPlaceholder.textContent = msg;
+  resultPlaceholder.className = 'resultPlaceholder error';
+  resultPlaceholder.classList.remove('hidden');
+  resultCard.classList.add('hidden');
+}
+
+analyzeBtn.addEventListener('click', async () => {
+  resultPlaceholder.textContent = 'Analyzing...';
+  resultPlaceholder.className = 'resultPlaceholder';
+  resultPlaceholder.classList.remove('hidden');
+  resultCard.classList.add('hidden');
+  analyzeBtn.disabled = true;
 
   try {
-    const res = await fetch(`${API_BASE}/health`);
+    let res;
+    if (mode === 'text') {
+      const text = textInput?.value?.trim();
+      if (!text) { setError('Please enter text.'); analyzeBtn.disabled = false; return; }
+      res = await fetch(`${API_BASE}/analyze-text`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ text }) });
+    } else {
+      let url = urlInput?.value?.trim();
+      if (!url) { setError('Please enter URL.'); analyzeBtn.disabled = false; return; }
+      if (!/^https?:\/\//i.test(url)) url = 'https://' + url;
+      res = await fetch(`${API_BASE}/analyze-url`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ url }) });
+    }
     const data = await res.json();
-    resultEl.textContent = `Backend: ${data.status}`;
-    resultEl.className = 'result';
+    renderResultCard(data);
   } catch (err) {
-    resultEl.textContent = 'Error: Backend not reachable. Start the server on port 3000.';
-    resultEl.className = 'result error';
+    setError('Backend not reachable. Start server on port 3000.');
+  } finally {
+    analyzeBtn.disabled = false;
   }
 });

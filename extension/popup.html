@@ -9,10 +9,22 @@
 <body>
   <div class="popup">
     <h2>LSJM</h2>
-    <p>Scam Detection</p>
-    <p class="hint">Select text on the page and analyze for scam risks.</p>
-    <button id="analyzeBtn">Analyze Page</button>
-    <div id="result" class="resultPlaceholder">Result will appear here.</div>
+    <p class="tagline">Scam Detection</p>
+    <div class="modeToggle">
+      <button type="button" id="modeText" class="modeBtn active">Text</button>
+      <button type="button" id="modeUrl" class="modeBtn">URL</button>
+    </div>
+    <div id="textInputWrap">
+      <label for="textInput">Paste text</label>
+      <textarea id="textInput" rows="3" placeholder="Paste message..."></textarea>
+    </div>
+    <div id="urlInputWrap" class="hidden">
+      <label for="urlInput">Enter URL</label>
+      <input type="url" id="urlInput" placeholder="https://example.com" />
+    </div>
+    <button id="analyzeBtn" type="button">Analyze</button>
+    <div id="resultPlaceholder" class="resultPlaceholder">Result will appear here.</div>
+    <div id="resultCard" class="resultCard hidden"></div>
   </div>
   <script src="popup.js"></script>
 </body>
