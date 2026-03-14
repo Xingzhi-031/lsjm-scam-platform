@@ -1,3 +1,37 @@
 {
-  "signals": []
+  "signals": [
+    {
+      "id": "urgency_language",
+      "description": "Creates time pressure or urges immediate action",
+      "keywords": {
+        "en": ["urgent", "immediately", "act now", "asap", "hurry"],
+        "zh": ["紧急", "立即", "马上", "速来", "赶快"],
+        "es": ["urgente", "ahora mismo", "inmediatamente", "rápido"],
+        "fr": ["urgent", "immédiatement", "tout de suite", "rapidement"]
+      },
+      "weight": 20
+    },
+    {
+      "id": "money_request",
+      "description": "Asks for money transfer or payment",
+      "keywords": {
+        "en": ["transfer", "wire", "pay now", "send money", "payment required"],
+        "zh": ["转账", "汇款", "打款", "支付", "付款"],
+        "es": ["transferir", "pagar ahora", "enviar dinero", "pago requerido"],
+        "fr": ["transfert", "payer maintenant", "envoyer de l'argent", "paiement requis"]
+      },
+      "weight": 25
+    },
+    {
+      "id": "suspicious_link",
+      "description": "Contains link that may lead to phishing or scam site",
+      "keywords": {
+        "en": ["click here", "click link", "open link", "verify account"],
+        "zh": ["点击链接", "点击此处", "打开链接", "验证账户"],
+        "es": ["haga clic aquí", "clic en el enlace", "abrir enlace", "verificar cuenta"],
+        "fr": ["cliquez ici", "cliquez sur le lien", "ouvrir le lien", "vérifier le compte"]
+      },
+      "weight": 20
+    }
+  ]
 }

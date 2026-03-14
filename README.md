@@ -171,6 +171,31 @@ Open http://localhost:3000 for the web interface.
 
 ---
 
+## Multilingual Rule Schema
+
+Rule configuration for scam signal detection. Supports English (en), Chinese (zh), Spanish (es), French (fr) for input matching; outputs (reasons, advice) in English.
+
+### signals.json
+
+Each signal: `id`, `description`, `keywords` (per language), `weight`.
+
+| Field       | Type   | Description                    |
+|-------------|--------|--------------------------------|
+| id          | string | Unique signal identifier       |
+| description | string | Short English description      |
+| keywords    | object | Language key → string[]        |
+| weight      | number | Score contribution (0–100)     |
+
+### reasonTemplates.json / adviceTemplates.json
+
+Maps signal id to English reason/advice text.
+
+### weights.json
+
+Default weight ranges and per-signal overrides.
+
+---
+
 ## Team
 
 Let Shade Just Move:
@@ -179,3 +204,5 @@ Let Shade Just Move:
 - Ting Shen (Lena)
 - Guangyu Ma (Marcus)
 - Xiaohan Jiang (Lindsey)
+
+University of New South Wales
