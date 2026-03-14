@@ -1,5 +1,4 @@
 import type { AnalysisResult, RiskLevel, RiskSignal } from '@/types/analysisTypes';
-import { buildAnalysisResult } from '@/utils/resultBuilder';
 import fs from 'fs';
 import {
   RISK_LEXICON_PATH,
