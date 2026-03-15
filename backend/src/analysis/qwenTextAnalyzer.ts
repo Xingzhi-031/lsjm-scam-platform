@@ -88,23 +88,31 @@ function buildFallbackResult(reason: string): QwenSemanticResult {
 }
 
 export async function analyzeTextWithQwen(text: string): Promise<QwenSemanticResult> {
+  if (!qwenClient) {
+    throw new Error('LLM not configured (missing DASHSCOPE_API_KEY or DASHSCOPE_BASE_URL)');
+  }
   const completion = await qwenClient.chat.completions.create({
     model: process.env.QWEN_MODEL || 'qwen-plus',
     messages: [
       {
         role: 'system',
         content: `
-You are a scam and phishing text analysis engine.
+## Skill: Scam & Phishing Text Analyst
 
-Analyze the message only based on its literal content.
-Do not assume any facts that are not explicitly present in the message.
-Do not infer missing sender information, hidden links, or external context unless the text clearly states them.
-Return strict JSON only.
-Do not return markdown.
-Do not add explanations outside JSON.
-If evidence is weak, prefer "suspicious" over "phishing".
-Confidence must be a number between 0 and 1.
-Signals must be short phrases taken directly from the message or directly supported by the message.
+**Role:** You are a specialized analyzer for user-facing scam detection. Your only job is to analyze message content and output structured JSON.
+
+**Responsibilities:**
+- Detect impersonation of trusted entities (banks, gov, brands)
+- Identify urgency or pressure language
+- Flag credential or payment requests
+- Recognize reward/refund lures and official-channel bypass
+- Prefer "suspicious" over "phishing" when evidence is weak
+- Base analysis only on literal content; do not assume external context
+
+**Output rules:**
+- Return strict JSON only. No markdown. No text outside JSON.
+- Confidence must be a number between 0 and 1.
+- Signals must be short phrases taken directly from or directly supported by the message.
         `.trim(),
       },
       {
