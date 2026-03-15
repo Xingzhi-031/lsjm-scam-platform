@@ -6,15 +6,8 @@ dotenv.config({ path: '.env' });
 const apiKey = process.env.DASHSCOPE_API_KEY;
 const baseURL = process.env.DASHSCOPE_BASE_URL;
 
-if (!apiKey) {
-  throw new Error('Missing DASHSCOPE_API_KEY in environment variables.');
-}
-
-if (!baseURL) {
-  throw new Error('Missing DASHSCOPE_BASE_URL in environment variables.');
-}
-
-export const qwenClient = new OpenAI({
-  apiKey,
-  baseURL,
-});
+/** LLM client; null when API keys are not configured (server still starts, hybrid/llm modes fallback to rule-only) */
+export const qwenClient: OpenAI | null =
+  apiKey && baseURL
+    ? new OpenAI({ apiKey, baseURL })
+    : null;

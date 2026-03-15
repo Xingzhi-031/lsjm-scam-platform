@@ -88,6 +88,9 @@ function buildFallbackResult(reason: string): QwenSemanticResult {
 }
 
 export async function analyzeTextWithQwen(text: string): Promise<QwenSemanticResult> {
+  if (!qwenClient) {
+    throw new Error('LLM not configured (missing DASHSCOPE_API_KEY or DASHSCOPE_BASE_URL)');
+  }
   const completion = await qwenClient.chat.completions.create({
     model: process.env.QWEN_MODEL || 'qwen-plus',
     messages: [

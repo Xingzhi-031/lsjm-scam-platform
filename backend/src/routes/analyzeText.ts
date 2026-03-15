@@ -50,7 +50,12 @@ router.post('/', async (req: Request, res: Response): Promise<void> => {
   } catch (llmErr) {
     try {
       const ruleResult = analyzeText(text);
-      res.json(ruleResult);
+      const fallbackReason =
+        'LLM unavailable. Add DASHSCOPE_API_KEY and DASHSCOPE_BASE_URL to backend/.env to enable. Showing rule-based analysis.';
+      res.json({
+        ...ruleResult,
+        reasons: [fallbackReason, ...ruleResult.reasons],
+      });
     } catch {
       const fallback = getTextFallback(llmErr);
       res.status(200).json(fallback);

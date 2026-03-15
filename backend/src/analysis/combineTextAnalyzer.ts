@@ -25,8 +25,9 @@ function computeSemanticScore(result: Awaited<ReturnType<typeof analyzeTextWithQ
   if (result.official_channel_bypass) score += 12;
   if (result.reward_lure) score += 8;
 
-  if (result.label === 'phishing') score += 10;
-  if (result.label === 'benign') score -= 10;
+  // Label is LLM's overall judgment – give it strong weight so it isn't overridden by a few indicators
+  if (result.label === 'phishing') score += 35;
+  else if (result.label === 'benign') score -= 40;
 
   return clamp(Math.round(score * result.confidence), 0, 100);
 }
@@ -99,7 +100,7 @@ export async function analyzeTextHybrid(text: string): Promise<AnalysisResult> {
 
   const semanticScore = computeSemanticScore(qwenResult);
   const finalScore = clamp(
-    Math.round(ruleResult.riskScore * 0.55 + semanticScore * 0.45),
+    Math.round(ruleResult.riskScore * 0.25 + semanticScore * 0.75),
     0,
     100
   );
@@ -107,11 +108,22 @@ export async function analyzeTextHybrid(text: string): Promise<AnalysisResult> {
   const finalRiskLevel = getRiskLevelFromScore(finalScore);
 
   const llmSignals = semanticSignalsToRiskSignals(semanticScore, qwenResult);
+  const llmSignalsForReport =
+    llmSignals.length > 0
+      ? llmSignals
+      : [
+          {
+            id: 'llm_no_indicators',
+            description: 'LLM: No scam indicators detected.',
+            score: semanticScore,
+            source: 'message' as const,
+          },
+        ];
 
   return {
     riskScore: finalScore,
     riskLevel: finalRiskLevel,
-    signals: [...ruleResult.signals, ...llmSignals],
+    signals: [...ruleResult.signals, ...llmSignalsForReport],
     reasons: [...ruleResult.reasons, qwenResult.reason],
     advice: ruleResult.advice,
   };
