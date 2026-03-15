@@ -98,6 +98,66 @@ body {
   border-color: #333;
 }
 
+.enableRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+.enableRow label { margin-bottom: 0; font-size: 12px; }
+
+.primaryBtn,
+#analyzePageBtn {
+  width: 100%;
+  margin-top: 4px;
+  padding: 8px 12px;
+  background: var(--btn-primary);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: opacity var(--transition);
+}
+
+.primaryBtn:hover:not(:disabled),
+#analyzePageBtn:hover:not(:disabled) {
+  background: var(--btn-primary-hover);
+}
+
+.primaryBtn:disabled,
+#analyzePageBtn:disabled {
+  background: var(--btn-disabled);
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+.combinedCard {
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+.combinedCard.hidden { display: none; }
+
+.reportBlock {
+  margin-bottom: 12px;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
+  background: #fafafa;
+}
+.reportBlock.risk-high,
+.reportBlock.risk-critical { border-color: #c62828; background: #ffebee; }
+.reportBlock.risk-medium { border-color: #f9a825; background: #fff8e1; }
+
+.reportBlock h4 { margin: 0 0 4px; font-size: 12px; }
+.blockScore { margin: 0 0 6px; font-size: 11px; }
+.blockSection { margin-top: 6px; }
+.blockSection ul { margin: 2px 0 0; padding-left: 18px; list-style: disc; }
+.blockEmpty { margin: 0; color: #666; font-size: 11px; }
+.riskWarn { margin: 0 0 8px; padding: 6px; background: #ffebee; border-radius: 4px; font-size: 11px; }
+.riskWarn a { color: #c62828; font-weight: 600; }
+
 #analyzeBtn {
   margin-top: 8px;
   padding: 6px 12px;
@@ -139,6 +199,8 @@ body {
 .resultPlaceholder {
   font-size: 12px;
 }
+.resultPlaceholder.state-loading { color: #666; }
+.resultPlaceholder.error { color: #c62828; }
 
 .resultCard {
   font-size: 12px;

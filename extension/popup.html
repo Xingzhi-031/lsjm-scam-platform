@@ -11,36 +11,18 @@
   <div class="popup">
     <h2>LSJM</h2>
     <p class="tagline">Let Shade Just Move</p>
-    <div class="modeToggle">
-      <button type="button" id="modeText" class="modeBtn active">Text</button>
-      <button type="button" id="modeUrl" class="modeBtn">URL</button>
+
+    <div class="enableRow">
+      <label for="enableAuto">Enable page risk detection</label>
+      <input type="checkbox" id="enableAuto" />
     </div>
-    <div id="textInputWrap">
-      <div class="analysisModeRow">
-        <label for="analysisMode">Mode</label>
-        <select id="analysisMode">
-          <option value="hybrid">Hybrid</option>
-          <option value="llm">LLM only</option>
-          <option value="rule">Rule only</option>
-        </select>
-      </div>
-      <label for="textInput">Paste text</label>
-      <div class="extractBtns">
-        <button type="button" id="btnPageText" class="extractBtn">Use page text</button>
-        <button type="button" id="btnSelection" class="extractBtn">Use selection</button>
-      </div>
-      <textarea id="textInput" rows="3" placeholder="Paste message..."></textarea>
-    </div>
-    <div id="urlInputWrap" class="hidden">
-      <label for="urlInput">Enter URL</label>
-      <button type="button" id="btnCurrentUrl" class="extractBtn">Use current page</button>
-      <input type="url" id="urlInput" placeholder="https://example.com" />
-    </div>
-    <button id="analyzeBtn" type="button">Analyze</button>
+
+    <button id="analyzePageBtn" type="button" class="primaryBtn">Analyze current page</button>
+
     <section class="resultSection" id="resultArea">
-      <h3>Analysis Result</h3>
-      <div id="resultPlaceholder" class="resultPlaceholder">Paste content to see if the shade moves away.</div>
-      <div id="resultCard" class="resultCard hidden"></div>
+      <h3>Combined report</h3>
+      <div id="resultPlaceholder" class="resultPlaceholder">Click the button to analyze this page (URL + content).</div>
+      <div id="combinedCard" class="combinedCard hidden"></div>
     </section>
   </div>
   <script src="popup.js"></script>

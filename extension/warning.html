@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LSJM — Risk warning</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 24px;
+      font-family: system-ui, -apple-system, sans-serif;
+      background: #ffebee;
+      color: #b71c1c;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    h1 { font-size: 1.25rem; margin: 0 0 16px; }
+    .scores { margin: 12px 0; font-size: 0.9375rem; }
+    .scores p { margin: 4px 0; }
+    p.advice { margin: 16px 0; font-size: 0.875rem; color: #5d4037; max-width: 320px; text-align: center; }
+    .btn {
+      margin-top: 16px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      background: #c62828;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .btn:hover { background: #b71c1c; }
+  </style>
+</head>
+<body>
+  <h1>⚠ Page risk warning</h1>
+  <p>You were redirected here because this page or link showed elevated risk.</p>
+  <div class="scores">
+    <p id="textScore">Text risk score: —</p>
+    <p id="urlScore">URL risk score: —</p>
+  </div>
+  <p class="advice">Consider going back or using official channels. Do not enter personal or payment details.</p>
+  <button type="button" class="btn" id="goBack">Go back</button>
+  <script src="warning.js"></script>
+</body>
+</html>
