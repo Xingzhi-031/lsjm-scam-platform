@@ -19,6 +19,8 @@ Current solutions often:
 
 Users need a system that can **analyze content in real time and explain potential scam risks clearly**.
 
+<img src="distribution24.png" alt="distribution24" width="600">
+<img src="distribution25.png" alt="distribution25" width="600">
 ---
 
 ## Solution
