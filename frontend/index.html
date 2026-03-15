@@ -20,6 +20,14 @@
         <button type="button" id="mode-url" class="mode-btn">URL</button>
       </div>
       <div id="text-input-wrap">
+        <div class="analysis-mode-row">
+          <label for="analysis-mode">Analysis mode</label>
+          <select id="analysis-mode">
+            <option value="hybrid">Hybrid (rule + LLM)</option>
+            <option value="llm">LLM only</option>
+            <option value="rule">Rule only</option>
+          </select>
+        </div>
         <label for="text-input">Paste suspicious message or content</label>
         <textarea id="text-input" rows="6" placeholder="Paste the message or text you want to analyze..."></textarea>
       </div>

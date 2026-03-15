@@ -191,14 +191,14 @@ POST /analyze-text?mode=rule    (legacy rule-only)
 
 ## Implementation Order
 
-| Step | Task | Effort | Blockers |
-|------|------|--------|----------|
-| 1 | Wire `analyzeTextHybrid` to `/analyze-text` route | ~15 min | None |
-| 2 | Add LLM failure fallback to rule-only | ~10 min | None |
-| 3 | Skill prompt enhancement in `qwenTextAnalyzer` | ~20 min | None |
-| 4 | Add `analyzeTextLLMOnly` + `?mode=llm` support | ~30 min | None |
-| 5 | (Optional) Frontend mode selector | ~20 min | Step 4 |
-| 6 | (Future) URL + page text via extension | ~1 hr | None |
+| Step | Task | Effort | Status |
+|------|------|--------|--------|
+| 1 | Wire `analyzeTextHybrid` to `/analyze-text` route | ~15 min | ✅ Done |
+| 2 | Add LLM failure fallback to rule-only | ~10 min | ✅ Done |
+| 3 | Skill prompt enhancement in `qwenTextAnalyzer` | ~20 min | ✅ Done |
+| 4 | Add `analyzeTextLLMOnly` + `?mode=llm` support | ~30 min | ✅ Done |
+| 5 | Frontend mode selector (web + extension) | ~20 min | ✅ Done |
+| 6 | (Future) URL + page text via extension | ~1 hr | Pending |
 
 ---
 

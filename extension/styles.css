@@ -41,6 +41,20 @@ body {
   border-color: #333;
 }
 
+.analysisModeRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+.analysisModeRow label { margin-bottom: 0; }
+.analysisModeRow select {
+  padding: 2px 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 11px;
+}
+
 .popup label {
   display: block;
   margin-bottom: 4px;

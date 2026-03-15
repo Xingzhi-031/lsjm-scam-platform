@@ -100,7 +100,8 @@ async function analyze() {
     if (mode === 'text') {
       const text = textInput?.value?.trim();
       if (!text) { setResult('Please enter some text.', true); setLoading(false); return; }
-      const res = await fetch(`${API_BASE}/analyze-text`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ text }) });
+      const analysisMode = document.getElementById('analysis-mode')?.value || 'hybrid';
+      const res = await fetch(`${API_BASE}/analyze-text?mode=${analysisMode}`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ text }) });
       const data = await res.json();
       renderResultCard(data);
     } else {

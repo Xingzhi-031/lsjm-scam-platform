@@ -154,7 +154,8 @@ analyzeBtn.addEventListener('click', async () => {
     if (mode === 'text') {
       const text = textInput?.value?.trim();
       if (!text) { setError('Please enter text.'); analyzeBtn.disabled = false; return; }
-      res = await fetch(`${API_BASE}/analyze-text`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ text }) });
+      const analysisMode = document.getElementById('analysisMode')?.value || 'hybrid';
+      res = await fetch(`${API_BASE}/analyze-text?mode=${analysisMode}`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ text }) });
     } else {
       let url = urlInput?.value?.trim();
       if (!url) { setError('Please enter URL.'); analyzeBtn.disabled = false; return; }

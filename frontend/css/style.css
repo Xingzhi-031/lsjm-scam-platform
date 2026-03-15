@@ -46,6 +46,20 @@ body {
 .mode-toggle .mode-btn { margin-right: 8px; padding: 6px 12px; border: 1px solid #ccc; background: #fff; border-radius: 6px; cursor: pointer; }
 .mode-toggle .mode-btn.active { background: #333; color: #fff; border-color: #333; }
 
+.analysis-mode-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 0.5rem;
+}
+.analysis-mode-row label { margin-bottom: 0; }
+.analysis-mode-row select {
+  padding: 4px 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.875rem;
+}
+
 .input-section label {
   display: block;
   margin-bottom: 0.5rem;
