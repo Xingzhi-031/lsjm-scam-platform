@@ -14,12 +14,35 @@ async function getAutoEnabled() {
   return o[STORAGE_KEY] === true;
 }
 
+const textInput = document.getElementById('textInput');
+const urlInput = document.getElementById('urlInput');
+const textWrap = document.getElementById('textInputWrap');
+const urlWrap = document.getElementById('urlInputWrap');
+const modeText = document.getElementById('modeText');
+const modeUrl = document.getElementById('modeUrl');
+const analyzeBtn = document.getElementById('analyzeBtn');
+const resultCard = document.getElementById('resultCard');
+const themeToggle = document.getElementById('themeToggle');
 function setAutoEnabled(value) {
   chrome.storage.local.set({ [STORAGE_KEY]: !!value });
 }
 
 enableAuto.addEventListener('change', () => setAutoEnabled(enableAuto.checked));
 
+const savedTheme = localStorage.getItem('lsjm-theme');
+
+if (savedTheme === 'dark') {
+  document.body.classList.add('dark');
+}
+
+themeToggle?.addEventListener('click', () => {
+  document.body.classList.toggle('dark');
+  const isDark = document.body.classList.contains('dark');
+  localStorage.setItem('lsjm-theme', isDark ? 'dark' : 'light');
+});
+
+modeText?.addEventListener('click', () => { mode = 'text'; textWrap?.classList.remove('hidden'); urlWrap?.classList.add('hidden'); modeText?.classList.add('active'); modeUrl?.classList.remove('active'); });
+modeUrl?.addEventListener('click', () => { mode = 'url'; urlWrap?.classList.remove('hidden'); textWrap?.classList.add('hidden'); modeUrl?.classList.add('active'); modeText?.classList.remove('active'); });
 async function loadOptions() {
   enableAuto.checked = await getAutoEnabled();
 }

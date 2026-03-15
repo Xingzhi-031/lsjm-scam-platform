@@ -4,6 +4,20 @@ const textInput = document.getElementById('text-input');
 const urlInput = document.getElementById('url-input');
 const analyzeTogetherBtn = document.getElementById('analyze-together-btn');
 const resultPlaceholder = document.getElementById('result-placeholder');
+const themeToggle = document.getElementById('theme-toggle');
+
+const savedTheme = localStorage.getItem('lsjm-theme');
+
+if (savedTheme === 'dark') {
+  document.body.classList.add('dark');
+}
+
+themeToggle?.addEventListener('click', () => {
+  document.body.classList.toggle('dark');
+
+  const isDark = document.body.classList.contains('dark');
+  localStorage.setItem('lsjm-theme', isDark ? 'dark' : 'light');
+});
 const combinedResult = document.getElementById('combined-result');
 
 const LEVEL_ORDER = { low: 0, medium: 1, high: 2, critical: 3 };
