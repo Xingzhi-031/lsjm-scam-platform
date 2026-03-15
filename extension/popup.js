@@ -43,6 +43,31 @@ function sendToContentScript(tabId, action) {
   });
 }
 
+const LEVEL_ORDER = { low: 0, medium: 1, high: 2, critical: 3 };
+function getWorstLevel(levelA, levelB) {
+  const a = LEVEL_ORDER[(levelA || 'low').toLowerCase()] ?? 0;
+  const b = LEVEL_ORDER[(levelB || 'low').toLowerCase()] ?? 0;
+  const worst = a >= b ? (levelA || 'low') : (levelB || 'low');
+  return (worst || 'low').toLowerCase();
+}
+
+function renderTogetherHeader(textData, urlData) {
+  const levelText = getWorstLevel(textData?.riskLevel, urlData?.riskLevel);
+  const levelLabel = levelText.toUpperCase();
+  const state = { low: 'calm', medium: 'suspicious', high: 'alert', critical: 'danger' }[levelText] || 'calm';
+  const shieldySrc = chrome.runtime.getURL('images/shieldy-' + state + '.png');
+  const shadeMsg = levelText === 'low' ? "Shade moved ✓ You're in the clear." : '';
+  return `
+    <div class="togetherHeader risk-${levelText}">
+      <div class="togetherHeaderContent">
+        <span class="risk-badge risk-${levelText}">${levelLabel}</span>
+        ${shadeMsg ? `<p class="shadeMoved">${shadeMsg}</p>` : ''}
+      </div>
+      <img class="shieldySticker" src="${shieldySrc}" alt="Shieldy" aria-hidden="true">
+    </div>
+  `;
+}
+
 // Extension: show only risk level (low/medium/high/critical) and explanation content; no numeric scores
 function renderBlock(title, data) {
   if (!data || data.riskLevel == null) return '<p class="blockEmpty">No data</p>';
@@ -118,6 +143,7 @@ analyzePageBtn.addEventListener('click', async () => {
     }
     resultPlaceholder.classList.add('hidden');
     combinedCard.classList.remove('hidden');
+    const headerHtml = renderTogetherHeader(data.text, data.url);
     const textHtml = renderBlock('Page content (text)', data.text);
     const urlHtml = renderBlock('Link (URL)', data.url);
     const textScore = data.text?.riskScore ?? 0;
@@ -127,7 +153,7 @@ analyzePageBtn.addEventListener('click', async () => {
       const warningUrl = chrome.runtime.getURL(`warning.html?ts=${textScore}&us=${urlScore}`);
       warnHtml = `<p class="riskWarn">High risk detected. <a href="${warningUrl}" target="_blank" id="openWarning">Open warning page</a></p>`;
     }
-    combinedCard.innerHTML = warnHtml + textHtml + urlHtml;
+    combinedCard.innerHTML = warnHtml + headerHtml + textHtml + urlHtml;
   } catch (err) {
     setError(err.message || 'Backend not reachable. Start server on port 3000.');
   } finally {
