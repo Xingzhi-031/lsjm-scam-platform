@@ -37,34 +37,35 @@
       </div>
       
       <div id="result-card" class="result-card hidden">
-
-        <div id="risk-header-area" class="risk-header-area">
-          <div class="result-row risk-row">
-            <span class="label">Risk Score</span>
-            <span id="riskScore" class="risk-score-num"></span>
+        <div class="result-card-body">
+          <div id="risk-header-area" class="risk-header-area">
+            <div class="risk-header-content">
+              <div class="result-row risk-row">
+                <span class="label">Risk Score</span>
+                <span id="riskScore" class="risk-score-num"></span>
+              </div>
+              <div class="result-row">
+                <span class="label">Risk Level</span>
+                <span id="riskLevel" class="risk-badge"></span>
+              </div>
+              <p id="shade-moved-msg" class="shade-moved hidden"></p>
+            </div>
+            <img id="shieldy-sticker" class="shieldy-sticker hidden" alt="Shieldy" aria-hidden="true">
           </div>
-          <div class="result-row">
-            <span class="label">Risk Level</span>
-            <span id="riskLevel" class="risk-badge"></span>
+
+          <div class="section">
+            <span class="label">Signals</span>
+            <ul id="signalsList"></ul>
           </div>
-          <p id="shade-moved-msg" class="shade-moved hidden"></p>
+          <div class="section">
+            <span class="label">Reasons</span>
+            <ul id="reasonsList"></ul>
+          </div>
+          <div class="section">
+            <span class="label">Advice</span>
+            <ul id="adviceList"></ul>
+          </div>
         </div>
-
-        <div class="section">
-          <span class="label">Signals</span>
-          <ul id="signalsList"></ul>
-        </div>
-
-        <div class="section">
-          <span class="label">Reasons</span>
-          <ul id="reasonsList"></ul>
-        </div>
-
-        <div class="section">
-          <span class="label">Advice</span>
-          <ul id="adviceList"></ul>
-        </div>
-
       </div>
     </section>
   </main>

@@ -1,4 +1,4 @@
-* {
+q* {
   box-sizing: border-box;
 }
 
@@ -124,6 +124,7 @@ body {
 }
 
 .result-card {
+  position: relative;
   border: 1px solid var(--border);
   border-radius: 10px;
   padding: 0;
@@ -133,12 +134,32 @@ body {
   box-shadow: var(--shadow-md);
 }
 
+.result-card-body {
+  width: 100%;
+}
+
 .risk-header-area {
   padding: 16px 20px;
   margin: 0;
-  border-radius: 10px 10px 0 0;
   border-bottom: 1px solid rgba(0,0,0,0.06);
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
+
+.risk-header-area .risk-header-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.risk-header-area .shieldy-sticker {
+  flex-shrink: 0;
+  width: 165px;
+  height: 165px;
+  object-fit: contain;
+  transform: translate(-50px, -10px);
+}
+
 
 .result-card .risk-row {
   margin-bottom: 8px;

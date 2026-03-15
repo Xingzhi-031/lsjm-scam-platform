@@ -70,6 +70,14 @@ function renderResultCard(result) {
     }
   }
 
+  const shieldy = document.getElementById("shieldy-sticker");
+  if (shieldy) {
+    const state = { low: "calm", medium: "suspicious", high: "alert", critical: "danger" }[level] || "calm";
+    shieldy.src = "/shared/images/shieldy-" + state + ".png";
+    shieldy.className = "shieldy-sticker";
+    shieldy.classList.remove("hidden");
+  }
+
   renderList("signalsList", (result.signals || []).map(s => s.score != null ? `${s.description} (score: ${s.score})` : s.description));
   renderList("reasonsList", result.reasons || []);
   renderList("adviceList", result.advice || []);

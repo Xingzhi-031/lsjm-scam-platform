@@ -103,10 +103,13 @@ document.getElementById('btnSelection')?.addEventListener('click', async () => {
   }
 });
 
+const SHIELDY_STATE = { low: 'calm', medium: 'suspicious', high: 'alert', critical: 'danger' };
+
 function renderResultCard(data) {
   resultPlaceholder.classList.add('hidden');
   resultPlaceholder.classList.remove('error', 'state-loading');
   const level = (data.riskLevel || 'low').toLowerCase();
+  const state = SHIELDY_STATE[level] || 'calm';
   const signalsHtml = (data.signals || []).length
     ? (data.signals || []).map(s => `<li>${s.score != null ? `${s.description} (${s.score})` : s.description}</li>`).join('')
     : '<li>—</li>';
@@ -114,10 +117,12 @@ function renderResultCard(data) {
   const adviceList = (data.advice || []).length ? data.advice.map(a => `<li>${a}</li>`).join('') : '<li>—</li>';
   const shadeMsg = level === 'low' ? '<p class="shade-moved">Shade moved ✓</p>' : '';
   resultCard.innerHTML = `
-    <div class="riskHeader risk-header-area risk-${level}"><span class="riskScore">${data.riskScore ?? 0}</span> <span class="riskLevel ${level}">${(data.riskLevel || 'low').toUpperCase()}</span>${shadeMsg}</div>
-    <div class="resultField"><strong>Signals</strong><ul>${signalsHtml}</ul></div>
-    <div class="resultField"><strong>Reasons</strong><ul>${reasonsList}</ul></div>
-    <div class="resultField"><strong>Advice</strong><ul>${adviceList}</ul></div>
+    <div class="result-card-body">
+      <div class="riskHeader risk-header-area risk-${level}"><div class="risk-header-content"><span class="riskScore">${data.riskScore ?? 0}</span> <span class="riskLevel ${level}">${(data.riskLevel || 'low').toUpperCase()}</span>${shadeMsg}</div><img class="shieldy-sticker" src="images/shieldy-${state}.png" alt="Shieldy"></div>
+      <div class="resultField"><strong>Signals</strong><ul>${signalsHtml}</ul></div>
+      <div class="resultField"><strong>Reasons</strong><ul>${reasonsList}</ul></div>
+      <div class="resultField"><strong>Advice</strong><ul>${adviceList}</ul></div>
+    </div>
   `;
   resultCard.className = 'resultCard animate-in risk-' + level;
   resultCard.classList.remove('hidden');

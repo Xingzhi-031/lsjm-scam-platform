@@ -136,13 +136,30 @@ body {
 .riskHeader {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-start;
   gap: 8px;
-  margin: -8px -10px 10px -10px;
-  padding: 10px 10px 10px 10px;
-  border-radius: 8px 8px 0 0;
+  margin: 0;
+  padding: 10px;
   border-bottom: 1px solid rgba(0,0,0,0.08);
 }
+
+.riskHeader .risk-header-content {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.riskHeader .shieldy-sticker {
+  flex-shrink: 0;
+  width: 118px;
+  height: 118px;
+  object-fit: contain;
+  transform: translate(-50px, -10px);
+}
+
 
 .riskHeader .shade-moved {
   width: 100%;
