@@ -83,8 +83,8 @@
 ### 5.1 Conditions (redirect if any is true)
 
 - **Text**: `textScore >= 67` (current high/critical threshold; can be made configurable later, e.g. 66).
-- **URL**: `urlScore > 15` (configurable).
-- **Total**: `(textScore + urlScore) >= 70` (e.g. text 60 + url 10 = 70 → warn).
+- **URL**: `urlScore > 25` (configurable).
+- **Total**: `(textScore + urlScore) > 75` (i.e. sum ≥ 76 → redirect).
 
 ### 5.2 Action
 
@@ -105,10 +105,10 @@
 | Dimension   | Source                    | LLM? | Use |
 |------------|---------------------------|------|-----|
 | Text score | Rule 25% + LLM 75%        | Yes  | Combined report + redirect if ≥67 |
-| URL score  | Existing URL rules only  | No   | Combined report + redirect if >15 |
+| URL score  | Existing URL rules only  | No   | Combined report + redirect if >25 |
 
-- Redirect rule: `(textScore >= 67) || (urlScore > 15) || (textScore + urlScore >= 70)` → open warning page.
-- Both scores are **shown separately** in the report; no single merged score.
+- Redirect rule: `(textScore >= 67) || (urlScore > 25) || (textScore + urlScore > 75)` → open warning page.
+- **Extension popup**: does not show numeric scores; shows only risk level (Low/Medium/High/Critical) and explanation content (Signals, Reasons, Advice). Web frontend unchanged (shows full scores).
 
 ## 7. Implementation Order
 
@@ -118,13 +118,13 @@
    - Add "Enable page risk detection" switch and persist it;
    - Listen for tab load complete (with debounce/dedupe), get url + page text, call combined API;
    - Popup: one "Analyze current page" button, same combined API, show combined report;
-   - If `textScore >= 67` or `urlScore > 15`, `chrome.tabs.update` to `warning.html`.
+   - If redirect conditions met (text ≥67, url >25, or total >75), `chrome.tabs.update` to `warning.html`.
 4. **Extension**: Add `warning.html` (minimal risk page) + minimal styles/script.
 5. **Web (optional)**: One "Analyze together" button, same combined API and report structure for demo/testing.
 
 ## 8. Config (can move to options later)
 
 - Text redirect threshold: default 67 (high/critical).
-- URL redirect threshold: default 15.
-- Total (sum of text + url) redirect threshold: ≥ 70.
+- URL redirect threshold: default 25.
+- Total (sum of text + url) redirect threshold: > 75 (i.e. sum ≥ 76).
 - Auto-redirect on/off: optional switch alongside "Enable page risk detection".

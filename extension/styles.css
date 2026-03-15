@@ -139,6 +139,31 @@ body {
 
 .combinedCard.hidden { display: none; }
 
+/* Shieldy inside combined report */
+.combinedCard .togetherHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
+  background: #fff;
+}
+.combinedCard .togetherHeader.risk-low { border-color: #c8e6c9; background: #e8f5e9; }
+.combinedCard .togetherHeader.risk-medium { border-color: #f9a825; background: #fff8e1; }
+.combinedCard .togetherHeader.risk-high,
+.combinedCard .togetherHeader.risk-critical { border-color: #c62828; background: #ffebee; }
+.combinedCard .togetherHeaderContent { flex: 1; min-width: 0; }
+.combinedCard .togetherHeader .risk-badge { font-size: 12px; font-weight: 700; }
+.combinedCard .togetherHeader .shadeMoved { margin: 2px 0 0; font-size: 11px; }
+.combinedCard .togetherHeader .shieldySticker {
+  flex-shrink: 0;
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+}
+
 .reportBlock {
   margin-bottom: 12px;
   padding: 8px;
@@ -152,6 +177,7 @@ body {
 
 .reportBlock h4 { margin: 0 0 4px; font-size: 12px; }
 .blockScore { margin: 0 0 6px; font-size: 11px; }
+.blockLevel { margin: 0 0 6px; font-size: 11px; }
 .blockSection { margin-top: 6px; }
 .blockSection ul { margin: 2px 0 0; padding-left: 18px; list-style: disc; }
 .blockEmpty { margin: 0; color: #666; font-size: 11px; }

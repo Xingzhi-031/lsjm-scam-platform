@@ -1,8 +1,8 @@
 const API_BASE = 'http://localhost:3000';
 const STORAGE_KEY = 'lsjm_auto_analyze_enabled';
 const TEXT_REDIRECT_THRESHOLD = 67;
-const URL_REDIRECT_THRESHOLD = 15;
-const TOTAL_REDIRECT_THRESHOLD = 70; // sum of text + url; warn when sum >= 70
+const URL_REDIRECT_THRESHOLD = 25;  // redirect when url score > 25
+const TOTAL_REDIRECT_THRESHOLD = 76; // sum of text + url; redirect when total > 75 (i.e. >= 76)
 
 const enableAuto = document.getElementById('enableAuto');
 const analyzePageBtn = document.getElementById('analyzePageBtn');
@@ -43,16 +43,43 @@ function sendToContentScript(tabId, action) {
   });
 }
 
+const LEVEL_ORDER = { low: 0, medium: 1, high: 2, critical: 3 };
+function getWorstLevel(levelA, levelB) {
+  const a = LEVEL_ORDER[(levelA || 'low').toLowerCase()] ?? 0;
+  const b = LEVEL_ORDER[(levelB || 'low').toLowerCase()] ?? 0;
+  const worst = a >= b ? (levelA || 'low') : (levelB || 'low');
+  return (worst || 'low').toLowerCase();
+}
+
+function renderTogetherHeader(textData, urlData) {
+  const levelText = getWorstLevel(textData?.riskLevel, urlData?.riskLevel);
+  const levelLabel = levelText.toUpperCase();
+  const state = { low: 'calm', medium: 'suspicious', high: 'alert', critical: 'danger' }[levelText] || 'calm';
+  const shieldySrc = chrome.runtime.getURL('images/shieldy-' + state + '.png');
+  const shadeMsg = levelText === 'low' ? "Shade moved ✓ You're in the clear." : '';
+  return `
+    <div class="togetherHeader risk-${levelText}">
+      <div class="togetherHeaderContent">
+        <span class="risk-badge risk-${levelText}">${levelLabel}</span>
+        ${shadeMsg ? `<p class="shadeMoved">${shadeMsg}</p>` : ''}
+      </div>
+      <img class="shieldySticker" src="${shieldySrc}" alt="Shieldy" aria-hidden="true">
+    </div>
+  `;
+}
+
+// Extension: show only risk level (low/medium/high/critical) and explanation content; no numeric scores
 function renderBlock(title, data) {
-  if (!data || data.riskScore == null) return '<p class="blockEmpty">No data</p>';
+  if (!data || data.riskLevel == null) return '<p class="blockEmpty">No data</p>';
   const level = (data.riskLevel || 'low').toLowerCase();
-  const signals = (data.signals || []).map(s => `<li>${s.description}${s.score != null ? ` (${s.score})` : ''}</li>`).join('') || '<li>—</li>';
+  const levelLabel = (data.riskLevel || 'low').toUpperCase();
+  const signals = (data.signals || []).map(s => `<li>${s.description || s}</li>`).join('') || '<li>—</li>';
   const reasons = (data.reasons || []).map(r => `<li>${r}</li>`).join('') || '<li>—</li>';
   const advice = (data.advice || []).map(a => `<li>${a}</li>`).join('') || '<li>—</li>';
   return `
     <div class="reportBlock risk-${level}">
       <h4>${title}</h4>
-      <p class="blockScore">Score: <strong>${data.riskScore}</strong> — ${(data.riskLevel || '').toUpperCase()}</p>
+      <p class="blockLevel">Risk level: <strong>${levelLabel}</strong></p>
       <div class="blockSection"><strong>Signals</strong><ul>${signals}</ul></div>
       <div class="blockSection"><strong>Reasons</strong><ul>${reasons}</ul></div>
       <div class="blockSection"><strong>Advice</strong><ul>${advice}</ul></div>
@@ -81,7 +108,7 @@ function shouldRedirect(textScore, urlScore) {
   const ts = typeof textScore === 'number' ? textScore : 0;
   const us = typeof urlScore === 'number' ? urlScore : 0;
   const total = ts + us;
-  return ts >= TEXT_REDIRECT_THRESHOLD || us > URL_REDIRECT_THRESHOLD || total > TOTAL_REDIRECT_THRESHOLD - 1;
+  return ts >= TEXT_REDIRECT_THRESHOLD || us > URL_REDIRECT_THRESHOLD || total >= TOTAL_REDIRECT_THRESHOLD;
 }
 
 analyzePageBtn.addEventListener('click', async () => {
@@ -116,6 +143,7 @@ analyzePageBtn.addEventListener('click', async () => {
     }
     resultPlaceholder.classList.add('hidden');
     combinedCard.classList.remove('hidden');
+    const headerHtml = renderTogetherHeader(data.text, data.url);
     const textHtml = renderBlock('Page content (text)', data.text);
     const urlHtml = renderBlock('Link (URL)', data.url);
     const textScore = data.text?.riskScore ?? 0;
@@ -125,7 +153,7 @@ analyzePageBtn.addEventListener('click', async () => {
       const warningUrl = chrome.runtime.getURL(`warning.html?ts=${textScore}&us=${urlScore}`);
       warnHtml = `<p class="riskWarn">High risk detected. <a href="${warningUrl}" target="_blank" id="openWarning">Open warning page</a></p>`;
     }
-    combinedCard.innerHTML = warnHtml + textHtml + urlHtml;
+    combinedCard.innerHTML = warnHtml + headerHtml + textHtml + urlHtml;
   } catch (err) {
     setError(err.message || 'Backend not reachable. Start server on port 3000.');
   } finally {
