@@ -4,12 +4,16 @@
   "description": "LSJM - Let Scams Just Miss, explainable AI platform for scam risk evaluation",
   "private": true,
   "scripts": {
-    "copy-shared": "node -e \"require('fs').copyFileSync('shared/css/ui.css','extension/shared-ui.css')\"",
+    "shieldy:process": "node scripts/process-shieldy.mjs",
+    "copy-shared": "node -e \"require('fs').copyFileSync('shared/css/ui.css','extension/shared-ui.css')\" && node -e \"const fs=require('fs'); const p='extension/images'; if(!fs.existsSync(p))fs.mkdirSync(p,{recursive:true}); ['shieldy-calm','shieldy-suspicious','shieldy-alert','shieldy-danger'].forEach(s=>fs.copyFileSync('shared/images/'+s+'.png', p+'/'+s+'.png'))\"",
     "dev": "pnpm backend:dev",
     "backend:dev": "pnpm --filter lsjm-backend dev",
     "backend:build": "pnpm --filter lsjm-backend build",
     "backend:start": "pnpm --filter lsjm-backend start",
     "data:process": "pnpm --filter lsjm-backend data:process"
   },
-  "packageManager": "pnpm@8.15.0"
+  "packageManager": "pnpm@8.15.0",
+  "devDependencies": {
+    "sharp": "^0.34.5"
+  }
 }

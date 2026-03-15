@@ -10,9 +10,9 @@
   --risk-high-bg: #ffe0e0;
   --risk-high-fg: #a71d2a;
   --risk-high-gradient: linear-gradient(135deg, #ffe0e0 0%, #ffcdd2 100%);
-  --risk-critical-bg: #b71c1c;
+  --risk-critical-bg: #6B0F0F;
   --risk-critical-fg: #fff;
-  --risk-critical-gradient: linear-gradient(135deg, #d32f2f 0%, #b71c1c 100%);
+  --risk-critical-gradient: linear-gradient(135deg, #8B0000 0%, #5C0A0A 100%);
 
   --state-loading-fg: #666;
   --state-error-bg: #ffebee;
@@ -154,6 +154,12 @@
 .shade-moved {
   color: var(--risk-low-fg);
   font-weight: 600;
+}
+
+/* Shieldy sticker: overlaps right side of result card, full height */
+.shieldy-sticker {
+  display: block;
+  object-fit: contain;
 }
 
 .hidden {
