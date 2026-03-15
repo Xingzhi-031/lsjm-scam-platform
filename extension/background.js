@@ -1,8 +1,8 @@
 const API_BASE = 'http://localhost:3000';
 const STORAGE_KEY = 'lsjm_auto_analyze_enabled';
 const TEXT_REDIRECT_THRESHOLD = 67;
-const URL_REDIRECT_THRESHOLD = 15;
-const TOTAL_REDIRECT_THRESHOLD = 70; // sum of text + url; warn when sum >= 70
+const URL_REDIRECT_THRESHOLD = 25;  // redirect when url score > 25
+const TOTAL_REDIRECT_THRESHOLD = 76; // sum of text + url; redirect when total > 75 (i.e. >= 76)
 const DEBOUNCE_MS = 2500;
 const DEDUPE_MS = 5 * 60 * 1000;
 
@@ -17,7 +17,7 @@ function shouldRedirect(textScore, urlScore) {
   const ts = typeof textScore === 'number' ? textScore : 0;
   const us = typeof urlScore === 'number' ? urlScore : 0;
   const total = ts + us;
-  return ts >= TEXT_REDIRECT_THRESHOLD || us > URL_REDIRECT_THRESHOLD || total >= TOTAL_REDIRECT_THRESHOLD;
+  return ts >= TEXT_REDIRECT_THRESHOLD || us > URL_REDIRECT_THRESHOLD || total >= TOTAL_REDIRECT_THRESHOLD; // total > 75
 }
 
 async function runCombinedAnalysis(text, url) {

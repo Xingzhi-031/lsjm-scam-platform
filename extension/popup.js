@@ -1,8 +1,8 @@
 const API_BASE = 'http://localhost:3000';
 const STORAGE_KEY = 'lsjm_auto_analyze_enabled';
 const TEXT_REDIRECT_THRESHOLD = 67;
-const URL_REDIRECT_THRESHOLD = 15;
-const TOTAL_REDIRECT_THRESHOLD = 70; // sum of text + url; warn when sum >= 70
+const URL_REDIRECT_THRESHOLD = 25;  // redirect when url score > 25
+const TOTAL_REDIRECT_THRESHOLD = 76; // sum of text + url; redirect when total > 75 (i.e. >= 76)
 
 const enableAuto = document.getElementById('enableAuto');
 const analyzePageBtn = document.getElementById('analyzePageBtn');
@@ -43,16 +43,18 @@ function sendToContentScript(tabId, action) {
   });
 }
 
+// Extension: show only risk level (low/medium/high/critical) and explanation content; no numeric scores
 function renderBlock(title, data) {
-  if (!data || data.riskScore == null) return '<p class="blockEmpty">No data</p>';
+  if (!data || data.riskLevel == null) return '<p class="blockEmpty">No data</p>';
   const level = (data.riskLevel || 'low').toLowerCase();
-  const signals = (data.signals || []).map(s => `<li>${s.description}${s.score != null ? ` (${s.score})` : ''}</li>`).join('') || '<li>—</li>';
+  const levelLabel = (data.riskLevel || 'low').toUpperCase();
+  const signals = (data.signals || []).map(s => `<li>${s.description || s}</li>`).join('') || '<li>—</li>';
   const reasons = (data.reasons || []).map(r => `<li>${r}</li>`).join('') || '<li>—</li>';
   const advice = (data.advice || []).map(a => `<li>${a}</li>`).join('') || '<li>—</li>';
   return `
     <div class="reportBlock risk-${level}">
       <h4>${title}</h4>
-      <p class="blockScore">Score: <strong>${data.riskScore}</strong> — ${(data.riskLevel || '').toUpperCase()}</p>
+      <p class="blockLevel">Risk level: <strong>${levelLabel}</strong></p>
       <div class="blockSection"><strong>Signals</strong><ul>${signals}</ul></div>
       <div class="blockSection"><strong>Reasons</strong><ul>${reasons}</ul></div>
       <div class="blockSection"><strong>Advice</strong><ul>${advice}</ul></div>
@@ -81,7 +83,7 @@ function shouldRedirect(textScore, urlScore) {
   const ts = typeof textScore === 'number' ? textScore : 0;
   const us = typeof urlScore === 'number' ? urlScore : 0;
   const total = ts + us;
-  return ts >= TEXT_REDIRECT_THRESHOLD || us > URL_REDIRECT_THRESHOLD || total > TOTAL_REDIRECT_THRESHOLD - 1;
+  return ts >= TEXT_REDIRECT_THRESHOLD || us > URL_REDIRECT_THRESHOLD || total >= TOTAL_REDIRECT_THRESHOLD;
 }
 
 analyzePageBtn.addEventListener('click', async () => {

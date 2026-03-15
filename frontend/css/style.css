@@ -57,10 +57,6 @@ body {
 
 .hidden { display: none !important; }
 
-.mode-toggle { margin-bottom: 0.75rem; }
-.mode-toggle .mode-btn { margin-right: 8px; padding: 6px 12px; border: 1px solid #ccc; background: #fff; border-radius: 6px; cursor: pointer; }
-.mode-toggle .mode-btn.active { background: #333; color: #fff; border-color: #333; }
-
 .analysis-mode-row {
   display: flex;
   align-items: center;
@@ -111,32 +107,36 @@ body {
   box-sizing: border-box;
 }
 
-#analyze-btn {
-  margin-top: 1rem;
-  padding: 0.625rem 1.25rem;
-  background: var(--btn-primary);
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: opacity var(--transition), transform var(--transition);
-  box-shadow: var(--shadow-sm);
-}
-
-#analyze-btn:hover:not(:disabled) {
-  background: var(--btn-primary-hover);
-  transform: translateY(-1px);
-}
-
-#analyze-btn:disabled {
-  background: var(--btn-disabled);
-  cursor: not-allowed;
-  opacity: 0.8;
-}
-
 .combined-result { margin-bottom: 1rem; }
 .combined-result.hidden { display: none !important; }
+
+/* Shieldy inside "Analyze together" result */
+.combined-result .together-header {
+  padding: 16px 20px;
+  margin: 0 0 0.5rem;
+  border-radius: 10px 10px 0 0;
+  border: 1px solid var(--border);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #fff;
+}
+.combined-result .together-header.risk-low { border-color: var(--risk-low-border, #c8e6c9); background: #e8f5e9; }
+.combined-result .together-header.risk-medium { border-color: #f9a825; background: #fff8e1; }
+.combined-result .together-header.risk-high,
+.combined-result .together-header.risk-critical { border-color: #c62828; background: #ffebee; }
+.combined-result .together-header-content { flex: 1; min-width: 0; }
+.combined-result .together-header .shieldy-sticker {
+  flex-shrink: 0;
+  width: 165px;
+  height: 165px;
+  object-fit: contain;
+  transform: translate(-50px, -10px);
+}
+.combined-result .together-header .risk-row { margin-bottom: 8px; }
+.combined-result .together-header .shade-moved { margin: 0.25rem 0 0; font-size: 0.9375rem; }
+
 .report-block {
   margin-bottom: 1rem;
   padding: 1rem;

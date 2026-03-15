@@ -543,8 +543,8 @@ Redesign the frontend output structure so users clearly see:
 **Conditions (redirect if any is true)**
 
 - **Text**: `textScore >= 67`
-- **URL**: `urlScore > 15`
-- **Total**: `(textScore + urlScore) >= 70`
+- **URL**: `urlScore > 25`
+- **Total**: `(textScore + urlScore) > 75` (i.e. sum ≥ 76)
 
 **Action**
 
@@ -559,9 +559,11 @@ Redesign the frontend output structure so users clearly see:
 | Dimension   | Source                    | LLM? | Use |
 |------------|---------------------------|------|-----|
 | Text score | Rule 25% + LLM 75%        | Yes  | Combined report + redirect if ≥67 |
-| URL score  | Existing URL rules only  | No   | Combined report + redirect if >15 |
+| URL score  | Existing URL rules only  | No   | Combined report + redirect if >25 |
 
-Redirect rule: `(textScore >= 67) || (urlScore > 15) || (textScore + urlScore >= 70)` → open warning page. Both scores shown separately; no single merged score.
+Redirect rule: `(textScore >= 67) || (urlScore > 25) || (textScore + urlScore > 75)` → open warning page.
+
+**Extension display:** The extension popup does **not** show numeric scores; it shows only **risk level** (Low / Medium / High / Critical) and explanation content (Signals, Reasons, Advice). The web frontend continues to show full scores and levels.
 
 ### Implementation Order
 
@@ -574,6 +576,6 @@ Redirect rule: `(textScore >= 67) || (urlScore > 15) || (textScore + urlScore >=
 ### Config (can move to options later)
 
 - Text redirect threshold: 67.
-- URL redirect threshold: 15.
-- Total (sum) redirect threshold: ≥ 70.
+- URL redirect threshold: 25.
+- Total (sum) redirect threshold: > 75 (i.e. sum ≥ 76).
 - Auto-redirect on/off: optional alongside "Enable page risk detection".

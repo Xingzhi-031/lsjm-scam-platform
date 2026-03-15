@@ -152,6 +152,7 @@ body {
 
 .reportBlock h4 { margin: 0 0 4px; font-size: 12px; }
 .blockScore { margin: 0 0 6px; font-size: 11px; }
+.blockLevel { margin: 0 0 6px; font-size: 11px; }
 .blockSection { margin-top: 6px; }
 .blockSection ul { margin: 2px 0 0; padding-left: 18px; list-style: disc; }
 .blockEmpty { margin: 0; color: #666; font-size: 11px; }
