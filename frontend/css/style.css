@@ -223,6 +223,11 @@ body.dark .mode-toggle .mode-btn.active {
   font-size: 1.75rem;
   font-weight: 700;
   letter-spacing: 0.02em;
+  color: #263238;
+}
+
+body.dark .risk-score-num {
+  color: #555;
 }
 
 .result-row {
@@ -249,6 +254,11 @@ body.dark .mode-toggle .mode-btn.active {
 
 .label {
   font-weight: bold;
+  color: #263238;
+}
+
+body.dark .label {
+  color: #555;
 }
 
 .section {

@@ -234,6 +234,11 @@ body.dark .popup input[type="url"]:focus {
 .riskScore {
   font-size: 24px;
   font-weight: 700;
+  color: #263238;
+}
+
+body.dark .riskScore {
+  color: #555;
 }
 
 .riskLevel {
