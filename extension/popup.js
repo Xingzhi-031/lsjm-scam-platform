@@ -24,8 +24,21 @@ const modeUrl = document.getElementById('modeUrl');
 const analyzeBtn = document.getElementById('analyzeBtn');
 const resultPlaceholder = document.getElementById('resultPlaceholder');
 const resultCard = document.getElementById('resultCard');
+const themeToggle = document.getElementById('themeToggle');
 
 let mode = 'text';
+
+const savedTheme = localStorage.getItem('lsjm-theme');
+
+if (savedTheme === 'dark') {
+  document.body.classList.add('dark');
+}
+
+themeToggle?.addEventListener('click', () => {
+  document.body.classList.toggle('dark');
+  const isDark = document.body.classList.contains('dark');
+  localStorage.setItem('lsjm-theme', isDark ? 'dark' : 'light');
+});
 
 modeText?.addEventListener('click', () => { mode = 'text'; textWrap?.classList.remove('hidden'); urlWrap?.classList.add('hidden'); modeText?.classList.add('active'); modeUrl?.classList.remove('active'); });
 modeUrl?.addEventListener('click', () => { mode = 'url'; urlWrap?.classList.remove('hidden'); textWrap?.classList.add('hidden'); modeUrl?.classList.add('active'); modeText?.classList.remove('active'); });

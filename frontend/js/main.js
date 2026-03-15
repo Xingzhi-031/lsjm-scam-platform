@@ -8,6 +8,20 @@ const modeText = document.getElementById('mode-text');
 const modeUrl = document.getElementById('mode-url');
 const analyzeBtn = document.getElementById('analyze-btn');
 const resultPlaceholder = document.getElementById('result-placeholder');
+const themeToggle = document.getElementById('theme-toggle');
+
+const savedTheme = localStorage.getItem('lsjm-theme');
+
+if (savedTheme === 'dark') {
+  document.body.classList.add('dark');
+}
+
+themeToggle?.addEventListener('click', () => {
+  document.body.classList.toggle('dark');
+
+  const isDark = document.body.classList.contains('dark');
+  localStorage.setItem('lsjm-theme', isDark ? 'dark' : 'light');
+});
 
 let mode = 'text';
 
