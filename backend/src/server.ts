@@ -2,6 +2,7 @@ import path from 'path';
 import express from 'express';
 import analyzeTextRouter from '@/routes/analyzeText';
 import analyzeUrlRouter from '@/routes/analyzeUrl';
+import analyzePageRouter from '@/routes/analyzePage';
 
 const app = express();
 const PORT = process.env.PORT ? Number(process.env.PORT) : 3000;
@@ -17,6 +18,7 @@ app.get('/health', (_req, res) => {
 
 app.use('/analyze-text', analyzeTextRouter);
 app.use('/analyze-url', analyzeUrlRouter);
+app.use('/analyze-page', analyzePageRouter);
 
 const frontendPath = path.resolve(__dirname, '..', '..', 'frontend');
 const sharedPath = path.resolve(__dirname, '..', '..', 'shared');
