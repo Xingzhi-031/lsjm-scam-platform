@@ -139,7 +139,7 @@ body {
   align-items: flex-start;
   gap: 8px;
   margin: 0;
-  padding: 10px;
+  padding: 10px 10px 16px 10px;
   border-bottom: 1px solid rgba(0,0,0,0.08);
 }
 
@@ -154,8 +154,8 @@ body {
 
 .riskHeader .shieldy-sticker {
   flex-shrink: 0;
-  width: 118px;
-  height: 118px;
+  width: 100px;
+  height: 100px;
   object-fit: contain;
   transform: translate(-50px, -10px);
 }
@@ -178,6 +178,7 @@ body {
 
 .resultField {
   margin-bottom: 8px;
+  margin-top: 20px;
   padding: 0 4px;
 }
 
