@@ -1,4 +1,5 @@
 import { Router, type IRouter, type Request, type Response } from 'express';
+import { analyzeTextHybrid } from '@/analysis/combineTextAnalyzer';
 import { analyzeText } from '@/analysis/textAnalyzer';
 import {
   getTextFallback,
@@ -7,7 +8,7 @@ import {
 
 const router: IRouter = Router();
 
-router.post('/', (req: Request, res: Response): void => {
+router.post('/', async (req: Request, res: Response): Promise<void> => {
   const { text } = req.body as { text?: string };
   const useMock = req.query.mock === '1' || process.env.LSJM_MOCK_MODE === '1';
 
@@ -22,11 +23,16 @@ router.post('/', (req: Request, res: Response): void => {
   }
 
   try {
-    const result = analyzeText(text);
+    const result = await analyzeTextHybrid(text);
     res.json(result);
-  } catch (err) {
-    const fallback = getTextFallback(err);
-    res.status(200).json(fallback);
+  } catch (llmErr) {
+    try {
+      const ruleResult = analyzeText(text);
+      res.json(ruleResult);
+    } catch {
+      const fallback = getTextFallback(llmErr);
+      res.status(200).json(fallback);
+    }
   }
 });
 
