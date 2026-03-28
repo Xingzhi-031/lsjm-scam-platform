@@ -1,6 +1,6 @@
 import * as whoiser from 'whoiser';
 import type { AnalysisResult, RiskSignal } from '@/types/analysisTypes';
-import { buildAnalysisResult } from '@/utils/resultBuilder';
+import { buildUrlAnalysisResult } from '@/utils/resultBuilder';
 
 const SOURCE = "url" as const;
 const DOMAIN_AGE_MONTHS_THRESHOLD = 6; // age < 6 months → suspicious (phishing)
@@ -217,7 +217,7 @@ export async function analyzeUrl(url: string): Promise<AnalysisResult> {
     return sum + signal.score * weight;
   }, 0);
 
-  return buildAnalysisResult({
+  return buildUrlAnalysisResult({
     riskScore,
     signals,
     reasons,

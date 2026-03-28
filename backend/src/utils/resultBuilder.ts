@@ -13,6 +13,14 @@ function getRiskLevel(score: number): RiskLevel {
   return 'low';
 }
 
+/** URL-specific thresholds: >15 medium, >25 high, >=50 critical */
+function getRiskLevelForUrl(score: number): RiskLevel {
+  if (score >= 50) return 'critical';
+  if (score > 25) return 'high';
+  if (score > 15) return 'medium';
+  return 'low';
+}
+
 export function buildAnalysisResult(params: {
   riskScore: number;
   signals?: RiskSignal[];
@@ -24,6 +32,22 @@ export function buildAnalysisResult(params: {
   return {
     riskScore: normalizedScore,
     riskLevel: getRiskLevel(normalizedScore),
+    signals: params.signals ?? [],
+    reasons: params.reasons ?? [],
+    advice: params.advice ?? [],
+  };
+}
+
+export function buildUrlAnalysisResult(params: {
+  riskScore: number;
+  signals?: RiskSignal[];
+  reasons?: string[];
+  advice?: string[];
+}): AnalysisResult {
+  const normalizedScore = normalizeRiskScore(params.riskScore);
+  return {
+    riskScore: normalizedScore,
+    riskLevel: getRiskLevelForUrl(normalizedScore),
     signals: params.signals ?? [],
     reasons: params.reasons ?? [],
     advice: params.advice ?? [],
